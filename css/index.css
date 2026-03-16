@@ -33,9 +33,11 @@ nav ul li a{
     background: red;
     position:relative;
     display: flex;
-    justify-content: flex-end;
+    
  
 }
-#primera-seccion img{
-    height: 100%;
+#tex{
+    width: 500px;
+    height: auto;
+    background: blue;
 }
