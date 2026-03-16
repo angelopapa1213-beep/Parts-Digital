@@ -1,21 +1,41 @@
 *{
     margin: 0;
     padding: 0;
-    border: none;
-
 }
+
 header{
     width: 100%;
-    height: 20vh;
-    background: rgb(154, 123, 123);
+    height:15vh;
+    background: black;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+nav{
+
+}
+
+nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+nav ul li a{
+    color: #ebc9d7;
+    text-decoration: none;
+    font-size: 1.4rem;
+    
 }
 #primera-seccion{
     width: 100%;
-    height: 80vh;
-
+    height: 89vh;
+    background: red;
+    position:relative;
+    display: flex;
+    justify-content: flex-end;
+ 
 }
-
 #primera-seccion img{
     height: 100%;
-    
 }
