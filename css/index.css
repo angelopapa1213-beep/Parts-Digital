@@ -6,11 +6,14 @@
 header{
     width: 100%;
     height:15vh;
-    background: black;
     display: flex;
-    gap: 340px;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
+}
+#caco{
+    background-image: url(/img/fondoto.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 #im{
     width: 200px;
@@ -23,19 +26,23 @@ header{
 }
 #primer-boton:hover{
     background: black;
-    color: #ebc9d7;
-    transition: 0.4s;
+    color: #fcabcd;
+    transition: 0.3s;
     transform: scale(1.1);
 }
-nav ul li a:hover{
+nav ul li:hover{
     text-decoration: underline;
-    transform: scale(1.6);
+    color: #fcabcd;
+    text-shadow:0px 0px 20px #fcabcd;
+    transform: scale(1.1);
+    transition: 0.4s;
 }
+
 #primer-boton{
     width: 150px;
     height: 40px;
     background: white;
-    border: 2px solid #ebc9d7;
+    border: 2px solid #fcabcd;
     border-radius: 20px;
     font-size: 1rem;
 }
@@ -46,22 +53,55 @@ nav ul {
 }
 
 nav ul li a{
-    color: #ebc9d7;
+    color: #fcabcd;
     text-decoration: none;
     font-size: 1.4rem;
-    
 }
 #primera-seccion{
     width: 100%;
     height: 89vh;
-    background: red;
-    position:relative;
     display: flex;
-    
- 
+    gap: 45px;
+    justify-content: space-evenly;
+    flex-direction: row;
 }
-#tex{
+#text{
     width: 500px;
     height: auto;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+}
+#text h1{
+    font-size: 2.5rem;
+    margin-top: 45px;
+    color: white;
+}
+#text span{
+    text-transform: uppercase;
+    color: #fcabcd;
+}
+#text p{
+    font-size: 1.2rem;
+    color: white;
+    text-align: justify;
+}
+#p-1{
+    margin-top: 30px;
+}
+
+#segundo-boton{
+    width: 250px;
+    height: 40px;
+    margin-top: 20px;
+    background: white;
+    border: 2px solid #ebc9d7;
+    border-radius: 20px;
+    font-size: 1rem;
+}
+
+#text-2{
+    width: 500px;
+    height: 500px;
     background: blue;
 }
