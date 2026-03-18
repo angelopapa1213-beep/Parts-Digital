@@ -121,3 +121,18 @@ nav ul li a{
     display: flex;
     justify-content: flex-end;
 }
+
+#dentro-text-3 img{
+    width: 70%;
+    height: 100%;
+    background: rgb(189, 189, 189);
+    border-radius: 50%;
+}
+
+#segundo-article{
+    width: 100%;
+    height: 85vh;
+    display: flex;
+    gap: 45px;
+  
+}
