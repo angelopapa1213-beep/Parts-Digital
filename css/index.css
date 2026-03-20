@@ -95,7 +95,7 @@ nav ul li a{
     height: 40px;
     margin-top: 20px;
     background: white;
-    border: 2px solid #ebc9d7;
+    border: 2px solid #fcabcd;
     border-radius: 20px;
     font-size: 1rem;
 }
@@ -133,6 +133,64 @@ nav ul li a{
     width: 100%;
     height: 85vh;
     display: flex;
-    gap: 45px;
-  
+    align-items: center;
+   flex-direction: column;
+   gap: 30px;
+   padding-top: 20px;
+   padding: 0 0 40px;
+}
+
+#segundo-article h2{
+    font-size: 2.5rem;
+    color: #000000;
+}
+#separador-1{
+    width: 80%;
+    font-size: 1.05rem;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+#separador-2{
+width: 80%;
+height: auto;
+display: flex;
+justify-content: center;
+gap: 60px;
+}
+.cajones{
+    width: 250px;
+    height: 400px;
+    display: flex;
+    background: #dfdfdf;
+    border-bottom: 5px solid #fcabcd;
+    border-radius: 10px;
+    flex-direction: column;
+    align-items: center;
+}
+.cajones img{
+    width: 55%;
+    height:35vh;
+    padding-top: 5px;
+}
+.cajones-tex{
+    width: 100%;
+    height: 900px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: justify;
+    gap: 20px;
+}
+
+.cajones-tex h3{
+    font-size: 1.7rem;
+    color: #000000;
+    padding-top: 20px;
+}
+.cajones-tex p{
+    font-size: 1.05rem;
+    line-height: 1.5;
+    padding: 0 10px;
 }
