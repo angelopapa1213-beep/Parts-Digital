@@ -192,10 +192,45 @@ nav ul li a{
     width: 100%;
     height: 60%;
     flex-direction: column;
+    align-items: center;
     color: white;
     font-size: 1.05rem;
-    gap: 20px;
+    gap: 10px;
 }
+#c h2{
+    font-size: 1.8rem;
+    padding: 0 20px;
+    margin-top: 5px;
+}
+#c p{
+    text-align: justify;
+    padding: 0 20px;
+}
+
+#contenedor-buton{
+ width: 100%;
+ height: 100%;
+ display: flex;
+ align-items: center;
+}
+
+#contenedor-buton button{
+    width: 130px;
+    height: 30px;
+    background: #ffffff;
+    border: 1px solid #fcabcd;
+    border-radius: 20px;
+    font-size: 1rem;
+    color: black;
+    margin-left: 20px;
+}
+#contenedor-buton button:hover{
+    background: #000000;
+    border: 1px solid #fcabcd;
+    color: #ff87b9;
+    transition: 0.3s;
+}
+
 #dentro-el-2{
     width: 45%;
     height: auto;
@@ -327,4 +362,88 @@ nav ul li a{
     border: 1px solid #000000;
     color: #000000;
     transition: 0.3s;
+}
+#primer-seccion{
+   width: 100%;
+   height: 55vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   background-image: url(/img/b155af78b8a4fe1a5361d8332e548296.jpg);
+   background-size: cover;
+   background-position: center;
+   background-attachment: fixed;
+}
+
+#suscipcion{
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #000000;
+}
+
+#suscipcion h2{
+    font-size: 2.5rem;
+    padding: 20px 0 10px;
+}
+
+#suscipcion p{
+    font-size: 1.6rem;
+    text-align: center;
+    padding: 0 20px 20px;
+}
+
+#caja-del-input{
+    width: auto;
+    height: auto;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#caja-del-input input{
+    width: 600px;
+    height: 45px;
+    outline: none;
+    border: none;
+    background: rgb(0, 0, 0);
+    border: 2px solid #fcabcd;
+    border-radius: 20px;
+    font-size: 1.04rem;
+    color: #fcabcd;
+    padding: 0 10px;
+}
+
+#caja-del-input button{
+    width: 150px;
+    height: 45px;
+    border-radius: 20px;
+    border: none;
+    border: 1px solid #fcabcd;
+}
+
+#primer-se6{
+    width: 70%;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    backdrop-filter: blur(10px);
+    padding: 0 20px;
+    border-radius: 10px;
+}
+
+#segundo-section{
+    width: 100%;
+    height: 85vh;
+    background-image: url(/img/so.svg) ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
