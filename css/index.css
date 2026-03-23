@@ -160,7 +160,69 @@ nav ul li a{
     border-radius: 50%;
 }
 
+#el-2{
+    width: 100%;
+    height: 78vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 120px;
+    padding:0 0 20px;
+}
+#manitos{
+    width: 23%;
+    height: 450px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #242424;
+}
+#conten-img{
+    width: 100%;
+    height: 40%;
+    background: #bfbfbf;
+}
+#conten-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+#c{
+    display: flex;
+    width: 100%;
+    height: 60%;
+    flex-direction: column;
+    color: white;
+    font-size: 1.05rem;
+    gap: 20px;
+}
+#dentro-el-2{
+    width: 45%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  border-left: 3.5px solid #fcabcd;
+  padding: 0 60px;
+}
 
+#dentro-el-2 h2{
+    font-size: 2.5rem;
+}
+
+#dentro-el-2 p{
+    font-size: 1.1rem;
+    text-align: justify;
+  ;
+}
+#dentro-el-2 ul{
+    line-height: 1.7;
+    font-size: 1.05rem;
+}
 #tercer-article{
     width: 100%;
     height: auto;
@@ -213,6 +275,7 @@ nav ul li a{
     width: 30%;
     height: 550px;
     display: flex;
+    border-radius: 5px;
     align-items: center;
     background: #242424;
     flex-direction: column;
@@ -257,4 +320,11 @@ nav ul li a{
     font-size: 1rem;
     color: black;
     margin-right: 20px;
+}
+
+.dentro-aside div button:hover{
+    background: #bfbfbf;
+    border: 1px solid #000000;
+    color: #000000;
+    transition: 0.3s;
 }
