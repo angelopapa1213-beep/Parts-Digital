@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+     font-family: Arial, sans-serif;
 }
 
 header{
@@ -62,12 +63,20 @@ header{
     color: black;
     transition: 0.3s;
 }
-nav ul li a:hover{
-    color: #ffffff;
-    text-shadow:0px 0px 10px #ff87b9;
-    transition: 0.4s;
+nav ul li::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background:#fcabcd;
+  left: 0;
+  bottom: -5px;
+  transition: 0.3s;
 }
 
+nav ul li:hover::after { 
+  width: 100%; 
+}
 #primer-boton{
     width: 120px;
     height: 40px;
@@ -81,6 +90,10 @@ nav ul {
     display: flex;
     gap: 25px;
     list-style: none;
+}
+
+nav ul li {
+    position: relative;
 }
 
 nav ul li a{
