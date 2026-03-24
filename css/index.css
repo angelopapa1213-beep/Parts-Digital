@@ -211,7 +211,7 @@ nav ul li a{
     gap: 10px;
 }
 #c h2{
-    font-size: 1.8rem;
+    font-size: 1.7rem;
     padding: 0 20px;
     margin-top: 5px;
 }
@@ -454,9 +454,49 @@ nav ul li a{
 
 #segundo-section{
     width: 100%;
-    height: 85vh;
-    background-image: url(/img/so.svg) ;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+}
+#contenedor-tercer-aside{
+    width: 98%;
+    height: 80vh;
+    display: flex;
+    gap: 5px;
+    border-bottom: black 5px solid;
+    padding: 5px;
+}
+.tercer-aside{
+    width: 50%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#p{
+    align-items: start;
+    gap: 20px;
+    border-radius: 35px;
+}
+.tercer-aside h2{
+    font-size: 2.3rem;
+    color: black;
+    padding: 0 20px;
+}
+.tercer-aside p{
+    text-align: justify;
+    padding: 0 20px;
+    font-size: 1.25rem;
+    line-height: 1.3;
+}
+
+.tercer-aside img{
+    width: 75%;
+    height: 75%;
+    object-fit: cover;
+    border-radius: 15px;
 }
