@@ -11,6 +11,7 @@ header{
     gap: 100px;
     justify-content: space-around;
     align-items: center;
+    background: #000000;
 }
 #cajon-dentro-del-header{
     display: flex;
@@ -44,9 +45,10 @@ header{
     position: absolute;
 }
 #caco{
-    background-image: url(/img/fondoto.svg);
-    background-repeat: no-repeat;
+  background-image: url(/img/ChatGPT\ Image\ 1\ abr\ 2026\,\ 22_11_24.png);
+  background-repeat: no-repeat;
     background-size: cover;
+
 }
 #im{
     width: 8%;
@@ -105,8 +107,8 @@ nav ul li a{
     height: 85vh;
     display: flex;
     gap: 45px;
-    justify-content: space-evenly;
-    flex-direction: row;
+
+
 }
 #text{
     width: 500px;
@@ -114,19 +116,35 @@ nav ul li a{
     display: flex;
     gap: 20px;
     flex-direction: column;
+    position: relative;
+    left: 100px;
+    z-index: 1;
+
 }
+
+#invi{
+    width: 400px;
+    height: 400px;
+    background: none;
+    position: absolute;
+    left: 200px;
+    top: 200px;
+    background: rgba(0, 0, 0, 0.643);
+    border-radius: 50%;
+}
+
 #text h1{
     font-size: 2.5rem;
     margin-top: 45px;
-    color: white;
+    color: rgb(0, 0, 0);
 }
 #text span{
     text-transform: uppercase;
-    color: #fcabcd;
+    color: #ffffff;
 }
 #text p{
     font-size: 1.2rem;
-    color: white;
+    color: rgb(0, 0, 0);
     text-align: justify;
 }
 #p-1{
@@ -137,27 +155,15 @@ nav ul li a{
     width: 250px;
     height: 40px;
     margin-top: 20px;
-    background: white;
+    background: rgb(0, 0, 0);
     border: 2px solid #fcabcd;
     border-radius: 20px;
     font-size: 1rem;
+    color: white;
 }
 
-#text-2{
-    width: 500px;
-    height: 500px;
-  
-}
-#dentro-text-2{
-    width: 100%;
-    height: 250px;
-}
-#dentro-text-2 img{
-    width: 70%;
-    height: 100%;
-    background: rgb(189, 189, 189);
-    border-radius: 50%;
-}
+
+
 #dentro-text-3{
     width: 100%;
     height: 250px;
@@ -174,13 +180,13 @@ nav ul li a{
 
 #el-2{
     width: 100%;
-    height: 78vh;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     gap: 50px;
-    padding:0 0 20px;
+    padding:0 0 40px;
    
 }
 
@@ -195,6 +201,7 @@ nav ul li a{
   font-weight: weight;
   font-style: normal;
   padding: 0 60px;
+  margin: 20px;
 }
 
 #dentro-el-2 h2{
@@ -215,23 +222,18 @@ nav ul li a{
 .caja-carrusel{
     width: 65%;
     padding: 40px;
-    background: #000000;
     border-radius: 25px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+    box-shadow: 0 10px 30px #fcabcd;
     overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-self:center;
+    margin: auto;
 }
 
 .carrusel{
-    width: auto;
-    height: auto;
     display: flex;
-    gap: 25px;
+    gap: 40px;
     overflow-x: auto;
     padding-bottom: 34px;
-        gap: 40px;
+    scroll-behavior: smooth;
 }
 
 .carrusel::-webkit-scrollbar{
@@ -243,7 +245,7 @@ nav ul li a{
 }
 
 .dividiendo-1{
-    min-width: 280px;
+    min-width: 360px;  
     height: 150px;
     background: #242424;
     padding: 20px;
@@ -253,6 +255,16 @@ nav ul li a{
     flex-direction: column;
     gap: 10px;
     box-shadow: 0 5px 15px rgba(255, 255, 255, 0.789);
+}
+
+.dividiendo-1 h4{
+    font-size: 1.5rem;
+    color: #fefefe;
+}
+.dividiendo-1 p{
+    font-size: 1.2rem;
+    color: #cdcdcd;
+    line-height: 1.4;
 }
 .dividiendo-1 h4{
     font-size: 1.5rem;
