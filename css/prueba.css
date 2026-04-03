@@ -1,0 +1,80 @@
+.cards-container {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+}
+
+/* Cada card es horizontal */
+.card-horizontal {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: #1a1a1a;
+    padding: 20px;
+    border-radius: 14px;
+    border: 1px solid rgba(255,255,255,0.07);
+    transition: 0.25s ease;
+}
+
+.card-horizontal:hover {
+    transform: translateX(5px);
+}
+
+/* Imagen */
+.card-horizontal img {
+    width: 160px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/* Contenido */
+.card-info {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.card-info h2 {
+    font-size: 1.4rem;
+    margin: 0;
+    color: #fff;
+}
+
+.card-info h3 {
+    font-size: 1rem;
+    margin: 0;
+    color: #d0d0d0;
+}
+
+/* Iconos + datos */
+.card-details {
+    display: flex;
+    gap: 18px;
+    margin: 8px 0;
+}
+
+.card-details span {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #cfcfcf;
+    font-size: 0.95rem;
+}
+
+/* Botón */
+.card-horizontal button {
+    margin-top: 10px;
+    width: 150px;
+    padding: 9px 15px;
+    border-radius: 30px;
+    border: none;
+    background: #fff;
+    color: #000;
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+.card-horizontal button:hover {
+    background: #e4e4e4;
+}
