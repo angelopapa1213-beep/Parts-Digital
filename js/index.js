@@ -17,3 +17,44 @@ botones.forEach(boton => {
         }
     });
 });
+
+
+const elementos = document.querySelectorAll(".milano");
+
+function mostrar() {
+    elementos.forEach(el => {
+        const altura = el.getBoundingClientRect().top;
+        const pantalla = window.innerHeight - 210;
+
+        if (altura < pantalla) {
+            el.classList.add("iniciador");
+        }
+    });
+}
+
+window.addEventListener("scroll", mostrar);
+
+const sopitas = document.querySelectorAll(".sopita");
+const sanos = document.querySelectorAll(".sano");
+
+function most() {
+    sopitas.forEach(el => {
+        const altura = el.getBoundingClientRect().top;
+        const pantalla = window.innerHeight - 210;
+
+        if (altura < pantalla) {
+            el.classList.add("mensajero");
+        }
+    });
+
+    sanos.forEach(el => {
+        const altura = el.getBoundingClientRect().top;
+        const pantalla = window.innerHeight - 210;
+
+        if (altura < pantalla) {
+            el.classList.add("mens");
+        }
+    });
+}
+
+window.addEventListener("scroll", most);

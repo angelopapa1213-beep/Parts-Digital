@@ -2,6 +2,13 @@
 *{
     margin: 0;
     padding: 0;
+      font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight:weight;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+    
 }
 
 header{
@@ -11,7 +18,21 @@ header{
     gap: 100px;
     justify-content: space-around;
     align-items: center;
+    animation: sapote 1s ease-in;
+
 }
+
+@keyframes sapote {
+    from{
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 #cajon-dentro-del-header{
     display: flex;
     gap: 20px;
@@ -109,12 +130,25 @@ nav ul li a{
     gap: 145px;
 }
 
+@keyframes durante {
+    from{
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
 #text{
     width: 500px;
     height: auto;
     display: flex;
     gap: 20px;
     flex-direction: column;
+    animation: durante 1.2s ease-in;
 }
 
 #invi{
@@ -151,9 +185,11 @@ nav ul li a{
     height: 40px;
     margin-top: 20px;
     background: rgb(255, 255, 255);
-    border: 2px solid #fcabcd;
+    border: 3px solid #fcabcd;
     border-radius: 20px;
-    font-size: 1rem;
+    font-size: 1.1rem;
+    position: relative;
+    left: 150px;
 }
 
 #text-2{
@@ -161,28 +197,63 @@ nav ul li a{
     height: 500px;
   
 }
+.milano{
+    opacity: 0;
+    transition: 1.2s;
+    transform: translateY(-40px);
+}
+.milano.iniciador{
+    opacity: 1;
+    transform: translateY(0);
+}
 #dentro-text-2{
     width: 100%;
     height: 250px;
+    animation: pensando 1.2s ease-in;
+}
+@keyframes pensando{
+    from{
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 #dentro-text-2 img{
-    width: 70%;
-    height: 100%;
+    width: 50%;
     background: rgb(189, 189, 189);
     border-radius: 50%;
+    border: 5px solid #fcabcd;
+    box-shadow: 0 10px 20px #fcabcd ;
 }
+
 #dentro-text-3{
     width: 100%;
     height: 250px;
     display: flex;
     justify-content: flex-end;
+    animation: newton 1.2s ease-in;
+}
+
+@keyframes newton {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 #dentro-text-3 img{
-    width: 70%;
-    height: 100%;
-    background: rgb(189, 189, 189);
+    width: 50%;
+     box-shadow: 0 0px 20px #fcabcd ;
     border-radius: 50%;
+    border: 5px solid #fcabcd;
+    object-fit: cover;
 }
 
 #el-2{
@@ -301,6 +372,27 @@ nav ul li a{
     border-bottom: 3px solid #fcabcd;
     gap: 60px;
 }
+
+.sopita{
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: 1.2s ease-in;
+}
+.sopita.mensajero{
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.sano{
+    opacity: 0;
+    transform: translateX(20px);
+    transition: 1.2s ease-in;
+}
+.sano.mens{
+    opacity: 1;
+    transform: translateX(0);
+}
+
 
 .del{
     width: 500px;
@@ -541,6 +633,7 @@ nav ul li a{
    font-size: 1.2rem;
    line-height: 1.6;
    color: white;
+  padding: 0 0 0 20px;
 }
 .metodos h5{
     font-size: 1.5rem;
@@ -943,6 +1036,7 @@ footer{
     flex-direction: column;
     align-items: flex-start;
     gap: 20px;
+    width: 300px;
 }
 
 .cajones-intercepcion-4{
@@ -1004,4 +1098,28 @@ footer{
     font-size: 1.05rem;
     text-align: center;
     padding-top: 20px;
+}
+footer ul li a{
+    position: relative;
+}
+
+footer ul li a::after{
+    content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background:#fcabcd;
+  left: 0;
+  bottom: -5px;
+  transition: 0.3s;
+}
+
+footer ul li a:hover::after{
+    width: 100%;
+}
+#redes .bi:hover{
+    transition: 0.3s ease-out;
+    transform: scale(1.1);
+    color: #fcabcd;
+    
 }
