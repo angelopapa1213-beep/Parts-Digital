@@ -16,6 +16,7 @@ header {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  background: black;
 }
 
 #cajon-dentro-del-header {
