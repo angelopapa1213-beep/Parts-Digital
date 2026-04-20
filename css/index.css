@@ -2,13 +2,12 @@
 *{
     margin: 0;
     padding: 0;
-      font-family: "Roboto", sans-serif;
-  font-optical-sizing: auto;
-  font-weight:weight;
-  font-style: normal;
-  font-variation-settings:
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight:weight;
+    font-style: normal;
+    font-variation-settings:
     "wdth" 100;
-    
 }
 
 header{
@@ -19,6 +18,7 @@ header{
     justify-content: space-around;
     align-items: center;
     animation: sapote 1s ease-in;
+    
 
 }
 
@@ -122,6 +122,7 @@ nav ul li a{
     text-decoration: none;
     font-size: 1.4rem;
 }
+
 #primera-seccion{
     width: 100%;
     height: 85vh;
@@ -183,13 +184,28 @@ nav ul li a{
 #segundo-boton{
     width: 250px;
     height: 40px;
-    margin-top: 20px;
     background: rgb(255, 255, 255);
     border: 3px solid #fcabcd;
     border-radius: 20px;
     font-size: 1.1rem;
+}
+.i{
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
     position: relative;
-    left: 150px;
+    top: 20px;
+}
+#tercer-boton{
+    width: 150px;
+    height: 40px;
+    background: rgba(0, 0, 0, 0.643);
+    border: 3px solid #fcabcd;
+    border-radius: 20px;
+    font-size: 1.1rem;
+    color: white;
 }
 
 #text-2{
