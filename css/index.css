@@ -10,6 +10,39 @@
     "wdth" 100;
 }
 
+#cabia{
+    width: 60%;
+    height: auto;
+    display: flex;
+    position: absolute;
+    left: 280px;
+    top: 70px;
+    z-index: 2;
+    display: none;
+    transition: 0.2s;
+    filter: none;
+}
+body.oscuro * {
+  filter: brightness(40%);
+  transition: 1s;
+}
+
+body.oscuro #cabia,
+body.oscuro #cabia * {
+  filter: none ;
+}
+
+#cabia img{
+    width: 100%;
+}
+#cabia .bi-x-lg{
+    color: rgb(255, 255, 255);
+    font-size: 3rem;
+    position: relative;
+   bottom: 0;
+    z-index: 10;
+}
+
 header{
     width: 100%;
     height:15vh;
@@ -50,6 +83,7 @@ header{
     border-radius: 20px;
     font-size: 1.04rem;
     color: #fcabcd;
+    padding-left: 10px;
     
 }
 #sopla{
@@ -80,7 +114,6 @@ header{
 }
 #primer-boton:hover{
     background: #fcabcd;
-    border: #000000;
     color: black;
     transition: 0.3s;
 }
@@ -106,6 +139,11 @@ nav ul li:hover::after {
     border: 2px solid #fcabcd;
     border-radius: 20px;
     font-size: 1rem;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
 }
 nav ul {
     display: flex;
@@ -121,6 +159,11 @@ nav ul li a{
     color: #fcabcd;
     text-decoration: none;
     font-size: 1.4rem;
+}
+
+#home{
+    border: 2px solid #fcabcd;
+    padding: 5px 6px;
 }
 
 #primera-seccion{
@@ -192,8 +235,6 @@ nav ul li a{
 .i{
     width: auto;
     display: flex;
-    justify-content: center;
-    align-items: center;
     gap: 20px;
     position: relative;
     top: 20px;

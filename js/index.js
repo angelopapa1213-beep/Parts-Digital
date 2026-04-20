@@ -58,3 +58,15 @@ function most() {
 }
 
 window.addEventListener("scroll", most);
+
+
+window.onload = function() {
+    document.body.classList.add("oscuro");  
+    document.getElementById("cabia").style.display = "block";  
+}
+
+document.querySelector(".bi-x-lg").addEventListener("click", function(fia){
+    document.getElementById("cabia").style.display="none"
+    document.body.classList.remove("oscuro")
+
+} )
