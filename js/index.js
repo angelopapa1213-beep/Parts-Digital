@@ -59,3 +59,18 @@ function most() {
 
 window.addEventListener("scroll", most);
 
+const contenedor=document.getElementById('del');
+const izquierda=document.getElementById('Izquierda');
+const derecha=document.getElementById('Derecha');
+
+angulo=0;
+
+derecha.addEventListener('click',(oo)=>{
+    angulo+=60;
+contenedor.style.transform=`rotateY(${angulo}deg)`;
+})
+
+izquierda.addEventListener('click',(pp)=>{
+    angulo-=60;
+contenedor.style.transform=`rotateY(${angulo}deg)`;
+}   )
