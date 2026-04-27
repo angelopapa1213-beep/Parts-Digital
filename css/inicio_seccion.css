@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 section{
     width: 100%;
@@ -50,7 +51,7 @@ aside{
 }
 .primer-aside h2{
     font-size: 2rem;
-    color: #fcabcd;
+    color: #ffffff;
     justify-content: center;
 
 
@@ -76,6 +77,7 @@ aside{
 }
 
 .ula h1{
+    color:  #fcabcd;
     font-size: 2.5rem;
 }
 form{
@@ -93,52 +95,99 @@ form input{
     margin-top: 30px;
     padding-left: 5px;
     border-bottom: #fcabcd 1px solid;
+
 }
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px white inset !important;
+    background-color: transparent !important;
+}
+.manito{
+    color: red;
+}
+.bi-eye{
+   color: #fcabcd;
+   right: 30px;
+   top: 5px;
+   position: relative;
+   font-size: 1.5rem;
+
+}
+
+.bi-eye-slash{
+     color: #fcabcd;
+   right: 30px;
+   top: 5px;
+   position: relative;
+   font-size: 1.5rem;
+}
+
 #valte{
-     display: flex;
-     justify-content: flex-start;
-     flex-direction: row;
     width: 100%;
     height: 40px;
     margin-top: 10px;
 }
 
-#valte input{
-    width: 20px;
+#valte p{
+   font-size: 1.05rem;
+    text-decoration: underline;
+    color: #fcabcd;
 }
 #i{
     width: 95%;
     height: 30px;
     font-size: 1.09rem;
+    background: none;
     border: #fcabcd 1px solid;
     border-radius: 5px;
     margin-top: 12px;
+    transition: 0.2s ease-in;
 }
 
-#separ{
-    width: 100%;
-    margin-top: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+#i:hover{
+    background: #fcabcd;
+    color: white;
+    transition: 0.3s;
+    cursor: pointer;
 }
 
 #miga{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    height: auto;
-      border-bottom: 2px solid #fcabcd;
+    position: relative;
+    margin-top: 10px;
 }
 
-span{
-    width: 20px;
+#planton::before{
+    content: "";
+    flex: 1;
+    height: 2px;
+    width: 100%;
+     background: #fcabcd;
+    background: #fcabcd;
     position: absolute;
-    padding: 0 12px;
+    bottom:0;
+    left: 0;
+    right: 0;
+}
+
+
+
+span{
+    color: #fcabcd;
     background: white;
+    padding: 0 10px;
+    font-size: 1rem;
+    z-index: 5;
+
 }
 
 #inf{
     width: 100%;
-    margin-top: 25px;
+    margin-top: 15px;
+    display: flex;
     gap: 10px;
 }
 
@@ -151,6 +200,9 @@ span{
      flex-direction: row;
      gap: 10px;
      border-radius: 10px;
+         border-radius: 5px;
+  
+    transition: 0.2s ease-in;
 }
 
 .oa img{
@@ -163,7 +215,22 @@ span{
 #inf .oa:hover{
     transition: 0.5s;
     animation: colr 1s forwards;
-    transform: translateX(10px);
+    transform: translateY(-5px);
     cursor: pointer;
     background: #fcabcd;
+}
+#tr{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+#piritu{
+    text-align: center;
+    font-size: 1.05rem;
+    color: #fcabcd;
 }
