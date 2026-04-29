@@ -10,7 +10,7 @@ header{
    width: 100%;
     height:15vh;
     display: flex;
-    gap: 100px;
+    gap: 50px;
     justify-content: space-around;
     align-items: center;
     animation: sapote 1s ease-in;
@@ -67,7 +67,7 @@ header{
 
 }
 #im{
-    width: 8%;
+    width: 6%;
 }
 #separador{
     display: flex;
@@ -186,6 +186,11 @@ nav ul li a{
     color: rgb(255, 255, 255);
     text-align: justify;
 }
+#saidina{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
 
 
 #segundo-boton{
@@ -200,8 +205,6 @@ nav ul li a{
     width: auto;
     display: flex;
     gap: 20px;
-    position: relative;
-    top: 20px;
 }
 #tercer-boton{
     width: 150px;
@@ -212,7 +215,6 @@ nav ul li a{
     font-size: 1.1rem;
     color: white;
 }
-
 #text-2{
     width: 500px;
     height: 500px;
@@ -391,8 +393,17 @@ nav ul li a{
     display: flex;
     justify-content: center;
     align-items: center;
-    border-bottom: 3px solid #fcabcd;
     gap: 60px;
+    position: relative;
+}
+
+#eventual::after{
+    content: '';
+    width: 100%;
+    height: 3px;
+    background: #fcabcd;
+    position: absolute;
+    bottom: 0;
 }
 
 .sopita{
@@ -417,8 +428,8 @@ nav ul li a{
 
 
 .del{
-    width: 500px;
-    height: 100px;
+    width: 40%;
+    height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -459,7 +470,7 @@ nav ul li a{
     padding: 20px 0;
 }
 #tx{
-    width: 300px;
+    width: 90%;
     color:white;
     font-size: 1.2rem;
     line-height: 1.4;
@@ -477,8 +488,9 @@ nav ul li a{
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 10px;
-    width: 300px;
-    height: 70px;
+    width: 90%;
+    height: auto;
+    padding-bottom: 10px;
     border-bottom: 1px solid #ffffff26;
   
 }
@@ -492,6 +504,9 @@ nav ul li a{
     color: #d0d0d0;
 }
 .dentro-aside{
+    width: 90%;
+     height: auto;
+     padding: 0 0 20px 10px;
     gap: 15px;
     display: flex;
     flex-direction: column;
@@ -566,7 +581,7 @@ nav ul li a{
 }
 
 #caja-del-input{
-    width: auto;
+    width: 100%;
     height: auto;
     display: flex;
     gap: 20px;
@@ -574,9 +589,12 @@ nav ul li a{
     align-items: center;
 
 }
-
-#caja-del-input input{
-    width: 600px;
+#fo{
+    width: 100%;
+    height: auto;
+}
+#fo input{
+    width: 90%;
     height: 45px;
     outline: none;
     border: none;
@@ -598,13 +616,13 @@ nav ul li a{
 
 #primer-se6{
     width: 70%;
-    height: 250px;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     backdrop-filter: blur(10px);
-    padding: 0 20px;
+    padding: 20px;
     border-radius: 10px;
 }
 
@@ -616,6 +634,8 @@ nav ul li a{
     align-items: center;
     padding: 10px 0;
 }
+
+
 #contenedor-tercer-aside{
     width: 98%;
     height: 80vh;
@@ -701,7 +721,7 @@ nav ul li a{
 
 #segundo-contenedor{
       width: 98%;
-    height: 80vh;
+    height: 90vh;
  display: flex;
  justify-content: center;
  align-items: center;
@@ -760,7 +780,7 @@ nav ul li a{
 }
 .segundo{
      width: 100%;
-    height: 100%;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -951,15 +971,15 @@ gap: 60px;
 }
 .ante-del-1{
     width: 100%;
-    height: 75vh;
+    height: 80%;
     display: flex;
     justify-content: center;
     align-items: center;
+  
 }
-
 .ante-del-2{
     width: 100%;
-    height: 70vh;
+    height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1183,3 +1203,197 @@ footer ul li a:hover::after{
     
 }
 
+
+@media(max-width:950px){
+    header{
+        flex-wrap: wrap;
+        gap: 0;
+    }
+    nav ul{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    #separador{
+    flex-wrap: wrap;
+    order: 1;
+    }
+
+    #caco{
+        height: auto;
+    }
+
+    #primera-seccion{
+        height: 90vh;
+        align-items: center;
+        flex-direction: column;
+        gap: 0;
+    }
+    #text h1{
+        font-size: 1.8rem;
+        text-align: start;    
+    }
+    #text{
+        width: 80%;
+        height: auto;
+        align-items: center;
+        text-align: center;
+        order: 1;
+    }
+    #saidina{
+        height: auto;
+    }
+    #tercer-article{
+        flex-wrap: wrap;
+    }
+    #even{
+        flex-wrap: wrap;
+    }
+    .primer-aside{
+        width: 45%;
+        }
+    .dentro-aside{
+        flex-wrap: wrap;
+    }
+    .dentro-aside h3{
+        font-size: 1.2rem;
+    }
+    .del h2{
+        font-size: 2.3rem;
+    }
+    .del p{
+        font-size: 1.2rem;
+    }
+    #primer-seccion{
+        height: 40vh;
+    }
+    #primer-se6{
+        width: 90%;
+    }
+
+    #suscipcion{
+        width: 90%;
+    }
+    #suscipcion h2{
+        font-size: 1.9rem;
+    }
+    #suscipcion p{
+        font-size: 1.3rem;
+    }
+    
+    #fo input{
+        width: 60%;
+    }
+    #contenedor-tercer-aside{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #p{
+        order: 1;
+    }
+    .tercer-aside{
+        width: 80%;
+    }
+     .tercer-aside h2{
+        font-size: 5vw;
+    }
+     .tercer-aside p{
+        font-size: 1.5rem;
+    }
+     .tercer-aside img{
+        width: 100%;
+    }
+     #segundo-article{
+        flex-wrap: wrap;
+    }
+     #separador-1{
+        width: 90%;
+    }
+     #separador-2{
+        flex-wrap: wrap;
+        justify-content: center;
+     }
+     .cajones{
+        width: 45%;
+     }
+     .metodos{
+        height: auto;
+        padding: 10px;
+     }
+     #segundo-contenedor{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+     }
+     #contenedor-cuarto{
+        flex-direction: column;
+     }
+     #R{
+      width: 80%;
+      order: 1;
+    }
+    #cuarto-section{
+        height: auto;
+    }
+    #cuarto-section h3{
+        font-size: 2rem;
+    }
+
+    .auxiliar{
+        width: 190px;
+        height: 190px;
+    }
+
+    .auxiliar img{
+        border-radius: 8px;
+    }
+
+    #del{
+        transform-style: preserve-3d;
+        height: 250px;
+      
+    }
+    .auxiliar:nth-child(1){transform: rotateY(0deg) translateZ(200px);}
+    .auxiliar:nth-child(2){transform: rotateY(60deg) translateZ(200px);}
+    .auxiliar:nth-child(3){transform: rotateY(120deg) translateZ(200px);}
+    .auxiliar:nth-child(4){transform: rotateY(180deg) translateZ(200px);}
+    .auxiliar:nth-child(5){transform: rotateY(240deg) translateZ(200px);}
+    .auxiliar:nth-child(6){transform: rotateY(300deg) translateZ(200px);}
+
+     .auxiliar:nth-child(1){transform: rotateY(0deg) translateZ(200px);}
+    .auxiliar:nth-child(2){transform: rotateY(60deg) translateZ(200px);}
+    .auxiliar:nth-child(3){transform: rotateY(120deg) translateZ(200px);}
+    .auxiliar:nth-child(4){transform: rotateY(180deg) translateZ(200px);}
+    .auxiliar:nth-child(5){transform: rotateY(240deg) translateZ(200px);}
+    .auxiliar:nth-child(6){transform: rotateY(300deg) translateZ(200px);}
+
+    .segundo button{
+        font-size: 1.8rem;
+        padding: 3px;
+    }
+
+    .ante-del-1{
+        flex-wrap: wrap;
+        justify-content: center;
+        
+    }
+    #h{
+        border-right: none;
+    }
+    #h::after{
+        content: '';
+        width: 90%;
+        height: 2px;
+        background: #fcabcd;
+        bottom: 0;
+    }
+
+    footer{
+        flex-wrap: wrap;
+    }
+    #footer-contenedor{
+        flex-wrap: wrap;
+    }
+
+}
