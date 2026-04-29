@@ -10,7 +10,7 @@ header{
    width: 100%;
     height:15vh;
     display: flex;
-    gap: 50px;
+
     justify-content: space-around;
     align-items: center;
     animation: sapote 1s ease-in;
@@ -79,6 +79,9 @@ header{
     color: black;
     transition: 0.3s;
 }
+nav{
+    display: block;
+}
 nav ul li::after {
   content: '';
   position: absolute;
@@ -127,7 +130,18 @@ nav ul li a{
 
 #home{
     border-bottom: 2px solid #fcabcd;
-    
+}
+#hambu{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.bi-list{
+    display: none;
+    font-size: 3rem;
+    color: #fcabcd;
+    cursor: pointer;
 }
 
 #primera-seccion{
@@ -971,7 +985,7 @@ gap: 60px;
 }
 .ante-del-1{
     width: 100%;
-    height: 80%;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1027,180 +1041,218 @@ gap: 60px;
     border-radius: 5px;
 }
 
-
-
-
-
 footer{
-    width: 100%;
-    height: 60vh;
-    background: #141414;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px 0;
+  background:#0d0d0d;
+  border-top:1px solid rgba(255,255,255,0.06);
 }
 
-#footer-contenedor{
-    width: 97%;
-    height: 95%;
-    border-bottom: 1px solid white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    padding: 24px 0;
+/* TOP */
+
+.footer-top{
+  display:grid;
+  grid-template-columns:1.5fr 1fr 1fr 1.4fr;
+  gap:60px;
+  padding:80px 80px 60px;
 }
 
-.cajitas-del-footer{
-    width: 32%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-#intercepcion-1{
-    gap: 40px;
-    font-size: 1.1rem;
-    color: whitesmoke;
-    background: none;
-}
-#intercepcion-2{
-    width: 16%;
-    background: none;
-}
-#intercepcion-3{
-    width: 16%;
-    background: none;
-}
-.cajitas-del-footer img{
-    width: 35%;
-    padding-top: 20px;
+
+.footer-brand img{
+  width:70px;
+  margin-bottom:20px;
+  display:block;
 }
 
-.cajones-interceptores-1{
-    width: 100%;
-    height: 70%;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
+.footer-brand p{
+  font-size:14px;
+  color:white;
+  line-height:1.8;
+  max-width:260px;
+  margin-bottom:24px;
 }
 
-.cajones-interceptores-2{
-    width: 100%;
-    height: 30%;
-    display: flex;
-    flex-direction: column;
-}
-.cajitas-del-footer h3{
-    font-size: 1.5rem;
-    color: white;
-     font-family: "Ramabhadra", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+/* SOCIAL */
+
+.footer-social{
+  display:flex;
+  gap:12px;
 }
 
-.cajitas-del-footer ul li{
-    list-style: none;
+.footer-social .bi{
+  width:38px;
+  height:38px;
+  border:1px solid rgba(255,255,255,0.1);
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:white;
+  font-size:15px;
+  cursor:pointer;
+  transition:all .25s;
 }
 
-.cajitas-del-footer ul li a{
-    text-decoration: none;
-    color: #cdcdcd;
-    font-size: 1.4rem;
-    line-height: 1.7;
-}
-#intercepcion-4{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 20px;
-    width: 300px;
+.footer-social .bi:hover{
+  border-color:var(--pink);
+  color: pink;
+  transform:translateY(-2px);
 }
 
-.cajones-intercepcion-4{
-    width: auto;
-    height: 90px;
-    display: flex;
-    gap: 10px;
-    flex-direction: column;
+/* COLUMNAS */
+
+.footer-col h4,
+.footer-newsletter h4{
+  font-size:23px;
+  font-weight:700;
+  letter-spacing:2px;
+  color:white;
+  margin-bottom:24px;
+  font-family:'Space Mono', monospace;
 }
 
-.cajones-intercepcion-4 .bi{
-    font-size: 1.5rem;
-    color: #cdcdcd;
+.footer-col ul{
+  list-style:none;
+  display:flex;
+  flex-direction:column;
+  gap:12px;
 }
 
-#redes{
-    display: flex;
-    gap: 10px;
+.footer-col ul li a{
+  font-size:14px;
+  color: #fcabcd;
+  text-decoration:none;
+  transition:color .2s;
 }
 
-.cajones-intercepcion-4 form{
-    display: flex;
-    gap: 20px;
+.footer-col ul li a:hover{
+  color:white;
 }
 
-.cajones-intercepcion-4 form input{
-    width: 200px;
-    height: 45px;
-    background: white;
+.footer-newsletter p{
+  font-size:13px;
+  color:white;
+  margin-bottom:20px;
+  line-height:1.6;
+}
+
+.newsletter-form{
+  display:flex;
+  gap:10px;
+  margin-bottom:16px;
+}
+
+.newsletter-form input{
+  flex:1;
+  background:rgba(255, 255, 255, 0.221);
+  border:1px solid rgb(255, 255, 255);
+  border-radius:8px;
+  padding:12px 16px;
+  color:var(--white);
+  font-family:'DM Sans', sans-serif;
+  font-size:14px;
+  outline:none;
+  transition:border-color .2s;
+}
+
+.newsletter-form input:focus{
     border: 1px solid #fcabcd;
-    border-radius: 20px;
-    font-size: 1.01rem;
-    outline: none;
-    padding: 0 10px;
+  background: white;
+  color: #fcabcd;
 }
 
-.cajones-intercepcion-4 form button{
-    width: 100px;
-    height: 45px;
-    background: #ffffff;
-    border: none;
-    border-radius: 20px;
-    color: rgb(0, 0, 0);
-    font-size: 1rem;
+.newsletter-form input::placeholder{
+  color:#fcabcd;
 }
 
-#e{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-#derechos{
-    width: 100%;
-    height: 10vh;
-    background:#141414;
-}
-#derechos p{
-    color: #cdcdcd;
-    font-size: 1.05rem;
-    text-align: center;
-    padding-top: 20px;
-}
-footer ul li a{
-    position: relative;
-}
-
-footer ul li a::after{
-    content: '';
-  position: absolute;
-  width: 0;
-  height: 2px;
+.newsletter-form button{
+  padding:12px 20px;
   background:#fcabcd;
-  left: 0;
-  bottom: -5px;
-  transition: 0.3s;
+  color:var(--black);
+  border:none;
+  border-radius:8px;
+  font-family:'DM Sans', sans-serif;
+  font-weight:700;
+  font-size:14px;
+  cursor:pointer;
+  transition:all .25s;
 }
 
-footer ul li a:hover::after{
-    width: 100%;
+.newsletter-form button:hover{
+  background:var(--pink-hot);
+  color:white;
 }
-#redes .bi:hover{
-    transition: 0.3s ease-out;
-    transform: scale(1.1);
-    color: #fcabcd;
-    
+
+.footer-mini-text{
+  font-size:12px !important;
+  color:rgb(255, 255, 255) !important;
+  margin-top:8px;
+}
+
+/* BOTTOM */
+
+.footer-bottom{
+  border-top:1px solid rgba(255,255,255,0.06);
+  padding:24px 80px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.footer-bottom p{
+  font-size:13px;
+  color:rgb(255, 255, 255);
+}
+
+.footer-bottom-links{
+  display:flex;
+  gap:24px;
+}
+
+.footer-bottom-links a{
+  font-size:13px;
+  color:rgb(255, 255, 255);
+  text-decoration:none;
+  transition:color .2s;
+}
+
+.footer-bottom-links a:hover{
+  color:var(--pink);
+}
+
+/* RESPONSIVE */
+
+@media (max-width:1024px){
+
+  .footer-top{
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+    padding:60px 32px 50px;
+  }
+
+  .footer-bottom{
+    padding:24px 32px;
+  }
+}
+
+@media (max-width:768px){
+
+  .footer-top{
+    grid-template-columns:1fr;
+  }
+
+  .footer-bottom{
+    flex-direction:column;
+    gap:12px;
+    text-align:center;
+  }
+
+  .footer-bottom-links{
+    flex-wrap:wrap;
+    justify-content:center;
+  }
+
+  .newsletter-form{
+    flex-direction:column;
+  }
 }
 
 
@@ -1296,7 +1348,7 @@ footer ul li a:hover::after{
         width: 80%;
     }
      .tercer-aside h2{
-        font-size: 5vw;
+        font-size: 2.5rem;
     }
      .tercer-aside p{
         font-size: 1.5rem;
@@ -1375,7 +1427,7 @@ footer ul li a:hover::after{
 
     .ante-del-1{
         flex-wrap: wrap;
-        justify-content: center;
+        gap: 70px;
         
     }
     #h{
@@ -1391,9 +1443,41 @@ footer ul li a:hover::after{
 
     footer{
         flex-wrap: wrap;
+        height: auto;
+        padding: 0;
     }
     #footer-contenedor{
         flex-wrap: wrap;
     }
+    #antes-del-footer-aside{
+        height: 80vh;
+    }
+    .cajitas-del-footer{
+        height: auto;
+    }
 
+    #intercepcion-1{
+        width: 75%;
+    }
+
+
+}
+
+@media(max-width:768px){
+    header{
+        justify-content: space-around;
+        justify-self: center;
+    }
+ nav{
+    display: none;
+ }
+ #im{
+    width: 15%;
+ }
+ #cajon-dentro-del-header{
+    display: none;
+ }
+ .bi-list{
+    display: block;
+ }
 }
