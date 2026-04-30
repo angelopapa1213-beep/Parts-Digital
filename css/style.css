@@ -10,11 +10,10 @@ header{
    width: 100%;
     height:15vh;
     display: flex;
-
+    gap: 50px;
     justify-content: space-around;
     align-items: center;
     animation: sapote 1s ease-in;
-    
 
 }
 
@@ -131,18 +130,48 @@ nav ul li a{
 #home{
     border-bottom: 2px solid #fcabcd;
 }
-#hambu{
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
+
 .bi-list{
     display: none;
     font-size: 3rem;
     color: #fcabcd;
     cursor: pointer;
 }
+
+#emergente{
+    width: 100%;
+    height: 40vh;
+    background: rgb(148, 93, 93);
+    position: absolute;
+    z-index: 5;
+    display: none;
+}
+#emergente-hijo{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#emergente-hijo ul{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    list-style: none;
+}
+
+.emergente-hijo ul li{
+    color: white;
+    font-size: 3.5rem;
+    text-decoration: none;
+}
+
+.emergente-hijo ul li a{
+        background: #fcabcd;
+    width: 100%;
+    height: auto;
+}
+
 
 #primera-seccion{
     width: 100%;
@@ -1039,6 +1068,11 @@ gap: 60px;
     color: #fcabcd;
     padding: 5px;
     border-radius: 5px;
+}
+
+footer{
+  background:#0d0d0d;
+  border-top:1px solid rgba(255,255,255,0.06);
 }
 
 footer{
