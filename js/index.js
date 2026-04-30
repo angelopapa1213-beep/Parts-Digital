@@ -58,3 +58,17 @@ function most() {
 }
 
 window.addEventListener("scroll", most);
+
+
+ contenedor = document.getElementById('del');
+let angulo = 0;
+
+document.getElementById('Derecha').addEventListener('click', () => {
+    angulo += 60;
+    contenedor.style.transform = `rotateY(${angulo}deg)`;
+});
+
+document.getElementById('Izquierda').addEventListener('click', () => {
+    angulo -= 60;
+    contenedor.style.transform = `rotateY(${angulo}deg)`;
+});
