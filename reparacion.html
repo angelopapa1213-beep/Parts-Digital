@@ -9,6 +9,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/reparaciones.css">
+
+    <!-- EmailJS — reemplaza TU_PUBLIC_KEY con tu clave de emailjs.com -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>emailjs.init("TU_PUBLIC_KEY");</script>
 </head>
 <body>
 
@@ -407,20 +411,24 @@
                     <div class="c-text"><strong>Horario</strong><span>Lun–Sáb: 8am – 7pm</span></div>
                 </div>
             </div>
+
+            <!-- ===== FORMULARIO CON JS ===== -->
             <div class="contacto-form reveal">
                 <div class="form-row">
                     <div class="form-group">
-                        <label>Nombre</label>
-                        <input type="text" placeholder="Tu nombre completo">
+                        <label for="f-nombre">Nombre</label>
+                        <input type="text" id="f-nombre" placeholder="Tu nombre completo" autocomplete="off">
+                        <span class="form-msg" id="msg-nombre"></span>
                     </div>
                     <div class="form-group">
-                        <label>Correo electrónico</label>
-                        <input type="email" placeholder="correo@ejemplo.com">
+                        <label for="f-email">Correo electrónico</label>
+                        <input type="email" id="f-email" placeholder="correo@ejemplo.com" autocomplete="off">
+                        <span class="form-msg" id="msg-email"></span>
                     </div>
                 </div>
                 <div class="form-group">
-                    <label>Tipo de servicio</label>
-                    <select>
+                    <label for="f-servicio">Tipo de servicio</label>
+                    <select id="f-servicio">
                         <option value="">Seleccionar…</option>
                         <option>Reparación de celular</option>
                         <option>Reparación de laptop</option>
@@ -429,15 +437,27 @@
                         <option>Plan empresarial</option>
                         <option>Otro</option>
                     </select>
+                    <span class="form-msg" id="msg-servicio"></span>
                 </div>
                 <div class="form-group">
-                    <label>Mensaje</label>
-                    <textarea placeholder="Cuéntanos qué necesitas…"></textarea>
+                    <label for="f-mensaje">Mensaje</label>
+                    <textarea id="f-mensaje" placeholder="Cuéntanos qué necesitas…" maxlength="500"></textarea>
+                    <div class="char-count" id="char-count">0 / 500</div>
+                    <span class="form-msg" id="msg-mensaje"></span>
                 </div>
-                <button class="btn-submit" type="button">
-                    <i class="fas fa-paper-plane"></i>&nbsp; Enviar mensaje
+                <button class="btn-submit" id="btn-enviar" type="button">
+                    <i class="fas fa-paper-plane" id="btn-icon"></i>
+                    <span id="btn-text">&nbsp;Enviar mensaje</span>
+                    <span class="form-spinner" id="form-spinner"></span>
                 </button>
+                <div class="success-box" id="success-box">
+                    <div class="success-icon"><i class="fas fa-check"></i></div>
+                    <h3>¡Mensaje enviado!</h3>
+                    <p>Gracias por contactarnos. Te responderemos en menos de 2 horas.</p>
+                </div>
             </div>
+            <!-- ===== FIN FORMULARIO ===== -->
+
         </div>
     </div>
 </section>
@@ -447,8 +467,8 @@
     <div class="footer-top">
         <div class="footer-brand">
             <div class="brand-name">
-  <img src="img/logo-nuevo.png" alt="Digital Parts Logo" class="footer-logo">
-</div>
+                <img src="img/logo-nuevo.png" alt="Digital Parts Logo" class="footer-logo">
+            </div>
             <p>Especialistas en reparación de dispositivos electrónicos y formación técnica profesional en Santo Domingo, RD.</p>
             <div class="footer-socials">
                 <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
@@ -496,40 +516,6 @@
 
 <button id="scrollTop" aria-label="Volver arriba"><i class="fas fa-arrow-up"></i></button>
 
-<script>
-const hamburger = document.getElementById('hamburger');
-const mobileMenu = document.getElementById('mobileMenu');
-hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('open');
-    mobileMenu.classList.toggle('open');
-});
-mobileMenu.querySelectorAll('a').forEach(a => {
-    a.addEventListener('click', () => {
-        hamburger.classList.remove('open');
-        mobileMenu.classList.remove('open');
-    });
-});
-
-const reveals = document.querySelectorAll('.reveal');
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-        if(e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
-    });
-}, { threshold: 0.12 });
-reveals.forEach(r => observer.observe(r));
-
-const scrollBtn = document.getElementById('scrollTop');
-window.addEventListener('scroll', () => {
-    scrollBtn.classList.toggle('show', window.scrollY > 500);
-});
-scrollBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
-
-const header = document.getElementById('header');
-window.addEventListener('scroll', () => {
-    header.style.boxShadow = window.scrollY > 50
-        ? '0 2px 30px rgba(0,0,0,0.4)'
-        : 'none';
-});
-</script>
+<script src="js/main.js"></script>
 </body>
 </html>
