@@ -1,9 +1,8 @@
 <?php
-
 $servidor = "localhost";
 $usuario = "root";
 $clave = "";
-$basededatos = "ejemplo"; // aquí va tu base de datos
+$basededatos = "parts_digital";
 
 $enlace = mysqli_connect($servidor, $usuario, $clave, $basededatos);
 
@@ -14,12 +13,11 @@ if (!$enlace) {
 if (isset($_POST['registrar'])) {
 
     $nombre = $_POST['firstName'];
-    $apellido = $_POST['lastName'];
     $correo = $_POST['email'];
     $contrasena = $_POST['password'];
 
-    $insertarDatos = "INSERT INTO datos (Nombre, Apellido, `Correo electrónico`, Contraseña)
-    VALUES ('$nombre', '$apellido', '$correo', '$contrasena')";
+    $insertarDatos = "INSERT INTO datos (Nombre, `Correo electrónico`, Contraseña)
+    VALUES ('$nombre', '$correo', '$contrasena')";
 
     $ejecutarInsertar = mysqli_query($enlace, $insertarDatos);
 
@@ -29,5 +27,4 @@ if (isset($_POST['registrar'])) {
         echo "<script>alert('Error al guardar los datos');</script>";
     }
 }
-
 ?>
