@@ -1,10 +1,9 @@
 <?php
 
-// CONFIGURACIÓN DE LA BASE DE DATOS
 $servidor = "localhost";
 $usuario = "root";
 $clave = "";
-$basededatos = "parts_digital"; // ← AQUÍ EL NOMBRE CORRECTO
+$basededatos = "parts_digital"; 
 
 // CONEXIÓN A MYSQL
 $enlace = mysqli_connect($servidor, $usuario, $clave, $basededatos);
