@@ -1,5 +1,4 @@
 <?php
-
 $servidor = "localhost";
 $usuario = "root";
 $clave = "";
@@ -17,14 +16,14 @@ if (isset($_POST['registrar'])) {
     $correo = $_POST['email'];
     $contrasena = $_POST['password'];
 
-    $insertar = "INSERT INTO datos (nombre, correo, contraseña) 
+    $insertar = "INSERT INTO datos (nombre, correo, contrasena)
                  VALUES ('$nombre', '$correo', '$contrasena')";
 
     $resultado = mysqli_query($enlace, $insertar);
 
     if ($resultado) {
         echo "<script>alert('Datos guardados correctamente'); window.location='formulario.html';</script>";
-    } else {
+    }else {
         echo "<script>alert('Error al guardar los datos'); window.history.back();</script>";
     }
 }
