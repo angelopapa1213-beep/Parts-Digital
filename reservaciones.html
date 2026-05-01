@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reservaciones — Digital Parts</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/reservaciones.css">
+</head>
+<body>
+
+<header id="header">
+        <div class="nav-inner">
+
+            <div class="nav-logo">
+                <img src="/img/logo-nuevo.png" alt="Digital Parts Logo" class="logo-img">
+            </div>
+
+            <nav id="nav-desktop">
+                <ul>
+                    <li><a href="#Home" id="home">Inició</a></li>
+                    <li><a href="#contact">Sobre Nosotros</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="#about">Reservaciones</a></li>
+                    <li><a href="#about">Contactos</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-actions">
+                <button class="btn-gear" aria-label="Configuración">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="17" height="17">
+                        <path
+                            d="M12 15.5A3.5 3.5 0 0 1 8.5 12 3.5 3.5 0 0 1 12 8.5a3.5 3.5 0 0 1 3.5 3.5 3.5 3.5 0 0 1-3.5 3.5m7.43-2.92c.04-.34.07-.69.07-1.08s-.03-.73-.07-1.08l2.33-1.82c.21-.16.27-.45.13-.69l-2.2-3.81c-.13-.24-.42-.32-.66-.24l-2.75 1.11c-.57-.44-1.18-.81-1.86-1.08L14.21 1.5c-.05-.26-.27-.5-.55-.5h-4.4c-.28 0-.49.24-.54.5l-.41 2.39c-.68.27-1.29.64-1.86 1.08L3.7 3.86c-.24-.08-.53 0-.66.24L.84 7.91c-.13.24-.08.53.13.69l2.33 1.82C3.26 10.77 3.23 11.1 3.23 11.5s.03.73.07 1.08L1 14.4c-.21.16-.27.45-.13.69l2.2 3.81c.13.24.42.32.66.24l2.75-1.11c.57.44 1.18.81 1.86 1.08l.41 2.39c.05.26.26.5.54.5h4.4c.28 0 .5-.24.55-.5l.41-2.39c.68-.27 1.29-.64 1.86-1.08l2.75 1.11c.24.08.53 0 .66-.24l2.2-3.81c.13-.24.08-.53-.13-.69l-2.33-1.82z" />
+                    </svg>
+                </button>
+                <div class="nav-divider"></div>
+                <button class="hamburger" id="hamburger" aria-label="Menú">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+
+        </div>
+
+    </header><!-- HERO SIMPLE -->
+<section class="hero-simple">
+  <div class="hero-text">
+    <div class="hero-tag"><span></span> RESERVACIONES EN LÍNEA</div>
+    <h1>APARTA TU <em>PRODUCTO</em></h1>
+    <p>Llena el formulario y nos contactamos contigo para confirmar tu pedido.</p>
+  </div>
+</section>
+
+<section class="form-section">
+   <form action="reservaciones.php" method="POST">
+>
+
+    <div class="form-grid">
+
+      <div class="field">
+        <label><i class="bi bi-person"></i> Nombre completo *</label>
+        <input type="text" id="nombre" placeholder="¿A nombre de quién?">
+        <span class="err" id="err-nombre"></span>
+      </div>
+
+      <div class="field">
+        <label><i class="bi bi-envelope"></i> Correo electrónico *</label>
+        <input type="email" id="email" placeholder="Para enviarte la confirmación">
+        <span class="err" id="err-email"></span>
+      </div>
+
+      <div class="field">
+        <label><i class="bi bi-telephone"></i> Teléfono / WhatsApp *</label>
+        <input type="tel" id="telefono" placeholder="Ej: 809-000-0000">
+        <span class="err" id="err-telefono"></span>
+      </div>
+
+      <div class="field">
+        <label><i class="bi bi-geo-alt"></i> Dirección de entrega *</label>
+        <input type="text" id="direccion" placeholder="¿Dónde te lo entregamos?">
+        <span class="err" id="err-direccion"></span>
+      </div>
+
+      <div class="field">
+        <label><i class="bi bi-calendar3"></i> Fecha de entrega *</label>
+        <input type="date" id="fecha">
+        <span class="err" id="err-fecha"></span>
+      </div>
+
+      <div class="field">
+        <label><i class="bi bi-clock"></i> Hora preferida *</label>
+        <select id="hora">
+          <option disabled selected hidden>Selecciona una hora</option>
+          <option>9:00 AM</option>
+          <option>10:00 AM</option>
+          <option>11:00 AM</option>
+          <option>12:00 PM</option>
+          <option>1:00 PM</option>
+          <option>2:00 PM</option>
+          <option>3:00 PM</option>
+          <option>4:00 PM</option>
+          <option>5:00 PM</option>
+          <option>6:00 PM</option>
+        </select>
+        <span class="err" id="err-hora"></span>
+      </div>
+
+      <div class="field full">
+        <label><i class="bi bi-laptop"></i> Producto que deseas *</label>
+        <select id="producto">
+          <option disabled selected hidden>¿Qué producto te interesa?</option>
+          <optgroup label="Laptops">
+            <option>Laptop Básica — $450 USD</option>
+            <option>Laptop Gamer Pro — $850 USD</option>
+            <option>Laptop Empresarial — $650 USD</option>
+          </optgroup>
+          <optgroup label="Mouse">
+            <option>Mouse Gamer RGB — $25 USD</option>
+            <option>Mouse Inalámbrico — $20 USD</option>
+          </optgroup>
+          <optgroup label="Teclados">
+            <option>Teclado Mecánico RGB — $35 USD</option>
+            <option>Teclado Compacto TKL — $28 USD</option>
+          </optgroup>
+          <optgroup label="Memorias">
+            <option>Memoria USB 64GB — $15 USD</option>
+            <option>Disco SSD 512GB — $55 USD</option>
+          </optgroup>
+          <optgroup label="Accesorios">
+            <option>Cargador Dell Original — $28 USD</option>
+            <option>Auriculares Gamer 7.1 — $30 USD</option>
+            <option>Hub USB-C 7 en 1 — $22 USD</option>
+          </optgroup>
+        </select>
+        <span class="err" id="err-producto"></span>
+      </div>
+
+      <div class="field">
+        <label><i class="bi bi-truck"></i> Método de entrega *</label>
+        <div class="radio-row">
+          <label class="radio-opt"><input type="radio" name="entrega" value="domicilio"> A domicilio</label>
+          <label class="radio-opt"><input type="radio" name="entrega" value="tienda"> Retiro en tienda</label>
+        </div>
+        <span class="err" id="err-entrega"></span>
+      </div>
+
+      <div class="field">
+        <label><i class="bi bi-credit-card"></i> Método de pago *</label>
+        <div class="radio-row">
+          <label class="radio-opt"><input type="radio" name="pago" value="efectivo"> Efectivo</label>
+          <label class="radio-opt"><input type="radio" name="pago" value="transferencia"> Transferencia</label>
+          <label class="radio-opt"><input type="radio" name="pago" value="tarjeta"> Tarjeta</label>
+        </div>
+        <span class="err" id="err-pago"></span>
+      </div>
+
+      <div class="field full">
+        <label><i class="bi bi-chat-left-text"></i> Notas adicionales</label>
+        <textarea id="notas" placeholder="Alguna indicación especial para tu pedido..." rows="3"></textarea>
+      </div>
+
+    </div>
+
+    <button type="button" class="btn-reservar" onclick="enviarReserva()">
+      <i class="bi bi-bag-check"></i> Confirmar Reserva
+    </button>
+
+  </form>
+</section>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal-box">
+    <div class="modal-icon"><i class="bi bi-check-circle-fill"></i></div>
+    <h2>¡Reserva Confirmada!</h2>
+    <p id="modalMsg"></p>
+    <div class="modal-detalle" id="modalDetalle"></div>
+    <p class="modal-nota">Te contactaremos pronto para coordinar los detalles.</p>
+    <button class="btn-modal" onclick="cerrarModal()">Perfecto, gracias</button>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <img src="img/logo-nuevo.png" alt="Digital Parts">
+      <p>Tecnología confiable, precios competitivos y servicio cercano para tu hogar y negocio.</p>
+      <div class="footer-social">
+        <div class="social-btn"><i class="bi bi-tiktok"></i></div>
+        <div class="social-btn"><i class="bi bi-instagram"></i></div>
+        <div class="social-btn"><i class="bi bi-facebook"></i></div>
+        <div class="social-btn"><i class="bi bi-whatsapp"></i></div>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>PRODUCTOS</h4>
+      <ul>
+        <li><a href="#">Laptops</a></li>
+        <li><a href="#">Mouse</a></li>
+        <li><a href="#">Teclados</a></li>
+        <li><a href="#">Memorias</a></li>
+        <li><a href="#">Accesorios</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>SERVICIOS</h4>
+      <ul>
+        <li><a href="#">Reparaciones</a></li>
+        <li><a href="#">Mantenimiento</a></li>
+        <li><a href="#">Diagnóstico</a></li>
+        <li><a href="#">Asesoría Tech</a></li>
+      </ul>
+    </div>
+    <div class="footer-newsletter">
+      <h4>CONSULTAS</h4>
+      <p>Envíanos tu pregunta y te respondemos rápido.</p>
+      <div class="newsletter-form">
+        <input type="text" placeholder="Tu consulta...">
+        <button onclick="alert('¡Consulta enviada! Gracias.')">Enviar</button>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Digital Parts. Todos los derechos reservados.</p>
+    <div class="footer-bottom-links">
+      <a href="#">Privacidad</a>
+      <a href="#">Términos</a>
+      <a href="#">Contacto</a>
+    </div>
+  </div>
+</footer>
+
+<script src="js/reservaciones.js"></script>
+</body>
+</html>
