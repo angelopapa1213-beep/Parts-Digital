@@ -5,7 +5,7 @@ const passInput  = document.getElementById('password');
 togglePass.addEventListener('click', () => {
     if (passInput.type === 'password') {
         passInput.type = 'text';
-        togglePass.textContent = '🙈 Ocultar';
+        togglePass.textContent = 'Ocultar';
     } else {
         passInput.type = 'password';
         togglePass.textContent = '👁 Ver';

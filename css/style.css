@@ -1,6 +1,4 @@
-/* =============================================
-   VARIABLES & RESET
-   ============================================= */
+
 :root {
     --pink:        #fcabcd;
     --pink-hot:    #ff6b9d;
@@ -58,7 +56,7 @@ button {
 
 h1, h2, h3, h4, h5, h6 {
 
-    font-weight: 700;
+    font-weight: 300;
 }
 
 h2 { font-weight: 800; }
@@ -95,13 +93,17 @@ h3, h4, h5 { font-weight: 700; }
     gap: 30px;
 }
 
-#nav-desktop ul li { position: relative; }
+#nav-desktop ul li { position: relative; 
+}
+
+#nav-desktop ul li a {
+    font-size: 1.2rem;
+}
 
 .nav-link {
     color: #fcabcd;
     font-size: 0.93rem;
     font-weight: 500;
-
     transition: var(--trans);
     padding-bottom: 4px;
 }
@@ -167,8 +169,6 @@ h3, h4, h5 { font-weight: 700; }
     border: 1.5px solid var(--pink);
     border-radius: 22px;
     font-size: 0.88rem;
-    font-weight: 600;
-
     transition: var(--trans);
     white-space: nowrap;
 }
@@ -179,9 +179,6 @@ h3, h4, h5 { font-weight: 700; }
     box-shadow: var(--shadow-pink);
 }
 
-/* =============================================
-   HAMBURGER
-   ============================================= */
 .hamburger {
     display: none;
     flex-direction: column;
@@ -204,9 +201,6 @@ h3, h4, h5 { font-weight: 700; }
 .hamburger.open span:nth-child(2) { opacity: 0; }
 .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
-/* =============================================
-   MENÚ MÓVIL
-   ============================================= */
 #menu-movil {
     display: none;
     background: var(--black-2);
@@ -241,9 +235,6 @@ h3, h4, h5 { font-weight: 700; }
     padding-left: 38px;
 }
 
-/* =============================================
-   HERO
-   ============================================= */
 #caco {
     background-image: url(/img/fondoto.svg);
     background-repeat: no-repeat;
@@ -291,7 +282,7 @@ h3, h4, h5 { font-weight: 700; }
 #text h1 {
   
     font-weight: 800;
-    font-size: clamp(2rem, 4.5vw, 3rem);
+    font-size: clamp(2rem, 4vw, 2.8rem);
     color: var(--white);
     line-height: 1.15;
     letter-spacing: -0.01em;
@@ -306,7 +297,7 @@ h3, h4, h5 { font-weight: 700; }
 }
 
 #saidina p {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     color: white;
     line-height: 1.8;
 
@@ -361,7 +352,6 @@ h3, h4, h5 { font-weight: 700; }
     transform: translateY(-2px);
 }
 
-/* Imágenes hero */
 #text-2 {
     width: 420px;
     flex-shrink: 0;
@@ -370,6 +360,8 @@ h3, h4, h5 { font-weight: 700; }
 }
 
 #dentro-text-2 {
+    display: flex;
+    gap: 20px;
     position: absolute;
     top: 0; left: 0;
     width: 230px; height: 230px;
@@ -386,8 +378,16 @@ h3, h4, h5 { font-weight: 700; }
 
 #dentro-text-3 {
     position: absolute;
-    bottom: 0; right: 0;
-    width: 210px; height: 210px;
+    bottom: 0; 
+    left: 120px;
+    width: 210px; 
+    height: 210px;
+    animation: floatB 4s ease-in-out infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.dentro-text-3{
     animation: floatB 4s ease-in-out infinite;
 }
 
@@ -396,7 +396,7 @@ h3, h4, h5 { font-weight: 700; }
     border-radius: 50%;
     border: 4px solid var(--pink);
     box-shadow: 0 12px 36px rgba(252,171,205,0.35);
-    object-fit: cover;
+
 }
 
 @keyframes floatA {
@@ -450,7 +450,7 @@ h3, h4, h5 { font-weight: 700; }
 }
 
 .caja-carrusel {
-    width: 90%;
+    width: 50%;
     max-width: 1100px;
     padding: 32px;
     border-radius: 24px;
@@ -460,11 +460,12 @@ h3, h4, h5 { font-weight: 700; }
 }
 
 .carrusel {
-    display: flex;
+    display: inline-flex;
     gap: 20px;
     overflow-x: auto;
     padding-bottom: 12px;
     scroll-behavior: smooth;
+        animation: scroll-loop 20s linear infinite;
 }
 
 .carrusel::-webkit-scrollbar { height: 4px; }
@@ -472,7 +473,7 @@ h3, h4, h5 { font-weight: 700; }
 .carrusel::-webkit-scrollbar-thumb { background: var(--pink); border-radius: 10px; }
 
 .dividiendo-1 {
-    min-width: 280px;
+    min-width: 360px;
     background: var(--black-4);
     padding: 28px 24px;
     border-radius: var(--radius);
@@ -505,7 +506,14 @@ h3, h4, h5 { font-weight: 700; }
     line-height: 1.7;
 
 }
-
+@keyframes scroll-loop {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
 /* =============================================
    OFERTAS
    ============================================= */
@@ -535,7 +543,7 @@ h3, h4, h5 { font-weight: 700; }
 .del { display: flex; flex-direction: column; gap: 6px; }
 .del h2 { font-size: clamp(1.6rem, 3vw, 2.4rem); color: var(--white); }
 .del p  {
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     color: rgba(255,255,255,0.55);
     max-width: 500px;
     
@@ -582,7 +590,7 @@ h3, h4, h5 { font-weight: 700; }
 }
 
 .producto-header h3 {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
 
     background: linear-gradient(to right, #ff8ad1, #ffffff);
     -webkit-background-clip: text;
@@ -591,14 +599,14 @@ h3, h4, h5 { font-weight: 700; }
 }
 
 .producto-header h4 {
-    font-size: 0.92rem;
+    font-size: 1rem;
     color: #aaa;
     margin-top: 4px;
 
 }
 
 .producto-desc {
-    font-size: 0.95rem;
+    font-size: 1.1rem;
     color: rgba(255,255,255,0.55);
     line-height: 1.7;
 
@@ -615,10 +623,10 @@ h3, h4, h5 { font-weight: 700; }
 #buscando span {
     display: inline-flex;
     align-items: center;
+    font-size: 1rem;
     gap: 5px;
     color: var(--pink);
     font-size: 0.82rem;
-
     background: rgba(252,171,205,0.08);
     padding: 4px 10px;
     border-radius: 20px;
@@ -783,7 +791,7 @@ h3, h4, h5 { font-weight: 700; }
 }
 
 .tercer-aside p {
-    font-size: 1.05rem;
+    font-size: 1.3rem;
     color: var(--gray);
     line-height: 1.8;
 
@@ -819,7 +827,7 @@ h3, h4, h5 { font-weight: 700; }
 .metodos:hover { border-color: rgba(252,171,205,0.35); }
 
 .metodos h5 {
-    font-size: 1.05rem;
+    font-size: 1.2rem;
     color: var(--white);
     margin-bottom: 12px;
 
@@ -839,6 +847,7 @@ h3, h4, h5 { font-weight: 700; }
     gap: 8px;
     font-size: 0.95rem;
     color: #ccc;
+    font-size: 1.05rem;
  
 }
 
@@ -899,8 +908,8 @@ h3, h4, h5 { font-weight: 700; }
 }
 
 #R p {
-    font-size: 1rem;
-    color: rgba(255,255,255,0.5);
+    font-size: 1.3rem;
+    color: rgba(255, 255, 255, 0.642);
     line-height: 1.8;
 
 }
@@ -919,6 +928,7 @@ h3, h4, h5 { font-weight: 700; }
     height: 340px;
     perspective: 1000px;
     position: relative;
+    
 }
 
 #del {
@@ -942,6 +952,7 @@ h3, h4, h5 { font-weight: 700; }
     border: 3px solid rgba(252,171,205,0.25);
     transition: var(--trans);
     backface-visibility: hidden;
+    
 }
 
 .auxiliar img {
@@ -1013,7 +1024,7 @@ h3, h4, h5 { font-weight: 700; }
 }
 
 .testimonios-header p {
-    font-size: 1.05rem;
+    font-size: 1.2rem;
     color: rgba(255,255,255,0.5);
     line-height: 1.75;
 
@@ -1064,9 +1075,8 @@ h3, h4, h5 { font-weight: 700; }
 }
 
 .cajones-tex p {
-    font-size: 1rem;
+    font-size: 1.1rem;
     color: rgba(255,255,255,0.65);
-    font-style: italic;
     line-height: 1.7;
 
 }
@@ -1135,7 +1145,7 @@ h3, h4, h5 { font-weight: 700; }
 }
 
 .ante-del-0 p {
-    font-size: 1rem;
+    font-size: 1.1rem;
     color: rgba(255,255,255,0.5);
 
 }
@@ -1173,7 +1183,7 @@ h3, h4, h5 { font-weight: 700; }
 
 .contenedor-del-2 .bi {
     color: var(--pink);
-    font-size: 1rem;
+    font-size: 1.2rem;
     transition: transform 0.3s var(--ease);
     flex-shrink: 0;
 }
@@ -1183,19 +1193,17 @@ h3, h4, h5 { font-weight: 700; }
 }
 
 .contenedor-del-2 h4 {
-    font-size: 1rem;
+    font-size: 1.2rem;
     color: rgba(255,255,255,0.8);
     line-height: 1.35;
- 
     transition: var(--trans);
 }
 
 .resultado {
     display: none;
-    font-size: 0.95rem;
+    font-size: 1.2rem;
     color: rgba(252,171,205,0.75);
     line-height: 1.7;
- 
     padding: 8px 0 4px 30px;
     border-left: 2px solid rgba(252,171,205,0.25);
     margin-left: 4px;

@@ -52,7 +52,11 @@ nav ul li a{
     font-size: 1.2rem;
 }
 
-/* EFECTO LINEA */
+.nav-link:hover,
+.nav-link.active { color:white; }
+
+.nav-link:hover::after,
+.nav-link.active::after { width: 100%; }
 nav ul li::after {
     content: '';
     position: absolute;
