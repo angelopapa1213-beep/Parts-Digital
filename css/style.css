@@ -39,7 +39,6 @@ ul { list-style: none; }
 img { max-width: 100%; display: block; }
 button {
     cursor: pointer;
-    font-family: 'Playfair Display', serif;
 }
 
 /* =============================================
@@ -53,13 +52,12 @@ button {
     text-transform: uppercase;
     color: var(--pink);
     margin-bottom: 10px;
-    font-family: 'Cormorant Garamond', serif;
     font-style: italic;
 }
 .section-tag.light { color: var(--pink); }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Playfair Display', serif;
+
     font-weight: 700;
 }
 
@@ -103,8 +101,7 @@ h3, h4, h5 { font-weight: 700; }
     color: #fcabcd;
     font-size: 0.93rem;
     font-weight: 500;
-    font-family: 'Playfair Display', serif;
-    font-style: italic;
+
     transition: var(--trans);
     padding-bottom: 4px;
 }
@@ -143,7 +140,7 @@ h3, h4, h5 { font-weight: 700; }
     outline: none;
     transition: var(--trans);
     width: 180px;
-    font-family: 'Cormorant Garamond', serif;
+
 }
 
 #sopla input:focus {
@@ -171,8 +168,7 @@ h3, h4, h5 { font-weight: 700; }
     border-radius: 22px;
     font-size: 0.88rem;
     font-weight: 600;
-    font-family: 'Playfair Display', serif;
-    font-style: italic;
+
     transition: var(--trans);
     white-space: nowrap;
 }
@@ -235,8 +231,7 @@ h3, h4, h5 { font-weight: 700; }
     padding: 13px 28px;
     color: rgba(255,255,255,0.75);
     font-size: 0.95rem;
-    font-family: 'Playfair Display', serif;
-    font-style: italic;
+
     border-bottom: 1px solid rgba(255,255,255,0.04);
     transition: var(--trans);
 }
@@ -289,13 +284,12 @@ h3, h4, h5 { font-weight: 700; }
     font-size: 0.82rem;
     color: var(--pink);
     font-weight: 600;
-    font-family: 'Cormorant Garamond', serif;
-    font-style: italic;
+    
     width: fit-content;
 }
 
 #text h1 {
-    font-family: 'Playfair Display', serif;
+  
     font-weight: 800;
     font-size: clamp(2rem, 4.5vw, 3rem);
     color: var(--white);
@@ -315,8 +309,7 @@ h3, h4, h5 { font-weight: 700; }
     font-size: 1.4rem;
     color: white;
     line-height: 1.8;
-    font-family: 'Cormorant Garamond', serif;
-    font-weight: 400;
+
 }
 
 .hero-btns {
@@ -337,8 +330,7 @@ h3, h4, h5 { font-weight: 700; }
     border-radius: 28px;
     font-size: 0.95rem;
     font-weight: 700;
-    font-family: 'Playfair Display', serif;
-    font-style: italic;
+
     transition: var(--trans);
 }
 
@@ -359,8 +351,7 @@ h3, h4, h5 { font-weight: 700; }
     border-radius: 28px;
     font-size: 0.95rem;
     font-weight: 600;
-    font-family: 'Playfair Display', serif;
-    font-style: italic;
+
     transition: var(--trans);
 }
 
@@ -455,7 +446,7 @@ h3, h4, h5 { font-weight: 700; }
     font-size: 1.1rem;
     color: var(--gray);
     line-height: 1.8;
-    font-family: 'Cormorant Garamond', serif;
+  
 }
 
 .caja-carrusel {
@@ -505,14 +496,14 @@ h3, h4, h5 { font-weight: 700; }
 .dividiendo-1 h4 {
     font-size: 1.1rem;
     color: var(--white);
-    font-family: 'Playfair Display', serif;
+   
 }
 
 .dividiendo-1 p {
     font-size: 0.95rem;
     color: #aaa;
     line-height: 1.7;
-    font-family: 'Cormorant Garamond', serif;
+
 }
 
 /* =============================================
@@ -547,7 +538,7 @@ h3, h4, h5 { font-weight: 700; }
     font-size: 1.1rem;
     color: rgba(255,255,255,0.55);
     max-width: 500px;
-    font-family: 'Cormorant Garamond', serif;
+    
 }
 
 #even {
@@ -592,7 +583,7 @@ h3, h4, h5 { font-weight: 700; }
 
 .producto-header h3 {
     font-size: 1.2rem;
-    font-family: 'Playfair Display', serif;
+
     background: linear-gradient(to right, #ff8ad1, #ffffff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -603,15 +594,14 @@ h3, h4, h5 { font-weight: 700; }
     font-size: 0.92rem;
     color: #aaa;
     margin-top: 4px;
-    font-family: 'Cormorant Garamond', serif;
-    font-style: italic;
+
 }
 
 .producto-desc {
     font-size: 0.95rem;
     color: rgba(255,255,255,0.55);
     line-height: 1.7;
-    font-family: 'Cormorant Garamond', serif;
+
 }
 
 #buscando {
@@ -628,7 +618,7 @@ h3, h4, h5 { font-weight: 700; }
     gap: 5px;
     color: var(--pink);
     font-size: 0.82rem;
-    font-family: 'Cormorant Garamond', serif;
+
     background: rgba(252,171,205,0.08);
     padding: 4px 10px;
     border-radius: 20px;
@@ -644,7 +634,7 @@ h3, h4, h5 { font-weight: 700; }
     color: var(--pink);
     font-size: 1.25rem;
     font-weight: 700;
-    font-family: 'Playfair Display', serif;
+
 }
 
 .boton-oferta {
@@ -654,8 +644,7 @@ h3, h4, h5 { font-weight: 700; }
     border-radius: 20px;
     font-size: 0.88rem;
     font-weight: 600;
-    font-family: 'Playfair Display', serif;
-    font-style: italic;
+
     color: var(--black);
     transition: var(--trans);
 }
@@ -701,14 +690,14 @@ h3, h4, h5 { font-weight: 700; }
 #suscripcion h2 {
     font-size: clamp(1.5rem, 3vw, 2.2rem);
     color: var(--white);
-    font-family: 'Playfair Display', serif;
+
 }
 
 #suscripcion p {
     font-size: 1.1rem;
     color: rgba(255,255,255,0.65);
     line-height: 1.75;
-    font-family: 'Cormorant Garamond', serif;
+
 }
 
 #caja-del-input { width: 100%; }
@@ -730,7 +719,7 @@ h3, h4, h5 { font-weight: 700; }
     border-radius: 23px;
     font-size: 0.95rem;
     color: var(--pink);
-    font-family: 'Cormorant Garamond', serif;
+
     outline: none;
     transition: var(--trans);
 }
@@ -747,8 +736,7 @@ h3, h4, h5 { font-weight: 700; }
     border-radius: 23px;
     font-size: 0.95rem;
     font-weight: 700;
-    font-family: 'Playfair Display', serif;
-    font-style: italic;
+
     transition: var(--trans);
 }
 
@@ -791,14 +779,14 @@ h3, h4, h5 { font-weight: 700; }
     font-size: clamp(1.5rem, 3vw, 2.2rem);
     color: var(--black);
     line-height: 1.2;
-    font-family: 'Playfair Display', serif;
+
 }
 
 .tercer-aside p {
     font-size: 1.05rem;
     color: var(--gray);
     line-height: 1.8;
-    font-family: 'Cormorant Garamond', serif;
+
 }
 
 #texto-reparacion { gap: 18px; }
@@ -834,7 +822,7 @@ h3, h4, h5 { font-weight: 700; }
     font-size: 1.05rem;
     color: var(--white);
     margin-bottom: 12px;
-    font-family: 'Playfair Display', serif;
+
 }
 
 .metodos h5 span { color: var(--pink); }
@@ -851,7 +839,7 @@ h3, h4, h5 { font-weight: 700; }
     gap: 8px;
     font-size: 0.95rem;
     color: #ccc;
-    font-family: 'Cormorant Garamond', serif;
+ 
 }
 
 .metodos ul li .bi {
@@ -881,7 +869,7 @@ h3, h4, h5 { font-weight: 700; }
     color: var(--white);
     text-align: center;
     max-width: 700px;
-    font-family: 'Playfair Display', serif;
+
 }
 
 #contenedor-cuarto {
@@ -907,14 +895,14 @@ h3, h4, h5 { font-weight: 700; }
 #R h2 {
     font-size: clamp(1.3rem, 2.5vw, 1.8rem);
     color: var(--white);
-    font-family: 'Playfair Display', serif;
+
 }
 
 #R p {
     font-size: 1rem;
     color: rgba(255,255,255,0.5);
     line-height: 1.8;
-    font-family: 'Cormorant Garamond', serif;
+
 }
 
 /* Carrusel 3D */
@@ -1021,14 +1009,14 @@ h3, h4, h5 { font-weight: 700; }
 .testimonios-header h2 {
     font-size: clamp(1.8rem, 3.5vw, 2.6rem);
     color: var(--white);
-    font-family: 'Playfair Display', serif;
+ 
 }
 
 .testimonios-header p {
     font-size: 1.05rem;
     color: rgba(255,255,255,0.5);
     line-height: 1.75;
-    font-family: 'Cormorant Garamond', serif;
+
 }
 
 #separador-2 {
@@ -1080,13 +1068,13 @@ h3, h4, h5 { font-weight: 700; }
     color: rgba(255,255,255,0.65);
     font-style: italic;
     line-height: 1.7;
-    font-family: 'Cormorant Garamond', serif;
+
 }
 
 .cajones-tex h3 {
     font-size: 1.05rem;
     color: var(--white);
-    font-family: 'Playfair Display', serif;
+
 }
 
 .estrellas-mini {
@@ -1109,8 +1097,7 @@ h3, h4, h5 { font-weight: 700; }
     font-size: clamp(0.95rem, 2vw, 1.2rem);
     color: var(--white);
     text-align: center;
-    font-family: 'Cormorant Garamond', serif;
-    font-style: italic;
+
 }
 
 /* =============================================
@@ -1144,13 +1131,13 @@ h3, h4, h5 { font-weight: 700; }
 .ante-del-0 h3 {
     font-size: clamp(1.4rem, 3vw, 2rem);
     color: var(--white);
-    font-family: 'Playfair Display', serif;
+
 }
 
 .ante-del-0 p {
     font-size: 1rem;
     color: rgba(255,255,255,0.5);
-    font-family: 'Cormorant Garamond', serif;
+
 }
 
 .ante-del-1 {
@@ -1199,7 +1186,7 @@ h3, h4, h5 { font-weight: 700; }
     font-size: 1rem;
     color: rgba(255,255,255,0.8);
     line-height: 1.35;
-    font-family: 'Playfair Display', serif;
+ 
     transition: var(--trans);
 }
 
@@ -1208,8 +1195,7 @@ h3, h4, h5 { font-weight: 700; }
     font-size: 0.95rem;
     color: rgba(252,171,205,0.75);
     line-height: 1.7;
-    font-family: 'Cormorant Garamond', serif;
-    font-style: italic;
+ 
     padding: 8px 0 4px 30px;
     border-left: 2px solid rgba(252,171,205,0.25);
     margin-left: 4px;
@@ -1245,7 +1231,7 @@ footer {
     line-height: 1.85;
     max-width: 260px;
     margin-bottom: 22px;
-    font-family: 'Cormorant Garamond', serif;
+
 }
 
 .footer-social {
@@ -1278,7 +1264,7 @@ footer {
     letter-spacing: 2.5px;
     color: var(--white);
     margin-bottom: 20px;
-    font-family: 'Playfair Display', serif;
+
 }
 
 .footer-col ul {
@@ -1290,7 +1276,7 @@ footer {
 .footer-col ul li a {
     font-size: 0.95rem;
     color: rgba(255,255,255,0.38);
-    font-family: 'Cormorant Garamond', serif;
+ 
     transition: var(--trans);
 }
 
@@ -1304,7 +1290,7 @@ footer {
     color: rgba(255,255,255,0.38);
     margin-bottom: 16px;
     line-height: 1.7;
-    font-family: 'Cormorant Garamond', serif;
+   
 }
 
 .newsletter-form {
@@ -1320,7 +1306,7 @@ footer {
     border-radius: 10px;
     padding: 11px 14px;
     color: var(--white);
-    font-family: 'Cormorant Garamond', serif;
+
     font-size: 0.95rem;
     outline: none;
     transition: var(--trans);
@@ -1337,7 +1323,7 @@ footer {
     border-radius: 10px;
     font-weight: 700;
     font-size: 0.88rem;
-    font-family: 'Playfair Display', serif;
+
     font-style: italic;
     transition: var(--trans);
 }
@@ -1347,7 +1333,6 @@ footer {
 .footer-mini-text {
     font-size: 0.82rem !important;
     color: rgba(255,255,255,0.28) !important;
-    font-family: 'Cormorant Garamond', serif !important;
 }
 
 .footer-bottom {
@@ -1365,7 +1350,7 @@ footer {
 .footer-bottom p {
     font-size: 0.88rem;
     color: rgba(255,255,255,0.28);
-    font-family: 'Cormorant Garamond', serif;
+   
 }
 
 .footer-bottom-links {
@@ -1376,7 +1361,7 @@ footer {
 .footer-bottom-links a {
     font-size: 0.88rem;
     color: rgba(255,255,255,0.28);
-    font-family: 'Cormorant Garamond', serif;
+
     font-style: italic;
     transition: var(--trans);
 }

@@ -1,0 +1,1189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Parts – Reparación de Dispositivos Electrónicos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+/* =============================================
+   CSS VARIABLES & RESET
+   ============================================= */
+:root {
+    --pink: #fcabcd;
+    --pink-hot: #ff6b9d;
+    --pink-dark: #e85a8a;
+    --black: #0d0d0d;
+    --black-2: #141414;
+    --black-3: #1e1e1e;
+    --white: #ffffff;
+    --off-white: #f6f6f6;
+    --gray: #888;
+    --gray-light: #e0e0e0;
+    --shadow-soft: 0 4px 24px rgba(0,0,0,0.08);
+    --shadow-med: 0 8px 32px rgba(0,0,0,0.13);
+    --shadow-pink: 0 8px 30px rgba(252,171,205,0.35);
+    --radius: 18px;
+    --radius-sm: 10px;
+    --transition: all 0.32s cubic-bezier(0.4,0,0.2,1);
+}
+
+*,*::before,*::after { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; font-size:16px; }
+body { font-family:'Poppins',sans-serif; background:var(--white); color:var(--black); overflow-x:hidden; }
+a { text-decoration:none; color:inherit; }
+ul { list-style:none; }
+img { max-width:100%; display:block; }
+button { cursor:pointer; font-family:'Poppins',sans-serif; }
+
+.container { max-width:1200px; margin:0 auto; padding:0 24px; }
+
+/* =============================================
+   HEADER / NAV
+   ============================================= */
+#header {
+    position:fixed; top:0; left:0; right:0; z-index:1000;
+    background:rgba(13,13,13,0.94);
+    backdrop-filter:blur(18px);
+    border-bottom:1px solid rgba(252,171,205,0.1);
+    transition:var(--transition);
+}
+.nav-inner {
+    max-width:1200px; margin:0 auto; padding:0 24px;
+    height:70px; display:flex; align-items:center; justify-content:space-between; gap:20px;
+}
+.nav-logo {
+    display:flex; align-items:center; gap:12px;
+    font-family:'Space Grotesk',sans-serif;
+    font-size:1.45rem; font-weight:700; color:var(--white);
+    letter-spacing:1px;
+}
+.nav-logo span { color:var(--pink); }
+.logo-icon { width:36px; height:36px; background:var(--pink); border-radius:8px;
+    display:flex; align-items:center; justify-content:center; font-size:1.1rem; color:var(--black); }
+
+nav ul { display:flex; gap:28px; }
+nav ul li a {
+    color:rgba(255,255,255,0.75); font-size:0.92rem; font-weight:500;
+    position:relative; transition:var(--transition);
+}
+nav ul li a::after {
+    content:''; position:absolute; bottom:-4px; left:0;
+    width:0; height:2px; background:var(--pink); transition:var(--transition);
+}
+nav ul li a:hover { color:var(--pink); }
+nav ul li a:hover::after { width:100%; }
+
+.nav-actions { display:flex; align-items:center; gap:14px; }
+
+.btn-search {
+    background:none; border:none; color:rgba(255,255,255,0.6);
+    font-size:1.1rem; transition:var(--transition); padding:6px;
+}
+.btn-search:hover { color:var(--pink); }
+
+.btn-login {
+    padding:9px 24px; background:transparent; color:var(--pink);
+    border:1.5px solid var(--pink); border-radius:25px;
+    font-size:0.88rem; font-weight:600; transition:var(--transition);
+}
+.btn-login:hover {
+    background:var(--pink); color:var(--black);
+    box-shadow:var(--shadow-pink);
+}
+
+.hamburger {
+    display:none; flex-direction:column; gap:5px;
+    background:none; border:none; padding:4px; cursor:pointer;
+}
+.hamburger span {
+    display:block; width:24px; height:2px; background:var(--pink);
+    transition:var(--transition); border-radius:2px;
+}
+.hamburger.open span:nth-child(1) { transform:translateY(7px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity:0; }
+.hamburger.open span:nth-child(3) { transform:translateY(-7px) rotate(-45deg); }
+
+.mobile-menu {
+    display:none; flex-direction:column; gap:0;
+    background:var(--black-2); border-top:1px solid rgba(252,171,205,0.08);
+    padding:0;
+}
+.mobile-menu.open { display:flex; }
+.mobile-menu a {
+    padding:14px 24px; color:rgba(255,255,255,0.75); font-size:0.95rem;
+    border-bottom:1px solid rgba(255,255,255,0.04); transition:var(--transition);
+}
+.mobile-menu a:hover { color:var(--pink); padding-left:32px; }
+
+/* =============================================
+   HERO SECTION
+   ============================================= */
+.hero {
+    min-height:100vh; display:flex; align-items:center; justify-content:center;
+    background:var(--black);
+    position:relative; overflow:hidden; padding-top:70px;
+}
+.hero-bg {
+    position:absolute; inset:0; pointer-events:none;
+    background:
+        radial-gradient(ellipse 60% 50% at 15% 85%, rgba(252,171,205,0.13) 0%, transparent 65%),
+        radial-gradient(ellipse 50% 40% at 85% 15%, rgba(255,107,157,0.09) 0%, transparent 65%),
+        radial-gradient(ellipse 30% 30% at 50% 50%, rgba(252,171,205,0.04) 0%, transparent 70%);
+}
+.hero-grid {
+    position:absolute; inset:0;
+    background-image:
+        linear-gradient(rgba(252,171,205,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(252,171,205,0.04) 1px, transparent 1px);
+    background-size:60px 60px;
+}
+.hero-content {
+    position:relative; z-index:2; text-align:center; max-width:780px; padding:0 24px;
+}
+.hero-badge {
+    display:inline-flex; align-items:center; gap:8px;
+    background:rgba(252,171,205,0.1); border:1px solid rgba(252,171,205,0.25);
+    border-radius:30px; padding:6px 18px; font-size:0.82rem; color:var(--pink);
+    font-weight:500; margin-bottom:28px;
+    animation:fadeUp 0.7s ease-out both;
+}
+.hero-badge i { font-size:0.75rem; }
+
+.hero-title {
+    font-family:'Space Grotesk',sans-serif;
+    font-size:clamp(2.8rem,7vw,5.2rem);
+    font-weight:700; color:var(--white); line-height:1.08;
+    margin-bottom:22px;
+    animation:fadeUp 0.7s ease-out 0.15s both;
+}
+.hero-title .accent { color:var(--pink); }
+
+.hero-subtitle {
+    font-size:clamp(1rem,2.5vw,1.22rem); color:rgba(255,255,255,0.55);
+    max-width:560px; margin:0 auto 42px; line-height:1.75;
+    animation:fadeUp 0.7s ease-out 0.28s both;
+}
+.hero-btns {
+    display:flex; gap:16px; justify-content:center; flex-wrap:wrap;
+    animation:fadeUp 0.7s ease-out 0.4s both;
+}
+.btn-primary {
+    display:inline-flex; align-items:center; gap:8px;
+    padding:14px 36px; background:var(--pink);
+    color:var(--black); border-radius:30px;
+    font-weight:700; font-size:0.95rem; border:none;
+    transition:var(--transition); position:relative; overflow:hidden;
+}
+.btn-primary:hover {
+    background:var(--pink-hot); transform:translateY(-2px);
+    box-shadow:var(--shadow-pink);
+}
+.btn-outline {
+    display:inline-flex; align-items:center; gap:8px;
+    padding:14px 36px; background:transparent;
+    color:var(--white); border:1.5px solid rgba(255,255,255,0.2);
+    border-radius:30px; font-weight:600; font-size:0.95rem;
+    transition:var(--transition);
+}
+.btn-outline:hover { border-color:var(--pink); color:var(--pink); transform:translateY(-2px); }
+
+.hero-stats {
+    display:flex; justify-content:center; gap:48px; flex-wrap:wrap;
+    margin-top:70px; padding-top:40px;
+    border-top:1px solid rgba(255,255,255,0.06);
+    animation:fadeUp 0.7s ease-out 0.55s both;
+}
+.stat { text-align:center; }
+.stat-num {
+    font-family:'Space Grotesk',sans-serif;
+    font-size:2rem; font-weight:700; color:var(--pink); display:block;
+}
+.stat-label { font-size:0.82rem; color:rgba(255,255,255,0.45); margin-top:3px; }
+
+/* =============================================
+   SECTION HEADERS
+   ============================================= */
+.section-header { text-align:center; margin-bottom:60px; }
+.section-tag {
+    display:inline-block; font-size:0.78rem; font-weight:700;
+    letter-spacing:2.5px; text-transform:uppercase; color:var(--pink);
+    margin-bottom:14px;
+}
+.section-title {
+    font-family:'Space Grotesk',sans-serif;
+    font-size:clamp(1.8rem,4vw,2.6rem); font-weight:700;
+    color:var(--black); line-height:1.15; margin-bottom:14px;
+}
+.section-title.light { color:var(--white); }
+.section-title::after {
+    content:''; display:block; width:50px; height:3px;
+    background:var(--pink); margin:16px auto 0; border-radius:2px;
+}
+.section-sub {
+    font-size:1rem; color:var(--gray); max-width:560px;
+    margin:0 auto; line-height:1.7;
+}
+.section-sub.light { color:rgba(255,255,255,0.45); }
+
+/* =============================================
+   SERVICIOS SECTION
+   ============================================= */
+.servicios { padding:110px 0; background:var(--off-white); }
+
+.servicios-grid {
+    display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:28px;
+}
+.servicio-card {
+    background:var(--white); border-radius:var(--radius);
+    padding:40px 30px 36px; text-align:center;
+    border:1px solid var(--gray-light);
+    box-shadow:var(--shadow-soft); transition:var(--transition);
+    position:relative; overflow:hidden;
+}
+.servicio-card::before {
+    content:''; position:absolute; inset:0;
+    background:linear-gradient(135deg,rgba(252,171,205,0.06) 0%,transparent 70%);
+    opacity:0; transition:var(--transition);
+}
+.servicio-card:hover { transform:translateY(-10px); box-shadow:0 20px 50px rgba(252,171,205,0.2); border-color:var(--pink); }
+.servicio-card:hover::before { opacity:1; }
+
+.servicio-img {
+    width:130px; height:130px; margin:0 auto 24px;
+    background:var(--off-white); border-radius:50%;
+    display:flex; align-items:center; justify-content:center;
+    font-size:3.2rem; color:var(--pink); transition:var(--transition);
+}
+.servicio-card:hover .servicio-img { background:var(--pink); color:var(--black); transform:scale(1.08); }
+.servicio-card h3 { font-size:1.18rem; font-weight:700; color:var(--black); margin-bottom:12px; }
+.servicio-card p { color:var(--gray); font-size:0.9rem; line-height:1.7; margin-bottom:24px; }
+.btn-sec {
+    display:inline-block; padding:9px 24px;
+    border:1.5px solid var(--pink); color:var(--pink);
+    border-radius:25px; font-size:0.85rem; font-weight:600;
+    transition:var(--transition);
+}
+.btn-sec:hover { background:var(--pink); color:var(--black); }
+
+/* =============================================
+   TALLERES SECTION
+   ============================================= */
+.talleres { padding:110px 0; background:var(--white); }
+
+.talleres-grid {
+    display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:28px;
+}
+.taller-card {
+    background:var(--off-white); border-radius:var(--radius);
+    overflow:hidden; border:1px solid var(--gray-light);
+    transition:var(--transition);
+}
+.taller-card:hover { transform:translateY(-8px); box-shadow:0 20px 50px rgba(252,171,205,0.18); border-color:var(--pink); }
+.taller-img {
+    height:200px; background:linear-gradient(135deg,var(--black) 0%,var(--black-3) 100%);
+    display:flex; align-items:center; justify-content:center;
+    font-size:4.5rem; color:var(--pink); position:relative; overflow:hidden;
+}
+.taller-img::after {
+    content:''; position:absolute; inset:0;
+    background:linear-gradient(to top,rgba(0,0,0,0.3),transparent);
+}
+.taller-body { padding:28px 26px; }
+.taller-body h3 { font-size:1.1rem; font-weight:700; color:var(--black); margin-bottom:10px; }
+.taller-body p { color:var(--gray); font-size:0.88rem; line-height:1.7; margin-bottom:20px; }
+.taller-meta {
+    display:flex; gap:16px; flex-wrap:wrap; margin-bottom:20px;
+}
+.taller-tag {
+    display:inline-flex; align-items:center; gap:5px;
+    font-size:0.78rem; font-weight:600; color:var(--pink);
+    background:rgba(252,171,205,0.1); border-radius:20px; padding:4px 12px;
+}
+
+/* =============================================
+   SOBRE NOSOTROS
+   ============================================= */
+.sobre { padding:110px 0; background:var(--off-white); }
+
+.sobre-layout { display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:center; }
+@media(max-width:900px){ .sobre-layout { grid-template-columns:1fr; } }
+
+.sobre-left .big-text {
+    font-family:'Space Grotesk',sans-serif;
+    font-size:clamp(2rem,4vw,3rem); font-weight:700;
+    color:var(--black); line-height:1.2; margin-bottom:24px;
+}
+.sobre-left .big-text span { color:var(--pink); }
+.sobre-left p { color:var(--gray); font-size:0.97rem; line-height:1.8; margin-bottom:30px; }
+
+.sobre-grid { display:grid; grid-template-columns:1fr 1fr; gap:20px; }
+.sobre-item {
+    background:var(--white); border-radius:var(--radius-sm);
+    padding:24px 20px; border-left:3px solid var(--pink);
+    box-shadow:var(--shadow-soft); transition:var(--transition);
+}
+.sobre-item:hover { transform:translateX(6px); box-shadow:var(--shadow-med); }
+.sobre-item h3 { font-size:1rem; font-weight:700; color:var(--black); margin-bottom:8px; display:flex; align-items:center; gap:8px; }
+.sobre-item h3 i { color:var(--pink); font-size:0.85rem; }
+.sobre-item p { color:var(--gray); font-size:0.85rem; line-height:1.6; }
+.valores-tags { display:flex; flex-wrap:wrap; gap:8px; margin-top:8px; }
+.valores-tags span {
+    font-size:0.78rem; font-weight:600; padding:5px 12px;
+    background:var(--pink); color:var(--black); border-radius:20px;
+}
+
+/* =============================================
+   PRODUCTOS SECTION
+   ============================================= */
+.productos { padding:110px 0; background:var(--white); }
+
+.productos-grid {
+    display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:28px;
+}
+.producto-card {
+    background:var(--white); border-radius:var(--radius);
+    border:1px solid var(--gray-light); overflow:hidden;
+    box-shadow:var(--shadow-soft); transition:var(--transition);
+    text-align:center;
+}
+.producto-card:hover { transform:translateY(-10px); border-color:var(--pink); box-shadow:0 18px 45px rgba(252,171,205,0.2); }
+.producto-img {
+    height:170px; background:var(--off-white);
+    display:flex; align-items:center; justify-content:center;
+    font-size:3.5rem; color:var(--pink); transition:var(--transition);
+}
+.producto-card:hover .producto-img { background:var(--black); color:var(--pink); }
+.producto-card h3 { padding:18px 16px 6px; font-size:1.05rem; font-weight:700; color:var(--black); }
+.producto-precio { padding:0 16px 20px; font-size:1.15rem; font-weight:700; color:var(--pink); }
+.producto-badge {
+    display:inline-block; font-size:0.72rem; font-weight:700;
+    background:rgba(252,171,205,0.12); color:var(--pink);
+    border-radius:20px; padding:3px 10px; margin-bottom:10px;
+}
+
+/* =============================================
+   GALERÍA
+   ============================================= */
+.galeria { padding:110px 0; background:var(--black); }
+
+.galeria-grid {
+    display:grid; grid-template-columns:repeat(3,1fr);
+    grid-template-rows:auto auto; gap:16px;
+}
+.galeria-item {
+    background:var(--black-3); border-radius:var(--radius);
+    height:200px; display:flex; flex-direction:column;
+    align-items:center; justify-content:center; gap:12px;
+    border:1px solid rgba(255,255,255,0.05);
+    cursor:pointer; transition:var(--transition); position:relative; overflow:hidden;
+}
+.galeria-item:first-child { grid-row:span 2; height:100%; }
+.galeria-item::before {
+    content:''; position:absolute; inset:0;
+    background:linear-gradient(135deg,var(--pink),var(--pink-dark));
+    opacity:0; transition:var(--transition);
+}
+.galeria-item:hover::before { opacity:0.2; }
+.galeria-item:hover { border-color:var(--pink); transform:scale(1.02); }
+.galeria-item i { font-size:2.5rem; color:var(--pink); z-index:1; transition:var(--transition); }
+.galeria-item span { color:rgba(255,255,255,0.55); font-size:0.88rem; z-index:1; }
+.galeria-item:hover i { transform:rotate(15deg) scale(1.15); color:var(--white); }
+
+@media(max-width:768px){
+    .galeria-grid { grid-template-columns:1fr 1fr; }
+    .galeria-item:first-child { grid-row:span 1; height:200px; }
+}
+@media(max-width:480px){
+    .galeria-grid { grid-template-columns:1fr; }
+}
+
+/* =============================================
+   TESTIMONIOS (NUEVA SECCIÓN)
+   ============================================= */
+.testimonios { padding:110px 0; background:var(--off-white); }
+
+.testimonios-grid {
+    display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:28px;
+}
+.testimonio-card {
+    background:var(--white); border-radius:var(--radius);
+    padding:32px 28px; border:1px solid var(--gray-light);
+    box-shadow:var(--shadow-soft); transition:var(--transition);
+    position:relative;
+}
+.testimonio-card::before {
+    content:'"'; position:absolute; top:16px; right:24px;
+    font-size:5rem; line-height:1; color:rgba(252,171,205,0.18);
+    font-family:'Space Grotesk',sans-serif; font-weight:700;
+}
+.testimonio-card:hover { transform:translateY(-8px); box-shadow:0 18px 45px rgba(252,171,205,0.18); border-color:var(--pink); }
+.stars { display:flex; gap:4px; margin-bottom:16px; }
+.stars i { color:var(--pink); font-size:0.85rem; }
+.testimonio-card p { color:var(--gray); font-size:0.93rem; line-height:1.75; margin-bottom:24px; }
+.testimonio-autor { display:flex; align-items:center; gap:14px; }
+.autor-avatar {
+    width:46px; height:46px; border-radius:50%;
+    background:var(--black); display:flex; align-items:center; justify-content:center;
+    font-size:1.1rem; font-weight:700; color:var(--pink);
+    flex-shrink:0;
+}
+.autor-info strong { display:block; font-size:0.92rem; color:var(--black); font-weight:700; }
+.autor-info span { font-size:0.8rem; color:var(--gray); }
+
+/* =============================================
+   PROCESO DE REPARACIÓN (NUEVA SECCIÓN)
+   ============================================= */
+.proceso { padding:110px 0; background:var(--black); }
+
+.proceso-steps {
+    display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:0; position:relative; margin-top:20px;
+}
+.proceso-steps::before {
+    content:''; position:absolute;
+    top:50px; left:10%; right:10%; height:1px;
+    background:linear-gradient(90deg, transparent, rgba(252,171,205,0.3), transparent);
+    display:none;
+}
+@media(min-width:768px){ .proceso-steps::before { display:block; } }
+
+.paso {
+    text-align:center; padding:32px 24px;
+    position:relative;
+}
+.paso-num {
+    width:64px; height:64px; margin:0 auto 20px;
+    background:rgba(252,171,205,0.08); border:1.5px solid rgba(252,171,205,0.3);
+    border-radius:50%; display:flex; align-items:center; justify-content:center;
+    font-family:'Space Grotesk',sans-serif; font-size:1.4rem; font-weight:700;
+    color:var(--pink); transition:var(--transition);
+}
+.paso:hover .paso-num { background:var(--pink); color:var(--black); border-color:var(--pink); }
+.paso-icon { font-size:1.5rem; color:var(--pink); margin-bottom:14px; }
+.paso h3 { font-size:1.05rem; font-weight:700; color:var(--white); margin-bottom:10px; }
+.paso p { font-size:0.85rem; color:rgba(255,255,255,0.42); line-height:1.7; }
+
+/* =============================================
+   PRECIOS (NUEVA SECCIÓN)
+   ============================================= */
+.precios { padding:110px 0; background:var(--white); }
+
+.precios-grid {
+    display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:28px; align-items:start;
+}
+.precio-card {
+    border-radius:var(--radius); padding:40px 32px;
+    border:1.5px solid var(--gray-light);
+    transition:var(--transition); position:relative; overflow:hidden;
+}
+.precio-card.destacado {
+    background:var(--black); border-color:var(--pink);
+    box-shadow:0 0 0 1px var(--pink), 0 20px 60px rgba(252,171,205,0.2);
+}
+.precio-card:not(.destacado) { background:var(--off-white); }
+.precio-badge {
+    position:absolute; top:18px; right:18px;
+    background:var(--pink); color:var(--black);
+    font-size:0.72rem; font-weight:700; padding:4px 12px; border-radius:20px;
+    letter-spacing:0.5px;
+}
+.precio-nombre { font-size:0.8rem; font-weight:700; letter-spacing:2px; text-transform:uppercase;
+    color:var(--pink); margin-bottom:12px; }
+.precio-valor {
+    font-family:'Space Grotesk',sans-serif;
+    font-size:2.8rem; font-weight:700; margin-bottom:6px;
+}
+.precio-card.destacado .precio-valor { color:var(--white); }
+.precio-card:not(.destacado) .precio-valor { color:var(--black); }
+.precio-sub { font-size:0.82rem; color:var(--gray); margin-bottom:28px; }
+.precio-features { display:flex; flex-direction:column; gap:12px; margin-bottom:32px; }
+.precio-features li { display:flex; align-items:center; gap:10px; font-size:0.9rem; }
+.precio-card.destacado .precio-features li { color:rgba(255,255,255,0.7); }
+.precio-card:not(.destacado) .precio-features li { color:var(--gray); }
+.precio-features li i { color:var(--pink); font-size:0.75rem; flex-shrink:0; }
+.btn-precio {
+    width:100%; padding:14px; border-radius:30px;
+    font-size:0.92rem; font-weight:700; border:none;
+    transition:var(--transition);
+}
+.btn-precio.filled { background:var(--pink); color:var(--black); }
+.btn-precio.filled:hover { background:var(--pink-hot); box-shadow:var(--shadow-pink); transform:translateY(-2px); }
+.btn-precio.ghost { background:transparent; border:1.5px solid var(--gray-light); color:var(--black); }
+.btn-precio.ghost:hover { border-color:var(--pink); color:var(--pink); transform:translateY(-2px); }
+
+/* =============================================
+   CONTACTO
+   ============================================= */
+.contacto { padding:110px 0; background:var(--off-white); }
+
+.contacto-layout { display:grid; grid-template-columns:1fr 1.5fr; gap:50px; margin-top:20px; }
+@media(max-width:900px){ .contacto-layout { grid-template-columns:1fr; } }
+
+.contacto-info { display:flex; flex-direction:column; gap:20px; }
+.contacto-info-item {
+    display:flex; align-items:center; gap:18px;
+    background:var(--white); border-radius:var(--radius-sm);
+    padding:20px; border:1px solid var(--gray-light);
+    box-shadow:var(--shadow-soft); transition:var(--transition);
+}
+.contacto-info-item:hover { transform:translateX(8px); border-color:var(--pink); }
+.c-icon {
+    width:50px; height:50px; border-radius:50%;
+    background:var(--pink); display:flex; align-items:center; justify-content:center;
+    font-size:1.1rem; color:var(--black); flex-shrink:0;
+}
+.c-text strong { display:block; font-size:0.85rem; font-weight:700; color:var(--black); }
+.c-text span { font-size:0.85rem; color:var(--gray); }
+
+.contacto-form {
+    background:var(--white); border-radius:var(--radius);
+    padding:44px; border:1px solid var(--gray-light);
+    box-shadow:var(--shadow-soft);
+}
+.form-row { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+@media(max-width:600px){ .form-row { grid-template-columns:1fr; } }
+.form-group { margin-bottom:18px; }
+.form-group label { display:block; font-size:0.82rem; font-weight:600; color:var(--black); margin-bottom:8px; }
+.form-group input, .form-group textarea, .form-group select {
+    width:100%; padding:13px 16px;
+    border:1.5px solid var(--gray-light); border-radius:var(--radius-sm);
+    font-family:'Poppins',sans-serif; font-size:0.9rem; color:var(--black);
+    background:var(--off-white); transition:var(--transition); outline:none;
+}
+.form-group input:focus, .form-group textarea:focus, .form-group select:focus {
+    border-color:var(--pink); background:var(--white);
+    box-shadow:0 0 0 4px rgba(252,171,205,0.12);
+}
+.form-group textarea { resize:vertical; min-height:110px; }
+.btn-submit {
+    width:100%; padding:15px; background:var(--pink);
+    color:var(--black); border:none; border-radius:30px;
+    font-size:0.97rem; font-weight:700; transition:var(--transition);
+}
+.btn-submit:hover { background:var(--pink-hot); box-shadow:var(--shadow-pink); transform:translateY(-2px); }
+
+/* =============================================
+   FOOTER
+   ============================================= */
+footer {
+    background:var(--black-2);
+    border-top:1px solid rgba(252,171,205,0.08);
+}
+.footer-top {
+    display:grid; grid-template-columns:1.8fr 1fr 1fr 1.4fr;
+    gap:48px; padding:80px 24px 60px; max-width:1200px; margin:0 auto;
+}
+@media(max-width:1000px){ .footer-top { grid-template-columns:1fr 1fr; gap:36px; } }
+@media(max-width:600px){ .footer-top { grid-template-columns:1fr; } }
+
+.footer-brand .brand-name {
+    font-family:'Space Grotesk',sans-serif;
+    font-size:1.5rem; font-weight:700; color:var(--white); margin-bottom:14px;
+    display:flex; align-items:center; gap:10px;
+}
+.footer-brand .brand-name span { color:var(--pink); }
+.footer-brand p { font-size:0.87rem; color:rgba(255,255,255,0.38); line-height:1.8; max-width:260px; margin-bottom:24px; }
+
+.footer-socials { display:flex; gap:10px; }
+.footer-socials a {
+    width:38px; height:38px; border-radius:50%;
+    border:1px solid rgba(255,255,255,0.1);
+    display:flex; align-items:center; justify-content:center;
+    color:rgba(255,255,255,0.5); font-size:0.95rem; transition:var(--transition);
+}
+.footer-socials a:hover { border-color:var(--pink); color:var(--pink); transform:translateY(-3px); }
+
+.footer-col h4 {
+    font-size:0.82rem; font-weight:700; letter-spacing:2px;
+    text-transform:uppercase; color:var(--white); margin-bottom:22px;
+}
+.footer-col ul { display:flex; flex-direction:column; gap:12px; }
+.footer-col ul li a {
+    font-size:0.87rem; color:rgba(255,255,255,0.38); transition:var(--transition);
+}
+.footer-col ul li a:hover { color:var(--pink); padding-left:6px; }
+
+.footer-newsletter h4 {
+    font-size:0.82rem; font-weight:700; letter-spacing:2px;
+    text-transform:uppercase; color:var(--white); margin-bottom:12px;
+}
+.footer-newsletter p { font-size:0.83rem; color:rgba(255,255,255,0.38); margin-bottom:18px; line-height:1.6; }
+.newsletter-form { display:flex; gap:10px; }
+.newsletter-form input {
+    flex:1; background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.1);
+    border-radius:10px; padding:12px 14px; color:var(--white);
+    font-family:'Poppins',sans-serif; font-size:0.85rem; outline:none; transition:var(--transition);
+}
+.newsletter-form input:focus { border-color:var(--pink); }
+.newsletter-form input::placeholder { color:rgba(255,255,255,0.28); }
+.newsletter-form button {
+    padding:12px 18px; background:var(--pink); color:var(--black);
+    border:none; border-radius:10px; font-weight:700; font-size:0.85rem;
+    transition:var(--transition);
+}
+.newsletter-form button:hover { background:var(--pink-hot); }
+
+.footer-bottom {
+    border-top:1px solid rgba(255,255,255,0.05);
+    padding:22px 24px; max-width:1200px; margin:0 auto;
+    display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:12px;
+}
+.footer-bottom p { font-size:0.82rem; color:rgba(255,255,255,0.28); }
+.footer-bottom-links { display:flex; gap:20px; }
+.footer-bottom-links a { font-size:0.82rem; color:rgba(255,255,255,0.28); transition:var(--transition); }
+.footer-bottom-links a:hover { color:var(--pink); }
+
+/* =============================================
+   KEYFRAMES
+   ============================================= */
+@keyframes fadeUp {
+    from { opacity:0; transform:translateY(28px); }
+    to { opacity:1; transform:translateY(0); }
+}
+
+/* Scroll reveal */
+.reveal {
+    opacity:0; transform:translateY(30px); transition:opacity 0.6s ease, transform 0.6s ease;
+}
+.reveal.visible { opacity:1; transform:translateY(0); }
+
+/* =============================================
+   SCROLL TO TOP
+   ============================================= */
+#scrollTop {
+    position:fixed; bottom:28px; right:28px;
+    width:44px; height:44px; border-radius:50%;
+    background:var(--pink); color:var(--black);
+    border:none; font-size:1rem; display:flex; align-items:center; justify-content:center;
+    opacity:0; pointer-events:none; transition:var(--transition); z-index:999;
+    box-shadow:var(--shadow-pink);
+}
+#scrollTop.show { opacity:1; pointer-events:all; }
+#scrollTop:hover { background:var(--pink-hot); transform:translateY(-4px); }
+    </style>
+</head>
+<body>
+
+<!-- ========== HEADER ========== -->
+<header id="header">
+    <div class="nav-inner">
+        <div class="nav-logo">
+            <div class="logo-icon"><i class="fas fa-microchip"></i></div>
+            DIGITAL <span>PARTS</span>
+        </div>
+        <nav id="nav-desktop">
+            <ul>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#talleres">Talleres</a></li>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#testimonios">Testimonios</a></li>
+                <li><a href="#precios">Precios</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+        <div class="nav-actions">
+            <button class="btn-login">Iniciar Sesión</button>
+            <button class="hamburger" id="hamburger" aria-label="Menú">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#servicios">Servicios</a>
+        <a href="#talleres">Talleres</a>
+        <a href="#productos">Productos</a>
+        <a href="#testimonios">Testimonios</a>
+        <a href="#precios">Precios</a>
+        <a href="#contacto">Contacto</a>
+    </div>
+</header>
+
+<!-- ========== HERO ========== -->
+<section class="hero" id="inicio">
+    <div class="hero-bg"></div>
+    <div class="hero-grid"></div>
+    <div class="hero-content">
+        <div class="hero-badge"><i class="fas fa-bolt"></i> Servicio técnico certificado</div>
+        <h1 class="hero-title">Reparamos tu <span class="accent">mundo digital</span></h1>
+        <p class="hero-subtitle">Especialistas en reparación de celulares, laptops y dispositivos electrónicos. Calidad garantizada y entrega rápida.</p>
+        <div class="hero-btns">
+            <a href="#contacto" class="btn-primary"><i class="fas fa-tools"></i> Solicitar servicio</a>
+            <a href="#servicios" class="btn-outline">Ver servicios</a>
+        </div>
+        <div class="hero-stats">
+            <div class="stat"><span class="stat-num">+2,500</span><span class="stat-label">Reparaciones exitosas</span></div>
+            <div class="stat"><span class="stat-num">98%</span><span class="stat-label">Clientes satisfechos</span></div>
+            <div class="stat"><span class="stat-num">6 años</span><span class="stat-label">De experiencia</span></div>
+            <div class="stat"><span class="stat-num">24h</span><span class="stat-label">Tiempo promedio</span></div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== SERVICIOS ========== -->
+<section id="servicios" class="servicios">
+    <div class="container">
+        <div class="section-header reveal">
+            <span class="section-tag">Lo que hacemos</span>
+            <h2 class="section-title">Nuestros Servicios</h2>
+            <p class="section-sub">Expertos en reparación de dispositivos electrónicos con garantía en cada trabajo</p>
+        </div>
+        <div class="servicios-grid">
+            <div class="servicio-card reveal">
+                <div class="servicio-img"><i class="fas fa-mobile-alt"></i></div>
+                <h3>Reparación de Celulares</h3>
+                <p>Cambio de pantallas, baterías, conectores de carga, cámaras y más. Todas las marcas.</p>
+                <a href="#contacto" class="btn-sec">Solicitar</a>
+            </div>
+            <div class="servicio-card reveal">
+                <div class="servicio-img"><i class="fas fa-laptop"></i></div>
+                <h3>Reparación de Laptops</h3>
+                <p>Diagnóstico completo, limpieza de polvo, cambio de componentes y reparación de placa.</p>
+                <a href="#contacto" class="btn-sec">Solicitar</a>
+            </div>
+            <div class="servicio-card reveal">
+                <div class="servicio-img"><i class="fas fa-cogs"></i></div>
+                <h3>Mantenimiento General</h3>
+                <p>Limpieza interna profunda, optimización de software y actualización de sistemas.</p>
+                <a href="#contacto" class="btn-sec">Solicitar</a>
+            </div>
+            <div class="servicio-card reveal">
+                <div class="servicio-img"><i class="fas fa-battery-full"></i></div>
+                <h3>Cambio de Batería</h3>
+                <p>Baterías originales y de alta calidad para toda clase de dispositivos móviles.</p>
+                <a href="#contacto" class="btn-sec">Solicitar</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== TALLERES ========== -->
+<section id="talleres" class="talleres">
+    <div class="container">
+        <div class="section-header reveal">
+            <span class="section-tag">Aprende con nosotros</span>
+            <h2 class="section-title">Talleres y Cursos</h2>
+            <p class="section-sub">Aprende a reparar dispositivos electrónicos con nuestros expertos certificados</p>
+        </div>
+        <div class="talleres-grid">
+            <div class="taller-card reveal">
+                <div class="taller-img"><i class="fas fa-mobile-alt"></i></div>
+                <div class="taller-body">
+                    <div class="taller-meta">
+                        <span class="taller-tag"><i class="fas fa-clock"></i> 20 horas</span>
+                        <span class="taller-tag"><i class="fas fa-certificate"></i> Certificado</span>
+                    </div>
+                    <h3>Taller de Reparación de Celulares</h3>
+                    <p>Curso práctico para aprender a diagnosticar y reparar celulares. Incluye materiales y certificado de participación.</p>
+                    <a href="#contacto" class="btn-sec">Inscribirse</a>
+                </div>
+            </div>
+            <div class="taller-card reveal">
+                <div class="taller-img"><i class="fas fa-microchip"></i></div>
+                <div class="taller-body">
+                    <div class="taller-meta">
+                        <span class="taller-tag"><i class="fas fa-clock"></i> 16 horas</span>
+                        <span class="taller-tag"><i class="fas fa-users"></i> Grupal</span>
+                    </div>
+                    <h3>Curso de Electrónica Básica</h3>
+                    <p>Aprende los fundamentos de la electrónica y cómo aplicarlos en la reparación de dispositivos modernos.</p>
+                    <a href="#contacto" class="btn-sec">Inscribirse</a>
+                </div>
+            </div>
+            <div class="taller-card reveal">
+                <div class="taller-img"><i class="fas fa-fire-alt"></i></div>
+                <div class="taller-body">
+                    <div class="taller-meta">
+                        <span class="taller-tag"><i class="fas fa-clock"></i> 12 horas</span>
+                        <span class="taller-tag"><i class="fas fa-star"></i> Avanzado</span>
+                    </div>
+                    <h3>Taller de Soldadura Electrónica</h3>
+                    <p>Domina las técnicas de soldadura SMD y THT para componentes electrónicos. Prácticas guiadas y asesoría personalizada.</p>
+                    <a href="#contacto" class="btn-sec">Inscribirse</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== SOBRE NOSOTROS ========== -->
+<section id="sobre" class="sobre">
+    <div class="container">
+        <div class="sobre-layout">
+            <div class="sobre-left reveal">
+                <span class="section-tag">Quiénes somos</span>
+                <h2 class="big-text">Formando técnicos del <span>futuro digital</span></h2>
+                <p>En nuestros talleres y cursos combinamos experiencia técnica con aprendizaje práctico, para formar a cada participante en reparación de dispositivos electrónicos, mantenimiento y soluciones tecnológicas reales.</p>
+                <a href="#talleres" class="btn-primary"><i class="fas fa-graduation-cap"></i> Ver cursos</a>
+            </div>
+            <div class="sobre-grid reveal">
+                <div class="sobre-item">
+                    <h3><i class="fas fa-bullseye"></i> Objetivo</h3>
+                    <p>Ofrecer cursos con contenido claro, herramientas reales y guías paso a paso aplicables desde el primer día.</p>
+                </div>
+                <div class="sobre-item">
+                    <h3><i class="fas fa-rocket"></i> Misión</h3>
+                    <p>Empoderar a nuestra comunidad con formación de calidad en diagnóstico, reparación y mantenimiento de dispositivos.</p>
+                </div>
+                <div class="sobre-item">
+                    <h3><i class="fas fa-eye"></i> Visión</h3>
+                    <p>Ser el espacio de referencia en educación técnica práctica que impulse carreras sostenibles en el sector digital.</p>
+                </div>
+                <div class="sobre-item">
+                    <h3><i class="fas fa-heart"></i> Valores</h3>
+                    <div class="valores-tags">
+                        <span>Aprendizaje</span>
+                        <span>Calidad</span>
+                        <span>Innovación</span>
+                        <span>Compromiso</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== PRODUCTOS ========== -->
+<section id="productos" class="productos">
+    <div class="container">
+        <div class="section-header reveal">
+            <span class="section-tag">Tienda</span>
+            <h2 class="section-title">Nuestros Productos</h2>
+            <p class="section-sub">Accesorios y repuestos de calidad para todos tus dispositivos</p>
+        </div>
+        <div class="productos-grid">
+            <div class="producto-card reveal">
+                <div class="producto-img"><i class="fas fa-charging-station"></i></div>
+                <span class="producto-badge">Disponible</span>
+                <h3>Cargadores</h3>
+                <p class="producto-precio">Desde RD$450</p>
+            </div>
+            <div class="producto-card reveal">
+                <div class="producto-img"><i class="fas fa-headphones"></i></div>
+                <span class="producto-badge">Disponible</span>
+                <h3>Audífonos</h3>
+                <p class="producto-precio">Desde RD$850</p>
+            </div>
+            <div class="producto-card reveal">
+                <div class="producto-img"><i class="fas fa-mobile-alt"></i></div>
+                <span class="producto-badge">Disponible</span>
+                <h3>Fundas</h3>
+                <p class="producto-precio">Desde RD$250</p>
+            </div>
+            <div class="producto-card reveal">
+                <div class="producto-img"><i class="fas fa-plug"></i></div>
+                <span class="producto-badge">Disponible</span>
+                <h3>Cables</h3>
+                <p class="producto-precio">Desde RD$180</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== GALERÍA ========== -->
+<section class="galeria">
+    <div class="container">
+        <div class="section-header reveal">
+            <span class="section-tag">Portafolio</span>
+            <h2 class="section-title light">Galería de Trabajos</h2>
+            <p class="section-sub light">Algunos de nuestros proyectos realizados</p>
+        </div>
+        <div class="galeria-grid reveal">
+            <div class="galeria-item"><i class="fas fa-wrench"></i><span>Reparación de pantalla</span></div>
+            <div class="galeria-item"><i class="fas fa-microchip"></i><span>Diagnóstico de placa</span></div>
+            <div class="galeria-item"><i class="fas fa-laptop"></i><span>Mantenimiento laptop</span></div>
+            <div class="galeria-item"><i class="fas fa-battery-full"></i><span>Cambio de batería</span></div>
+            <div class="galeria-item"><i class="fas fa-fire-alt"></i><span>Soldadura SMD</span></div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== TESTIMONIOS (NUEVA) ========== -->
+<section id="testimonios" class="testimonios">
+    <div class="container">
+        <div class="section-header reveal">
+            <span class="section-tag">Clientes</span>
+            <h2 class="section-title">Lo que dicen de nosotros</h2>
+            <p class="section-sub">La satisfacción de nuestros clientes es nuestra mejor carta de presentación</p>
+        </div>
+        <div class="testimonios-grid">
+            <div class="testimonio-card reveal">
+                <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                <p>Llevé mi iPhone con la pantalla rota y en menos de 2 horas me lo entregaron como nuevo. El precio fue muy justo y la atención excelente. Sin duda volvería.</p>
+                <div class="testimonio-autor">
+                    <div class="autor-avatar">AM</div>
+                    <div class="autor-info"><strong>Ana María R.</strong><span>Cliente frecuente</span></div>
+                </div>
+            </div>
+            <div class="testimonio-card reveal">
+                <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                <p>Mi laptop llevaba meses lenta y con sobrecalentamiento. Hicieron la limpieza y cambio de pasta térmica. Quedó como el primer día. Muy profesionales.</p>
+                <div class="testimonio-autor">
+                    <div class="autor-avatar">JC</div>
+                    <div class="autor-info"><strong>Juan Carlos P.</strong><span>Diseñador gráfico</span></div>
+                </div>
+            </div>
+            <div class="testimonio-card reveal">
+                <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+                <p>Tomé el taller de reparación de celulares y aprendí muchísimo. Los instructores son pacientes y el contenido es muy práctico. Totalmente recomendado.</p>
+                <div class="testimonio-autor">
+                    <div class="autor-avatar">LG</div>
+                    <div class="autor-info"><strong>Laura G.</strong><span>Estudiante del taller</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== PROCESO (NUEVA) ========== -->
+<section id="proceso" class="proceso">
+    <div class="container">
+        <div class="section-header reveal">
+            <span class="section-tag">Cómo funciona</span>
+            <h2 class="section-title light">Proceso de Reparación</h2>
+            <p class="section-sub light">Simple, transparente y sin sorpresas. Así trabajamos para ti.</p>
+        </div>
+        <div class="proceso-steps">
+            <div class="paso reveal">
+                <div class="paso-num">01</div>
+                <div class="paso-icon"><i class="fas fa-search"></i></div>
+                <h3>Diagnóstico gratuito</h3>
+                <p>Evaluamos tu dispositivo sin costo y te explicamos el problema con claridad.</p>
+            </div>
+            <div class="paso reveal">
+                <div class="paso-num">02</div>
+                <div class="paso-icon"><i class="fas fa-file-invoice-dollar"></i></div>
+                <h3>Presupuesto transparente</h3>
+                <p>Recibes un presupuesto claro y detallado. Sin cargos ocultos, sin sorpresas.</p>
+            </div>
+            <div class="paso reveal">
+                <div class="paso-num">03</div>
+                <div class="paso-icon"><i class="fas fa-tools"></i></div>
+                <h3>Reparación experta</h3>
+                <p>Nuestros técnicos certificados trabajan con piezas de calidad garantizada.</p>
+            </div>
+            <div class="paso reveal">
+                <div class="paso-num">04</div>
+                <div class="paso-icon"><i class="fas fa-shield-alt"></i></div>
+                <h3>Entrega con garantía</h3>
+                <p>Recibes tu dispositivo reparado con garantía escrita por 30 días.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== PRECIOS (NUEVA) ========== -->
+<section id="precios" class="precios">
+    <div class="container">
+        <div class="section-header reveal">
+            <span class="section-tag">Planes</span>
+            <h2 class="section-title">Planes de Mantenimiento</h2>
+            <p class="section-sub">Protege tus dispositivos con nuestros planes de mantenimiento preventivo</p>
+        </div>
+        <div class="precios-grid">
+            <div class="precio-card reveal">
+                <div class="precio-nombre">Básico</div>
+                <div class="precio-valor">RD$1,200</div>
+                <div class="precio-sub">por dispositivo / anual</div>
+                <ul class="precio-features">
+                    <li><i class="fas fa-check-circle"></i>1 limpieza interna anual</li>
+                    <li><i class="fas fa-check-circle"></i>Diagnóstico completo</li>
+                    <li><i class="fas fa-check-circle"></i>Reporte de estado</li>
+                    <li><i class="fas fa-check-circle"></i>10% dto. en reparaciones</li>
+                </ul>
+                <button class="btn-precio ghost">Elegir plan</button>
+            </div>
+            <div class="precio-card destacado reveal">
+                <div class="precio-badge">Más popular</div>
+                <div class="precio-nombre">Pro</div>
+                <div class="precio-valor">RD$2,500</div>
+                <div class="precio-sub">por dispositivo / anual</div>
+                <ul class="precio-features">
+                    <li><i class="fas fa-check-circle"></i>2 limpiezas internas anuales</li>
+                    <li><i class="fas fa-check-circle"></i>Diagnóstico completo</li>
+                    <li><i class="fas fa-check-circle"></i>Actualización de software</li>
+                    <li><i class="fas fa-check-circle"></i>20% dto. en reparaciones</li>
+                    <li><i class="fas fa-check-circle"></i>Prioridad en atención</li>
+                </ul>
+                <button class="btn-precio filled">Elegir plan</button>
+            </div>
+            <div class="precio-card reveal">
+                <div class="precio-nombre">Empresarial</div>
+                <div class="precio-valor">RD$8,500</div>
+                <div class="precio-sub">hasta 5 dispositivos / anual</div>
+                <ul class="precio-features">
+                    <li><i class="fas fa-check-circle"></i>Mantenimiento ilimitado</li>
+                    <li><i class="fas fa-check-circle"></i>Diagnóstico continuo</li>
+                    <li><i class="fas fa-check-circle"></i>Soporte técnico remoto</li>
+                    <li><i class="fas fa-check-circle"></i>30% dto. en reparaciones</li>
+                    <li><i class="fas fa-check-circle"></i>Técnico dedicado</li>
+                </ul>
+                <button class="btn-precio ghost">Contactar</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== CONTACTO ========== -->
+<section id="contacto" class="contacto">
+    <div class="container">
+        <div class="section-header reveal">
+            <span class="section-tag">Contacto</span>
+            <h2 class="section-title">Inscríbete o solicita un servicio</h2>
+            <p class="section-sub">Estamos listos para ayudarte. Escríbenos y respondemos en menos de 2 horas.</p>
+        </div>
+        <div class="contacto-layout">
+            <div class="contacto-info reveal">
+                <div class="contacto-info-item">
+                    <div class="c-icon"><i class="fas fa-phone"></i></div>
+                    <div class="c-text"><strong>Teléfono</strong><span>829-974-9835</span></div>
+                </div>
+                <div class="contacto-info-item">
+                    <div class="c-icon"><i class="fab fa-whatsapp"></i></div>
+                    <div class="c-text"><strong>WhatsApp</strong><span>829-974-9835</span></div>
+                </div>
+                <div class="contacto-info-item">
+                    <div class="c-icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <div class="c-text"><strong>Dirección</strong><span>Av. Padre Castellano #123</span></div>
+                </div>
+                <div class="contacto-info-item">
+                    <div class="c-icon"><i class="fas fa-clock"></i></div>
+                    <div class="c-text"><strong>Horario</strong><span>Lun–Sáb: 8am – 7pm</span></div>
+                </div>
+            </div>
+            <div class="contacto-form reveal">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Nombre</label>
+                        <input type="text" placeholder="Tu nombre completo">
+                    </div>
+                    <div class="form-group">
+                        <label>Correo electrónico</label>
+                        <input type="email" placeholder="correo@ejemplo.com">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Tipo de servicio</label>
+                    <select>
+                        <option value="">Seleccionar…</option>
+                        <option>Reparación de celular</option>
+                        <option>Reparación de laptop</option>
+                        <option>Mantenimiento preventivo</option>
+                        <option>Inscripción a taller</option>
+                        <option>Plan empresarial</option>
+                        <option>Otro</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Mensaje</label>
+                    <textarea placeholder="Cuéntanos qué necesitas…"></textarea>
+                </div>
+                <button class="btn-submit" type="button">
+                    <i class="fas fa-paper-plane"></i>&nbsp; Enviar mensaje
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<footer>
+    <div class="footer-top">
+        <div class="footer-brand">
+            <div class="brand-name"><i class="fas fa-microchip" style="color:var(--pink)"></i> DIGITAL <span>PARTS</span></div>
+            <p>Especialistas en reparación de dispositivos electrónicos y formación técnica profesional en Santo Domingo, RD.</p>
+            <div class="footer-socials">
+                <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+        <div class="footer-col">
+            <h4>Servicios</h4>
+            <ul>
+                <li><a href="#servicios">Reparación de celulares</a></li>
+                <li><a href="#servicios">Reparación de laptops</a></li>
+                <li><a href="#servicios">Mantenimiento general</a></li>
+                <li><a href="#servicios">Cambio de batería</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Empresa</h4>
+            <ul>
+                <li><a href="#sobre">Sobre nosotros</a></li>
+                <li><a href="#talleres">Talleres</a></li>
+                <li><a href="#precios">Planes</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </div>
+        <div class="footer-newsletter">
+            <h4>Novedades</h4>
+            <p>Recibe ofertas, tips tecnológicos y novedades de nuestros cursos.</p>
+            <div class="newsletter-form">
+                <input type="email" placeholder="tu@correo.com">
+                <button type="button">Unirme</button>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom container">
+        <p>© 2026 Digital Parts. Todos los derechos reservados.</p>
+        <div class="footer-bottom-links">
+            <a href="#">Privacidad</a>
+            <a href="#">Términos</a>
+            <a href="#">Cookies</a>
+        </div>
+    </div>
+</footer>
+
+<button id="scrollTop" aria-label="Volver arriba"><i class="fas fa-arrow-up"></i></button>
+
+<script>
+// Hamburger menu
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobileMenu');
+hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('open');
+    mobileMenu.classList.toggle('open');
+});
+mobileMenu.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+        hamburger.classList.remove('open');
+        mobileMenu.classList.remove('open');
+    });
+});
+
+// Scroll reveal
+const reveals = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+        if(e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
+    });
+}, { threshold: 0.12 });
+reveals.forEach(r => observer.observe(r));
+
+// Scroll to top
+const scrollBtn = document.getElementById('scrollTop');
+window.addEventListener('scroll', () => {
+    scrollBtn.classList.toggle('show', window.scrollY > 500);
+});
+scrollBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+// Header background on scroll
+const header = document.getElementById('header');
+window.addEventListener('scroll', () => {
+    header.style.boxShadow = window.scrollY > 50
+        ? '0 2px 30px rgba(252,171,205,0.08)'
+        : 'none';
+});
+</script>
+</body>
+</html>

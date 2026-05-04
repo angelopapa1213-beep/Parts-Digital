@@ -7,43 +7,48 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
       <link rel="icon" type="image/png" sizes="32x32" href="img/ChatGPT Image 24 may 2025, 20_35_36.png">
     <link rel="stylesheet" href="css/empresa_digital.css">
+    <script defer src="js/empresa-digital.js"></script>
     <title>digital_parts</title>
 </head>
 <body>
   
     <div id="caco">
-    <header>
-    
-        <div id="separador">
-            <div></div>
-             <img src="img/digital_parts.png" id="im">
-        <nav>
-            <ul>
-                <li><a href="#home" >Productos</a></li>
-                <li><a href="#about">Contactos</a></li>
-                <li><a href="#about">Ubicacion</a></li>
-                <li><a href="#contact">Sobre Nosotros</a></li>
-            </ul>
-        </nav>
-        </div>
-        <div id="cajon-dentro-del-header">
-            <div id="sopla">
-                <form action="">
-            <input type="text" placeholder="  Buscar..." id="buscador">
+   <header>
+
+    <!-- IZQUIERDA (LOGO) -->
+    <div class="header-left">
+        <img src="img/logo-nuevo.png" id="im">
+    </div>
+
+    <!-- CENTRO (MENU) -->
+    <nav>
+        <ul>
+            <li><a href="#">Productos</a></li>
+            <li><a href="#">Contactos</a></li>
+            <li><a href="#">Ubicación</a></li>
+            <li><a href="#">Sobre Nosotros</a></li>
+        </ul>
+    </nav>
+
+    <!-- DERECHA (BUSCADOR + CARRITO) -->
+    <div class="header-right">
+
+        <div id="sopla">
+            <input type="text" id="buscador" placeholder="Buscar...">
             <svg class="search-icon" viewBox="0 0 24 24">
                 <circle cx="11" cy="11" r="7" stroke="#fcabcd" stroke-width="2" fill="none"/>
                 <line x1="16" y1="16" x2="22" y2="22" stroke="#fcabcd" stroke-width="2" />
             </svg>
-                </form> 
-            </div>
         </div>
-        <!-- 🛒 CARRITO -->
-<div id="carrito-icono">
-    <i class="fa-solid fa-cart-shopping"></i>
-    <span id="contador">0</span>
-</div>
 
-        </header>
+        <div id="carrito-icono">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span id="contador">0</span>
+        </div>
+
+    </div>
+
+</header>
 
 
 
@@ -65,10 +70,17 @@
       <div>RD $1250</div>
       <div class="precio1">RD $1450</div>
     </div>
-    <div class="contenedor">
-      <button class="pedidos"><i class="fa-solid fa-cart-shopping"  id="conten-icon"></i><p>Ordenar</p></button>
-      
-    </div>
+    <div class="contenedor-botones">
+  <button class="pedidos">
+    <i class="fa-solid fa-cart-shopping"></i>
+    Ordenar
+  </button>
+
+  <button class="compartir">
+    <i class="fa-solid fa-share-nodes"></i>
+    Compartir
+  </button>
+</div>
   </div>
 </div>
 
@@ -82,10 +94,17 @@
       <div>RD $350</div>
       <div class="precio1">RD $500</div>
     </div>
-    <div class="contenedor">
-      <button class="pedidos"><i class="fa-solid fa-cart-shopping"  id="conten-icon"></i><p>Ordenar</p></button>
-     
-    </div>
+   <div class="contenedor-botones">
+  <button class="pedidos">
+    <i class="fa-solid fa-cart-shopping"></i>
+    Ordenar
+  </button>
+
+  <button class="compartir">
+    <i class="fa-solid fa-share-nodes"></i>
+    Compartir
+  </button>
+</div>
   </div>
 </div>
 
@@ -99,10 +118,17 @@
       <div>RD 350</div>
       <div class="precio1">RD $500</div>
     </div>
-    <div class="contenedor">
-      <button class="pedidos"><i class="fa-solid fa-cart-shopping"  id="conten-icon"></i><p>Ordenar</p></button>
-     
-    </div>
+   <div class="contenedor-botones">
+  <button class="pedidos">
+    <i class="fa-solid fa-cart-shopping"></i>
+    Ordenar
+  </button>
+
+  <button class="compartir">
+    <i class="fa-solid fa-share-nodes"></i>
+    Compartir
+  </button>
+</div>
   </div>
 </div>
 
@@ -116,10 +142,17 @@
       <div>RD $1900</div>
       <div class="precio1">RD $2000</div>
     </div>
-    <div class="contenedor">
-      <button class="pedidos"><i class="fa-solid fa-cart-shopping"  id="conten-icon"></i><p>Ordenar</p></button>
-      
-    </div>
+   <div class="contenedor-botones">
+  <button class="pedidos">
+    <i class="fa-solid fa-cart-shopping"></i>
+    Ordenar
+  </button>
+
+  <button class="compartir">
+    <i class="fa-solid fa-share-nodes"></i>
+    Compartir
+  </button>
+</div>
   </div>
 </div>
 
@@ -133,16 +166,23 @@
       <div>RD $1500</div>
       <div class="precio1">RD $2500</div>
     </div>
-    <div class="contenedor">
-      <button class="pedidos"><i class="fa-solid fa-cart-shopping"  id="conten-icon"></i><p>Ordenar</p></button>
-   
-    </div>
+   <div class="contenedor-botones">
+  <button class="pedidos">
+    <i class="fa-solid fa-cart-shopping"></i>
+    Ordenar
+  </button>
+
+  <button class="compartir">
+    <i class="fa-solid fa-share-nodes"></i>
+    Compartir
+  </button>
+</div>
   </div>
 </div>
 
 <div class="primer-aside">
   <div class="segundo-div">
-    <img src="img/teclado_gamer.png">
+    <img src="img/teclado_game.png">
     <h1 class="mismo-h1">Teclado Game</h1>
     <div class="p-aside">
     <p class="mismo-p">Teclado diseñado para videojuegos, con luces y teclas rápidas para mejor rendimiento.</p></div>
@@ -150,10 +190,17 @@
       <div>RD$350</div>
       <div class="precio1">RD$1450</div>
     </div>
-    <div class="contenedor">
-      <button class="pedidos"><i class="fa-solid fa-cart-shopping"  id="conten-icon"></i><p>Ordenar</p></button>
+   <div class="contenedor-botones">
+  <button class="pedidos">
+    <i class="fa-solid fa-cart-shopping"></i>
+    Ordenar
+  </button>
 
-    </div>
+  <button class="compartir">
+    <i class="fa-solid fa-share-nodes"></i>
+    Compartir
+  </button>
+</div>
   </div>
 </div>
 
@@ -167,10 +214,17 @@
       <div>RD$1500</div>
       <div class="precio1">RD$2000</div>
     </div>
-    <div class="contenedor">
-      <button class="pedidos"><i class="fa-solid fa-cart-shopping"  id="conten-icon"></i><p> Ordenar</p></button>
-      
-    </div>
+   <div class="contenedor-botones">
+  <button class="pedidos">
+    <i class="fa-solid fa-cart-shopping"></i>
+    Ordenar
+  </button>
+
+  <button class="compartir">
+    <i class="fa-solid fa-share-nodes"></i>
+    Compartir
+  </button>
+</div>
   </div>
 </div>
 
@@ -184,10 +238,17 @@
       <div>RD$350</div>
       <div class="precio1">RD$500</div>
     </div>
-    <div class="contenedor">
-      <button class="pedidos"><i class="fa-solid fa-cart-shopping"  id="conten-icon"></i><p>Ordenar</p></button>
-      
-    </div>
+   <div class="contenedor-botones">
+  <button class="pedidos">
+    <i class="fa-solid fa-cart-shopping"></i>
+    Ordenar
+  </button>
+
+  <button class="compartir">
+    <i class="fa-solid fa-share-nodes"></i>
+    Compartir
+  </button>
+</div>
   </div>
 </div>
 
@@ -201,10 +262,17 @@
       <div>RD$1250</div>
       <div class="precio1">RD$1450</div>
     </div>
-    <div class="contenedor">
-      <button class="pedidos"><i class="fa-solid fa-cart-shopping"  id="conten-icon"></i><p>Ordenar</p></button>
-       
-    </div>
+    <div class="contenedor-botones">
+  <button class="pedidos">
+    <i class="fa-solid fa-cart-shopping"></i>
+    Ordenar
+  </button>
+
+  <button class="compartir">
+    <i class="fa-solid fa-share-nodes"></i>
+    Compartir
+  </button>
+</div>
   </div>
 </div>
 
@@ -218,7 +286,7 @@
          
           <div class="primer-aside">
   <div class="segundo-div">
-    <img src="img/disco_duro1.jpg">
+    <img src="img/duro.jpeg">
     <h1 class="mismo-h1">Disco duro</h1>
     <div class="p-aside">
    <p class="mismo-p">Dispositivo que almacena información de forma permanente en el computador.</p></div>
@@ -226,10 +294,17 @@
       <div>RD$1500</div>
       <div class="precio1">RD$2450</div>
     </div>
-    <div class="contenedor">
-      <button class="pedidos"><i class="fa-solid fa-cart-shopping"  id="conten-icon"></i><p>Ordenar</p></button>
-      
-    </div>
+   <div class="contenedor-botones">
+  <button class="pedidos">
+    <i class="fa-solid fa-cart-shopping"></i>
+    Ordenar
+  </button>
+
+  <button class="compartir">
+    <i class="fa-solid fa-share-nodes"></i>
+    Compartir
+  </button>
+</div>
   </div>
 </div>
 
@@ -243,10 +318,17 @@
       <div>RD$1000</div>
       <div class="precio1">RD$1450</div>
     </div>
-    <div class="contenedor">
-      <button class="pedidos"><i class="fa-solid fa-cart-shopping"  id="conten-icon"></i><p>Ordenar</p></button>
-      
-    </div>
+  <div class="contenedor-botones">
+  <button class="pedidos">
+    <i class="fa-solid fa-cart-shopping"></i>
+    Ordenar
+  </button>
+
+  <button class="compartir">
+    <i class="fa-solid fa-share-nodes"></i>
+    Compartir
+  </button>
+</div>
   </div>
 </div>
 
@@ -261,10 +343,17 @@
       <div>RD$450</div>
       <div class="precio1">RD$600</div>
     </div>
-    <div class="contenedor">
-      <button class="pedidos"><i class="fa-solid fa-cart-shopping"  id="conten-icon"></i><p>Ordenar</p></button>
-      
-    </div>
+   <div class="contenedor-botones">
+  <button class="pedidos">
+    <i class="fa-solid fa-cart-shopping"></i>
+    Ordenar
+  </button>
+
+  <button class="compartir">
+    <i class="fa-solid fa-share-nodes"></i>
+    Compartir
+  </button>
+</div>
   </div>
 </div>
 
@@ -279,10 +368,17 @@
       <div>RD$350</div>
       <div class="precio1">RD$500</div>
     </div>
-    <div class="contenedor">
-      <button class="pedidos"><i class="fa-solid fa-cart-shopping"  id="conten-icon"></i><p>Ordenar</p></button>
-      
-    </div>
+    <div class="contenedor-botones">
+  <button class="pedidos">
+    <i class="fa-solid fa-cart-shopping"></i>
+    Ordenar
+  </button>
+
+  <button class="compartir">
+    <i class="fa-solid fa-share-nodes"></i>
+    Compartir
+  </button>
+</div>
   </div>
 </div>
 
@@ -297,10 +393,17 @@
       <div>RD$1000</div>
       <div class="precio1">RD$1450</div>
     </div>
-    <div class="contenedor">
-      <button class="pedidos"><i class="fa-solid fa-cart-shopping"  id="conten-icon"></i><p>Ordenarr</p></button>
-      
-    </div>
+   <div class="contenedor-botones">
+  <button class="pedidos">
+    <i class="fa-solid fa-cart-shopping"></i>
+    Ordenar
+  </button>
+
+  <button class="compartir">
+    <i class="fa-solid fa-share-nodes"></i>
+    Compartir
+  </button>
+</div>
   </div>
 </div>
 
@@ -315,10 +418,17 @@
       <div>RD$1550</div>
       <div class="precio1">RD$2000</div>
     </div>
-    <div class="contenedor">
-      <button class="pedidos"><i class="fa-solid fa-cart-shopping"  id="conten-icon"></i><p>Ordenar</p></button>
-      
-    </div>
+    <div class="contenedor-botones">
+  <button class="pedidos">
+    <i class="fa-solid fa-cart-shopping"></i>
+    Ordenar
+  </button>
+
+  <button class="compartir">
+    <i class="fa-solid fa-share-nodes"></i>
+    Compartir
+  </button>
+</div>
   </div>
 </div>
 
