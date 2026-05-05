@@ -236,7 +236,7 @@ h3, h4, h5 { font-weight: 700; }
 }
 
 #caco {
-    background-image: url(/img/fondoto.svg);
+    background-image: url(../img/fondoto.svg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -671,7 +671,7 @@ h3, h4, h5 { font-weight: 700; }
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url(/img/b155af78b8a4fe1a5361d8332e548296.jpg);
+    background-image: url(../img/b155af78b8a4fe1a5361d8332e548296.jpg);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -1003,7 +1003,7 @@ h3, h4, h5 { font-weight: 700; }
     flex-direction: column;
     align-items: center;
     gap: 50px;
-    background-image: url(/img/del.svg);
+    background-image: url(../img/del.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
