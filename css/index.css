@@ -38,10 +38,6 @@ img { max-width: 100%; display: block; }
 button {
     cursor: pointer;
 }
-
-/* =============================================
-   TIPOGRAFÍA DE SECCIÓN
-   ============================================= */
 .section-tag {
     display: inline-block;
     font-size: 0.72rem;
@@ -62,9 +58,6 @@ h1, h2, h3, h4, h5, h6 {
 h2 { font-weight: 800; }
 h3, h4, h5 { font-weight: 700; }
 
-/* =============================================
-   HEADER
-   ============================================= */
 #header {
     position: fixed;
     top: 0; left: 0; right: 0;
@@ -414,9 +407,6 @@ h3, h4, h5 { font-weight: 700; }
     to   { opacity: 1; transform: translateX(0); }
 }
 
-/* =============================================
-   ¿POR QUÉ ELEGIRNOS?
-   ============================================= */
 #el-2 {
     width: 100%;
     padding: 90px 0 70px;
@@ -514,9 +504,7 @@ h3, h4, h5 { font-weight: 700; }
         transform: translateX(-50%);
     }
 }
-/* =============================================
-   OFERTAS
-   ============================================= */
+
 #tercer-article {
     width: 100%;
     background: radial-gradient(circle at center, rgba(255,255,255,0.05) 0%, transparent 70%), var(--black-2);
@@ -662,9 +650,6 @@ h3, h4, h5 { font-weight: 700; }
     color: var(--black);
 }
 
-/* =============================================
-   SUSCRIPCIÓN
-   ============================================= */
 #primer-seccion {
     width: 100%;
     min-height: 50vh;
@@ -753,10 +738,6 @@ h3, h4, h5 { font-weight: 700; }
     box-shadow: var(--shadow-pink);
     transform: translateY(-2px);
 }
-
-/* =============================================
-   SECCIONES REPARACIÓN
-   ============================================= */
 #segundo-section,
 #tercer-section {
     width: 100%;
@@ -857,9 +838,6 @@ h3, h4, h5 { font-weight: 700; }
     flex-shrink: 0;
 }
 
-/* =============================================
-   GALERÍA 3D
-   ============================================= */
 #cuarto-section {
     width: 100%;
     min-height: 100vh;
@@ -993,9 +971,6 @@ h3, h4, h5 { font-weight: 700; }
     box-shadow: var(--shadow-pink);
 }
 
-/* =============================================
-   TESTIMONIOS
-   ============================================= */
 #segundo-article {
     width: 100%;
     padding: 90px 24px 70px;
@@ -1109,10 +1084,6 @@ h3, h4, h5 { font-weight: 700; }
     text-align: center;
 
 }
-
-/* =============================================
-   PREGUNTAS FRECUENTES
-   ============================================= */
 #ante-del-footer {
     width: 100%;
     background: var(--black);
@@ -1211,9 +1182,6 @@ h3, h4, h5 { font-weight: 700; }
 
 .resultado.visible { display: block; }
 
-/* =============================================
-   FOOTER
-   ============================================= */
 footer {
     background: var(--black-2);
     border-top: 1px solid rgba(252,171,205,0.07);
