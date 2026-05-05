@@ -1,519 +1,546 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Digital Parts</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;600;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="css/reparaciones.css">
-     <link rel="shortcut icon" sizes="180x180" href="img/l.jpeg">
+    <link rel="stylesheet" href="./css/reparaciones.css">
+    <link rel="shortcut icon" sizes="180x180" href="./img/l.jpeg">
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script>emailjs.init("TU_PUBLIC_KEY");</script>
 </head>
+
 <body>
 
-<!-- ========== HEADER ========== -->
-<header id="header">
-  <div class="nav-inner">
+    <!-- ========== HEADER ========== -->
+    <header id="header">
+        <div class="nav-inner">
 
-    <div class="nav-logo">
-      <img src="img/logo-nuevo.png" alt="Digital Parts Logo" class="logo-img">
-    </div>
+            <div class="nav-logo">
+                <img src="./img/logo-nuevo.png" alt="Digital Parts Logo" class="logo-img">
+            </div>
 
-    <nav id="nav-desktop">
-      <ul>
-                 <li><a href="#inicio" class="nav-link active">Inicio</a></li>
+            <nav id="nav-desktop">
+                <ul>
+                    <li><a href="index.html" class="nav-link active">Inicio</a></li>
                     <li><a href="empresa_digital.html" class="nav-link">Productos</a></li>
                     <li><a href="sobre nosotros.html" class="nav-link">Sobre Nosotros</a></li>
                     <li><a href="reservaciones.html" class="nav-link">Reservaciónes</a></li>
                     <li><a href="reparacion.html" class="nav-link">Reparaciones</a></li>
-      </ul>
-    </nav>
-
-    <div class="nav-actions">
-      <button class="btn-gear" aria-label="Configuración">
-        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="17" height="17">
-          <path d="M12 15.5A3.5 3.5 0 0 1 8.5 12 3.5 3.5 0 0 1 12 8.5a3.5 3.5 0 0 1 3.5 3.5 3.5 3.5 0 0 1-3.5 3.5m7.43-2.92c.04-.34.07-.69.07-1.08s-.03-.73-.07-1.08l2.33-1.82c.21-.16.27-.45.13-.69l-2.2-3.81c-.13-.24-.42-.32-.66-.24l-2.75 1.11c-.57-.44-1.18-.81-1.86-1.08L14.21 1.5c-.05-.26-.27-.5-.55-.5h-4.4c-.28 0-.49.24-.54.5l-.41 2.39c-.68.27-1.29.64-1.86 1.08L3.7 3.86c-.24-.08-.53 0-.66.24L.84 7.91c-.13.24-.08.53.13.69l2.33 1.82C3.26 10.77 3.23 11.1 3.23 11.5s.03.73.07 1.08L1 14.4c-.21.16-.27.45-.13.69l2.2 3.81c.13.24.42.32.66.24l2.75-1.11c.57.44 1.18.81 1.86 1.08l.41 2.39c.05.26.26.5.54.5h4.4c.28 0 .5-.24.55-.5l.41-2.39c.68-.27 1.29-.64 1.86-1.08l2.75 1.11c.24.08.53 0 .66-.24l2.2-3.81c.13-.24.08-.53-.13-.69l-2.33-1.82z"/>
-        </svg>
-      </button>
-      <div class="nav-divider"></div>
-      <button class="hamburger" id="hamburger" aria-label="Menú">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-
-  </div>
-
-  <div class="mobile-menu" id="mobileMenu">
-    <a href="#servicios">Servicios</a>
-    <a href="#talleres">Talleres</a>
-    <a href="#productos">Productos</a>
-    <a href="#testimonios">Testimonios</a>
-    <a href="#precios">Precios</a>
-    <a href="#contacto">Contacto</a>
-  </div>
-</header>
-
-<!-- ========== HERO ========== -->
-<section class="hero" id="inicio">
-    <div class="hero-bg"></div>
-    <div class="hero-grid"></div>
-    <div class="hero-content">
-        <div class="hero-badge"><i class="fas fa-bolt"></i> Servicio técnico certificado</div>
-        <h1 class="hero-title">Reparamos tu <span class="accent">mundo digital</span></h1>
-        <p class="hero-subtitle">Especialistas en reparación de celulares, laptops y dispositivos electrónicos. Calidad garantizada y entrega rápida.</p>
-        <div class="hero-btns">
-            <a href="#contacto" class="btn-primary"><i class="fas fa-tools"></i> Solicitar servicio</a>
-            <a href="#servicios" class="btn-outline">Ver servicios</a>
-        </div>
-        <div class="hero-stats">
-            <div class="stat"><span class="stat-num">+2,500</span><span class="stat-label">Reparaciones exitosas</span></div>
-            <div class="stat"><span class="stat-num">98%</span><span class="stat-label">Clientes satisfechos</span></div>
-            <div class="stat"><span class="stat-num">6 años</span><span class="stat-label">De experiencia</span></div>
-            <div class="stat"><span class="stat-num">24h</span><span class="stat-label">Tiempo promedio</span></div>
-        </div>
-    </div>
-</section>
-
-<!-- ========== SERVICIOS ========== -->
-<section id="servicios" class="servicios">
-    <div class="container">
-        <div class="section-header reveal">
-            <span class="section-tag">Lo que hacemos</span>
-            <h2 class="section-title">Nuestros Servicios</h2>
-            <p class="section-sub">Expertos en reparación de dispositivos electrónicos con garantía en cada trabajo</p>
-        </div>
-        <div class="servicios-grid">
-            <div class="servicio-card reveal">
-                <div class="servicio-img"><i class="fas fa-mobile-alt"></i></div>
-                <h3>Reparación de Celulares</h3>
-                <p>Cambio de pantallas, baterías, conectores de carga, cámaras y más. Todas las marcas.</p>
-                <a href="#contacto" class="btn-sec">Solicitar</a>
-            </div>
-            <div class="servicio-card reveal">
-                <div class="servicio-img"><i class="fas fa-laptop"></i></div>
-                <h3>Reparación de Laptops</h3>
-                <p>Diagnóstico completo, limpieza de polvo, cambio de componentes y reparación de placa.</p>
-                <a href="#contacto" class="btn-sec">Solicitar</a>
-            </div>
-            <div class="servicio-card reveal">
-                <div class="servicio-img"><i class="fas fa-cogs"></i></div>
-                <h3>Mantenimiento General</h3>
-                <p>Limpieza interna profunda, optimización de software y actualización de sistemas.</p>
-                <a href="#contacto" class="btn-sec">Solicitar</a>
-            </div>
-            <div class="servicio-card reveal">
-                <div class="servicio-img"><i class="fas fa-battery-full"></i></div>
-                <h3>Cambio de Batería</h3>
-                <p>Baterías originales y de alta calidad para toda clase de dispositivos móviles.</p>
-                <a href="#contacto" class="btn-sec">Solicitar</a>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ========== TALLERES ========== -->
-<section id="talleres" class="talleres">
-    <div class="container">
-        <div class="section-header reveal">
-            <span class="section-tag">Aprende con nosotros</span>
-            <h2 class="section-title">Talleres y Cursos</h2>
-            <p class="section-sub">Aprende a reparar dispositivos electrónicos con nuestros expertos certificados</p>
-        </div>
-        <div class="talleres-grid">
-            <div class="taller-card reveal">
-                <div class="taller-img"><i class="fas fa-mobile-alt"></i></div>
-                <div class="taller-body">
-                    <div class="taller-meta">
-                        <span class="taller-tag"><i class="fas fa-clock"></i> 20 horas</span>
-                        <span class="taller-tag"><i class="fas fa-certificate"></i> Certificado</span>
-                    </div>
-                    <h3>Taller de Reparación de Celulares</h3>
-                    <p>Curso práctico para aprender a diagnosticar y reparar celulares. Incluye materiales y certificado de participación.</p>
-                    <a href="#contacto" class="btn-sec">Inscribirse</a>
-                </div>
-            </div>
-            <div class="taller-card reveal">
-                <div class="taller-img"><i class="fas fa-microchip"></i></div>
-                <div class="taller-body">
-                    <div class="taller-meta">
-                        <span class="taller-tag"><i class="fas fa-clock"></i> 16 horas</span>
-                        <span class="taller-tag"><i class="fas fa-users"></i> Grupal</span>
-                    </div>
-                    <h3>Curso de Electrónica Básica</h3>
-                    <p>Aprende los fundamentos de la electrónica y cómo aplicarlos en la reparación de dispositivos modernos.</p>
-                    <a href="#contacto" class="btn-sec">Inscribirse</a>
-                </div>
-            </div>
-            <div class="taller-card reveal">
-                <div class="taller-img"><i class="fas fa-fire-alt"></i></div>
-                <div class="taller-body">
-                    <div class="taller-meta">
-                        <span class="taller-tag"><i class="fas fa-clock"></i> 12 horas</span>
-                        <span class="taller-tag"><i class="fas fa-star"></i> Avanzado</span>
-                    </div>
-                    <h3>Taller de Soldadura Electrónica</h3>
-                    <p>Domina las técnicas de soldadura SMD y THT para componentes electrónicos. Prácticas guiadas y asesoría personalizada.</p>
-                    <a href="#contacto" class="btn-sec">Inscribirse</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ========== SOBRE NOSOTROS ========== -->
-<section id="sobre" class="sobre">
-    <div class="container">
-        <div class="sobre-layout">
-            <div class="sobre-left reveal">
-                <span class="section-tag">Quiénes somos</span>
-                <h2 class="big-text">Formando técnicos del <span>futuro digital</span></h2>
-                <p>En nuestros talleres y cursos combinamos experiencia técnica con aprendizaje práctico, para formar a cada participante en reparación de dispositivos electrónicos, mantenimiento y soluciones tecnológicas reales.</p>
-                <a href="#talleres" class="btn-primary"><i class="fas fa-graduation-cap"></i> Ver cursos</a>
-            </div>
-            <div class="sobre-grid reveal">
-                <div class="sobre-item">
-                    <h3><i class="fas fa-bullseye"></i> Objetivo</h3>
-                    <p>Ofrecer cursos con contenido claro, herramientas reales y guías paso a paso aplicables desde el primer día.</p>
-                </div>
-                <div class="sobre-item">
-                    <h3><i class="fas fa-rocket"></i> Misión</h3>
-                    <p>Empoderar a nuestra comunidad con formación de calidad en diagnóstico, reparación y mantenimiento de dispositivos.</p>
-                </div>
-                <div class="sobre-item">
-                    <h3><i class="fas fa-eye"></i> Visión</h3>
-                    <p>Ser el espacio de referencia en educación técnica práctica que impulse carreras sostenibles en el sector digital.</p>
-                </div>
-                <div class="sobre-item">
-                    <h3><i class="fas fa-heart"></i> Valores</h3>
-                    <div class="valores-tags">
-                        <span>Aprendizaje</span>
-                        <span>Calidad</span>
-                        <span>Innovación</span>
-                        <span>Compromiso</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ========== PRODUCTOS ========== -->
-<section id="productos" class="productos">
-    <div class="container">
-        <div class="section-header reveal">
-            <span class="section-tag">Tienda</span>
-            <h2 class="section-title">Nuestros Productos</h2>
-            <p class="section-sub">Accesorios y repuestos de calidad para todos tus dispositivos</p>
-        </div>
-        <div class="productos-grid">
-            <div class="producto-card reveal">
-                <div class="producto-img"><i class="fas fa-charging-station"></i></div>
-                <span class="producto-badge">Disponible</span>
-                <h3>Cargadores</h3>
-                <p class="producto-precio">Desde RD$450</p>
-            </div>
-            <div class="producto-card reveal">
-                <div class="producto-img"><i class="fas fa-headphones"></i></div>
-                <span class="producto-badge">Disponible</span>
-                <h3>Audífonos</h3>
-                <p class="producto-precio">Desde RD$850</p>
-            </div>
-            <div class="producto-card reveal">
-                <div class="producto-img"><i class="fas fa-mobile-alt"></i></div>
-                <span class="producto-badge">Disponible</span>
-                <h3>Fundas</h3>
-                <p class="producto-precio">Desde RD$250</p>
-            </div>
-            <div class="producto-card reveal">
-                <div class="producto-img"><i class="fas fa-plug"></i></div>
-                <span class="producto-badge">Disponible</span>
-                <h3>Cables</h3>
-                <p class="producto-precio">Desde RD$180</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ========== GALERÍA ========== -->
-<section class="galeria">
-    <div class="container">
-        <div class="section-header reveal">
-            <span class="section-tag">Portafolio</span>
-            <h2 class="section-title light">Galería de Trabajos</h2>
-            <p class="section-sub light">Algunos de nuestros proyectos realizados</p>
-        </div>
-        <div class="galeria-grid reveal">
-            <div class="galeria-item"><i class="fas fa-wrench"></i><span>Reparación de pantalla</span></div>
-            <div class="galeria-item"><i class="fas fa-microchip"></i><span>Diagnóstico de placa</span></div>
-            <div class="galeria-item"><i class="fas fa-laptop"></i><span>Mantenimiento laptop</span></div>
-            <div class="galeria-item"><i class="fas fa-battery-full"></i><span>Cambio de batería</span></div>
-            <div class="galeria-item"><i class="fas fa-fire-alt"></i><span>Soldadura SMD</span></div>
-        </div>
-    </div>
-</section>
-
-<!-- ========== TESTIMONIOS ========== -->
-<section id="testimonios" class="testimonios">
-    <div class="container">
-        <div class="section-header reveal">
-            <span class="section-tag">Clientes</span>
-            <h2 class="section-title">Lo que dicen de nosotros</h2>
-            <p class="section-sub">La satisfacción de nuestros clientes es nuestra mejor carta de presentación</p>
-        </div>
-        <div class="testimonios-grid">
-            <div class="testimonio-card reveal">
-                <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                <p>Llevé mi iPhone con la pantalla rota y en menos de 2 horas me lo entregaron como nuevo. El precio fue muy justo y la atención excelente. Sin duda volvería.</p>
-                <div class="testimonio-autor">
-                    <div class="autor-avatar">AM</div>
-                    <div class="autor-info"><strong>Ana María R.</strong><span>Cliente frecuente</span></div>
-                </div>
-            </div>
-            <div class="testimonio-card reveal">
-                <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                <p>Mi laptop llevaba meses lenta y con sobrecalentamiento. Hicieron la limpieza y cambio de pasta térmica. Quedó como el primer día. Muy profesionales.</p>
-                <div class="testimonio-autor">
-                    <div class="autor-avatar">JC</div>
-                    <div class="autor-info"><strong>Juan Carlos P.</strong><span>Diseñador gráfico</span></div>
-                </div>
-            </div>
-            <div class="testimonio-card reveal">
-                <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
-                <p>Tomé el taller de reparación de celulares y aprendí muchísimo. Los instructores son pacientes y el contenido es muy práctico. Totalmente recomendado.</p>
-                <div class="testimonio-autor">
-                    <div class="autor-avatar">LG</div>
-                    <div class="autor-info"><strong>Laura G.</strong><span>Estudiante del taller</span></div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ========== PROCESO ========== -->
-<section id="proceso" class="proceso">
-    <div class="container">
-        <div class="section-header reveal">
-            <span class="section-tag">Cómo funciona</span>
-            <h2 class="section-title light">Proceso de Reparación</h2>
-            <p class="section-sub light">Simple, transparente y sin sorpresas. Así trabajamos para ti.</p>
-        </div>
-        <div class="proceso-steps">
-            <div class="paso reveal">
-                <div class="paso-num">01</div>
-                <div class="paso-icon"><i class="fas fa-search"></i></div>
-                <h3>Diagnóstico gratuito</h3>
-                <p>Evaluamos tu dispositivo sin costo y te explicamos el problema con claridad.</p>
-            </div>
-            <div class="paso reveal">
-                <div class="paso-num">02</div>
-                <div class="paso-icon"><i class="fas fa-file-invoice-dollar"></i></div>
-                <h3>Presupuesto transparente</h3>
-                <p>Recibes un presupuesto claro y detallado. Sin cargos ocultos, sin sorpresas.</p>
-            </div>
-            <div class="paso reveal">
-                <div class="paso-num">03</div>
-                <div class="paso-icon"><i class="fas fa-tools"></i></div>
-                <h3>Reparación experta</h3>
-                <p>Nuestros técnicos certificados trabajan con piezas de calidad garantizada.</p>
-            </div>
-            <div class="paso reveal">
-                <div class="paso-num">04</div>
-                <div class="paso-icon"><i class="fas fa-shield-alt"></i></div>
-                <h3>Entrega con garantía</h3>
-                <p>Recibes tu dispositivo reparado con garantía escrita por 30 días.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ========== PRECIOS ========== -->
-<section id="precios" class="precios">
-    <div class="container">
-        <div class="section-header reveal">
-            <span class="section-tag">Planes</span>
-            <h2 class="section-title">Planes de Mantenimiento</h2>
-            <p class="section-sub">Protege tus dispositivos con nuestros planes de mantenimiento preventivo</p>
-        </div>
-        <div class="precios-grid">
-            <div class="precio-card reveal">
-                <div class="precio-nombre">Básico</div>
-                <div class="precio-valor">RD$1,200</div>
-                <div class="precio-sub">por dispositivo / anual</div>
-                <ul class="precio-features">
-                    <li><i class="fas fa-check-circle"></i>1 limpieza interna anual</li>
-                    <li><i class="fas fa-check-circle"></i>Diagnóstico completo</li>
-                    <li><i class="fas fa-check-circle"></i>Reporte de estado</li>
-                    <li><i class="fas fa-check-circle"></i>10% dto. en reparaciones</li>
                 </ul>
-                <button class="btn-precio ghost">Elegir plan</button>
-            </div>
-            <div class="precio-card destacado reveal">
-                <div class="precio-badge">Más popular</div>
-                <div class="precio-nombre">Pro</div>
-                <div class="precio-valor">RD$2,500</div>
-                <div class="precio-sub">por dispositivo / anual</div>
-                <ul class="precio-features">
-                    <li><i class="fas fa-check-circle"></i>2 limpiezas internas anuales</li>
-                    <li><i class="fas fa-check-circle"></i>Diagnóstico completo</li>
-                    <li><i class="fas fa-check-circle"></i>Actualización de software</li>
-                    <li><i class="fas fa-check-circle"></i>20% dto. en reparaciones</li>
-                    <li><i class="fas fa-check-circle"></i>Prioridad en atención</li>
-                </ul>
-                <button class="btn-precio filled">Elegir plan</button>
-            </div>
-            <div class="precio-card reveal">
-                <div class="precio-nombre">Empresarial</div>
-                <div class="precio-valor">RD$8,500</div>
-                <div class="precio-sub">hasta 5 dispositivos / anual</div>
-                <ul class="precio-features">
-                    <li><i class="fas fa-check-circle"></i>Mantenimiento ilimitado</li>
-                    <li><i class="fas fa-check-circle"></i>Diagnóstico continuo</li>
-                    <li><i class="fas fa-check-circle"></i>Soporte técnico remoto</li>
-                    <li><i class="fas fa-check-circle"></i>30% dto. en reparaciones</li>
-                    <li><i class="fas fa-check-circle"></i>Técnico dedicado</li>
-                </ul>
-                <button class="btn-precio ghost">Contactar</button>
-            </div>
-        </div>
-    </div>
-</section>
+            </nav>
 
-<!-- ========== CONTACTO ========== -->
-<section id="contacto" class="contacto">
-    <div class="container">
-        <div class="section-header reveal">
-            <span class="section-tag">Contacto</span>
-            <h2 class="section-title">Inscríbete o solicita un servicio</h2>
-            <p class="section-sub">Estamos listos para ayudarte. Escríbenos y respondemos en menos de 2 horas.</p>
-        </div>
-        <div class="contacto-layout">
-            <div class="contacto-info reveal">
-                <div class="contacto-info-item">
-                    <div class="c-icon"><i class="fas fa-phone"></i></div>
-                    <div class="c-text"><strong>Teléfono</strong><span>829-974-9835</span></div>
-                </div>
-                <div class="contacto-info-item">
-                    <div class="c-icon"><i class="fab fa-whatsapp"></i></div>
-                    <div class="c-text"><strong>WhatsApp</strong><span>829-974-9835</span></div>
-                </div>
-                <div class="contacto-info-item">
-                    <div class="c-icon"><i class="fas fa-map-marker-alt"></i></div>
-                    <div class="c-text"><strong>Dirección</strong><span>Av. Padre Castellano #123</span></div>
-                </div>
-                <div class="contacto-info-item">
-                    <div class="c-icon"><i class="fas fa-clock"></i></div>
-                    <div class="c-text"><strong>Horario</strong><span>Lun–Sáb: 8am – 7pm</span></div>
-                </div>
-            </div>
-
-            <!-- ===== FORMULARIO CON JS ===== -->
-            <div class="contacto-form reveal">
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="f-nombre">Nombre</label>
-                        <input type="text" id="f-nombre" placeholder="Tu nombre completo" autocomplete="off">
-                        <span class="form-msg" id="msg-nombre"></span>
-                    </div>
-                    <div class="form-group">
-                        <label for="f-email">Correo electrónico</label>
-                        <input type="email" id="f-email" placeholder="correo@ejemplo.com" autocomplete="off">
-                        <span class="form-msg" id="msg-email"></span>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="f-servicio">Tipo de servicio</label>
-                    <select id="f-servicio">
-                        <option value="">Seleccionar…</option>
-                        <option>Reparación de celular</option>
-                        <option>Reparación de laptop</option>
-                        <option>Mantenimiento preventivo</option>
-                        <option>Inscripción a taller</option>
-                        <option>Plan empresarial</option>
-                        <option>Otro</option>
-                    </select>
-                    <span class="form-msg" id="msg-servicio"></span>
-                </div>
-                <div class="form-group">
-                    <label for="f-mensaje">Mensaje</label>
-                    <textarea id="f-mensaje" placeholder="Cuéntanos qué necesitas…" maxlength="500"></textarea>
-                    <div class="char-count" id="char-count">0 / 500</div>
-                    <span class="form-msg" id="msg-mensaje"></span>
-                </div>
-                <button class="btn-submit" id="btn-enviar" type="button">
-                    <i class="fas fa-paper-plane" id="btn-icon"></i>
-                    <span id="btn-text">&nbsp;Enviar mensaje</span>
-                    <span class="form-spinner" id="form-spinner"></span>
+            <div class="nav-actions">
+                <button class="btn-gear" aria-label="Configuración">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="17" height="17">
+                        <path
+                            d="M12 15.5A3.5 3.5 0 0 1 8.5 12 3.5 3.5 0 0 1 12 8.5a3.5 3.5 0 0 1 3.5 3.5 3.5 3.5 0 0 1-3.5 3.5m7.43-2.92c.04-.34.07-.69.07-1.08s-.03-.73-.07-1.08l2.33-1.82c.21-.16.27-.45.13-.69l-2.2-3.81c-.13-.24-.42-.32-.66-.24l-2.75 1.11c-.57-.44-1.18-.81-1.86-1.08L14.21 1.5c-.05-.26-.27-.5-.55-.5h-4.4c-.28 0-.49.24-.54.5l-.41 2.39c-.68.27-1.29.64-1.86 1.08L3.7 3.86c-.24-.08-.53 0-.66.24L.84 7.91c-.13.24-.08.53.13.69l2.33 1.82C3.26 10.77 3.23 11.1 3.23 11.5s.03.73.07 1.08L1 14.4c-.21.16-.27.45-.13.69l2.2 3.81c.13.24.42.32.66.24l2.75-1.11c.57.44 1.18.81 1.86 1.08l.41 2.39c.05.26.26.5.54.5h4.4c.28 0 .5-.24.55-.5l.41-2.39c.68-.27 1.29-.64 1.86-1.08l2.75 1.11c.24.08.53 0 .66-.24l2.2-3.81c.13-.24.08-.53-.13-.69l-2.33-1.82z" />
+                    </svg>
                 </button>
-                <div class="success-box" id="success-box">
-                    <div class="success-icon"><i class="fas fa-check"></i></div>
-                    <h3>¡Mensaje enviado!</h3>
-                    <p>Gracias por contactarnos. Te responderemos en menos de 2 horas.</p>
+                <div class="nav-divider"></div>
+                <button class="hamburger" id="hamburger" aria-label="Menú">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+
+        </div>
+
+        <div class="mobile-menu" id="mobileMenu">
+            <li><a href="index.html" class="nav-link active">Inicio</a></li>
+            <li><a href="empresa_digital.html" class="nav-link">Productos</a></li>
+            <li><a href="sobre nosotros.html" class="nav-link">Sobre Nosotros</a></li>
+            <li><a href="reservaciones.html" class="nav-link">Reservaciónes</a></li>
+            <li><a href="reparacion.html" class="nav-link">Reparaciones</a></li>
+        </div>
+    </header>
+
+    <!-- ========== HERO ========== -->
+    <section class="hero" id="inicio">
+        <div class="hero-bg"></div>
+        <div class="hero-grid"></div>
+        <div class="hero-content">
+            <div class="hero-badge"><i class="fas fa-bolt"></i> Servicio técnico certificado</div>
+            <h1 class="hero-title">Reparamos tu <span class="accent">mundo digital</span></h1>
+            <p class="hero-subtitle">Especialistas en reparación de celulares, laptops y dispositivos electrónicos.
+                Calidad garantizada y entrega rápida.</p>
+            <div class="hero-btns">
+                <a href="#contacto" class="btn-primary"><i class="fas fa-tools"></i> Solicitar servicio</a>
+                <a href="#servicios" class="btn-outline">Ver servicios</a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat"><span class="stat-num">+2,500</span><span class="stat-label">Reparaciones
+                        exitosas</span></div>
+                <div class="stat"><span class="stat-num">98%</span><span class="stat-label">Clientes satisfechos</span>
+                </div>
+                <div class="stat"><span class="stat-num">6 años</span><span class="stat-label">De experiencia</span>
+                </div>
+                <div class="stat"><span class="stat-num">24h</span><span class="stat-label">Tiempo promedio</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== SERVICIOS ========== -->
+    <section id="servicios" class="servicios">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">Lo que hacemos</span>
+                <h2 class="section-title">Nuestros Servicios</h2>
+                <p class="section-sub">Expertos en reparación de dispositivos electrónicos con garantía en cada trabajo
+                </p>
+            </div>
+            <div class="servicios-grid">
+                <div class="servicio-card reveal">
+                    <div class="servicio-img"><i class="fas fa-mobile-alt"></i></div>
+                    <h3>Reparación de Celulares</h3>
+                    <p>Cambio de pantallas, baterías, conectores de carga, cámaras y más. Todas las marcas.</p>
+                    <a href="#contacto" class="btn-sec">Solicitar</a>
+                </div>
+                <div class="servicio-card reveal">
+                    <div class="servicio-img"><i class="fas fa-laptop"></i></div>
+                    <h3>Reparación de Laptops</h3>
+                    <p>Diagnóstico completo, limpieza de polvo, cambio de componentes y reparación de placa.</p>
+                    <a href="#contacto" class="btn-sec">Solicitar</a>
+                </div>
+                <div class="servicio-card reveal">
+                    <div class="servicio-img"><i class="fas fa-cogs"></i></div>
+                    <h3>Mantenimiento General</h3>
+                    <p>Limpieza interna profunda, optimización de software y actualización de sistemas.</p>
+                    <a href="#contacto" class="btn-sec">Solicitar</a>
+                </div>
+                <div class="servicio-card reveal">
+                    <div class="servicio-img"><i class="fas fa-battery-full"></i></div>
+                    <h3>Cambio de Batería</h3>
+                    <p>Baterías originales y de alta calidad para toda clase de dispositivos móviles.</p>
+                    <a href="#contacto" class="btn-sec">Solicitar</a>
                 </div>
             </div>
-            <!-- ===== FIN FORMULARIO ===== -->
-
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- ========== FOOTER ========== -->
-<footer>
-    <div class="footer-top">
-        <div class="footer-brand">
-            <div class="brand-name">
-                <img src="img/logo-nuevo.png" alt="Digital Parts Logo" class="footer-logo">
+    <!-- ========== TALLERES ========== -->
+    <section id="talleres" class="talleres">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">Aprende con nosotros</span>
+                <h2 class="section-title">Talleres y Cursos</h2>
+                <p class="section-sub">Aprende a reparar dispositivos electrónicos con nuestros expertos certificados
+                </p>
             </div>
-            <p>Especialistas en reparación de dispositivos electrónicos y formación técnica profesional en Santo Domingo, RD.</p>
-            <div class="footer-socials">
-                <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
-                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <div class="talleres-grid">
+                <div class="taller-card reveal">
+                    <div class="taller-img"><i class="fas fa-mobile-alt"></i></div>
+                    <div class="taller-body">
+                        <div class="taller-meta">
+                            <span class="taller-tag"><i class="fas fa-clock"></i> 20 horas</span>
+                            <span class="taller-tag"><i class="fas fa-certificate"></i> Certificado</span>
+                        </div>
+                        <h3>Taller de Reparación de Celulares</h3>
+                        <p>Curso práctico para aprender a diagnosticar y reparar celulares. Incluye materiales y
+                            certificado de participación.</p>
+                        <a href="#contacto" class="btn-sec">Inscribirse</a>
+                    </div>
+                </div>
+                <div class="taller-card reveal">
+                    <div class="taller-img"><i class="fas fa-microchip"></i></div>
+                    <div class="taller-body">
+                        <div class="taller-meta">
+                            <span class="taller-tag"><i class="fas fa-clock"></i> 16 horas</span>
+                            <span class="taller-tag"><i class="fas fa-users"></i> Grupal</span>
+                        </div>
+                        <h3>Curso de Electrónica Básica</h3>
+                        <p>Aprende los fundamentos de la electrónica y cómo aplicarlos en la reparación de dispositivos
+                            modernos.</p>
+                        <a href="#contacto" class="btn-sec">Inscribirse</a>
+                    </div>
+                </div>
+                <div class="taller-card reveal">
+                    <div class="taller-img"><i class="fas fa-fire-alt"></i></div>
+                    <div class="taller-body">
+                        <div class="taller-meta">
+                            <span class="taller-tag"><i class="fas fa-clock"></i> 12 horas</span>
+                            <span class="taller-tag"><i class="fas fa-star"></i> Avanzado</span>
+                        </div>
+                        <h3>Taller de Soldadura Electrónica</h3>
+                        <p>Domina las técnicas de soldadura SMD y THT para componentes electrónicos. Prácticas guiadas y
+                            asesoría personalizada.</p>
+                        <a href="#contacto" class="btn-sec">Inscribirse</a>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="footer-col">
-            <h4>Servicios</h4>
-            <ul>
-                <li><a href="#servicios">Reparación de celulares</a></li>
-                <li><a href="#servicios">Reparación de laptops</a></li>
-                <li><a href="#servicios">Mantenimiento general</a></li>
-                <li><a href="#servicios">Cambio de batería</a></li>
-            </ul>
-        </div>
-        <div class="footer-col">
-            <h4>Empresa</h4>
-            <ul>
-                <li><a href="#sobre">Sobre nosotros</a></li>
-                <li><a href="#talleres">Talleres</a></li>
-                <li><a href="#precios">Planes</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
-        </div>
-        <div class="footer-newsletter">
-            <h4>Novedades</h4>
-            <p>Recibe ofertas, tips tecnológicos y novedades de nuestros cursos.</p>
-            <div class="newsletter-form">
-                <input type="email" placeholder="tu@correo.com">
-                <button type="button">Unirme</button>
+    </section>
+
+    <!-- ========== SOBRE NOSOTROS ========== -->
+    <section id="sobre" class="sobre">
+        <div class="container">
+            <div class="sobre-layout">
+                <div class="sobre-left reveal">
+                    <span class="section-tag">Quiénes somos</span>
+                    <h2 class="big-text">Formando técnicos del <span>futuro digital</span></h2>
+                    <p>En nuestros talleres y cursos combinamos experiencia técnica con aprendizaje práctico, para
+                        formar a cada participante en reparación de dispositivos electrónicos, mantenimiento y
+                        soluciones tecnológicas reales.</p>
+                    <a href="#talleres" class="btn-primary"><i class="fas fa-graduation-cap"></i> Ver cursos</a>
+                </div>
+                <div class="sobre-grid reveal">
+                    <div class="sobre-item">
+                        <h3><i class="fas fa-bullseye"></i> Objetivo</h3>
+                        <p>Ofrecer cursos con contenido claro, herramientas reales y guías paso a paso aplicables desde
+                            el primer día.</p>
+                    </div>
+                    <div class="sobre-item">
+                        <h3><i class="fas fa-rocket"></i> Misión</h3>
+                        <p>Empoderar a nuestra comunidad con formación de calidad en diagnóstico, reparación y
+                            mantenimiento de dispositivos.</p>
+                    </div>
+                    <div class="sobre-item">
+                        <h3><i class="fas fa-eye"></i> Visión</h3>
+                        <p>Ser el espacio de referencia en educación técnica práctica que impulse carreras sostenibles
+                            en el sector digital.</p>
+                    </div>
+                    <div class="sobre-item">
+                        <h3><i class="fas fa-heart"></i> Valores</h3>
+                        <div class="valores-tags">
+                            <span>Aprendizaje</span>
+                            <span>Calidad</span>
+                            <span>Innovación</span>
+                            <span>Compromiso</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="footer-bottom container">
-        <p>© 2026 Digital Parts. Todos los derechos reservados.</p>
-        <div class="footer-bottom-links">
-            <a href="#">Privacidad</a>
-            <a href="#">Términos</a>
-            <a href="#">Cookies</a>
+    </section>
+
+    <!-- ========== PRODUCTOS ========== -->
+    <section id="productos" class="productos">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">Tienda</span>
+                <h2 class="section-title">Nuestros Productos</h2>
+                <p class="section-sub">Accesorios y repuestos de calidad para todos tus dispositivos</p>
+            </div>
+            <div class="productos-grid">
+                <div class="producto-card reveal">
+                    <div class="producto-img"><i class="fas fa-charging-station"></i></div>
+                    <span class="producto-badge">Disponible</span>
+                    <h3>Cargadores</h3>
+                    <p class="producto-precio">Desde RD$450</p>
+                </div>
+                <div class="producto-card reveal">
+                    <div class="producto-img"><i class="fas fa-headphones"></i></div>
+                    <span class="producto-badge">Disponible</span>
+                    <h3>Audífonos</h3>
+                    <p class="producto-precio">Desde RD$850</p>
+                </div>
+                <div class="producto-card reveal">
+                    <div class="producto-img"><i class="fas fa-mobile-alt"></i></div>
+                    <span class="producto-badge">Disponible</span>
+                    <h3>Fundas</h3>
+                    <p class="producto-precio">Desde RD$250</p>
+                </div>
+                <div class="producto-card reveal">
+                    <div class="producto-img"><i class="fas fa-plug"></i></div>
+                    <span class="producto-badge">Disponible</span>
+                    <h3>Cables</h3>
+                    <p class="producto-precio">Desde RD$180</p>
+                </div>
+            </div>
         </div>
-    </div>
-</footer>
+    </section>
 
-<button id="scrollTop" aria-label="Volver arriba"><i class="fas fa-arrow-up"></i></button>
+    <!-- ========== GALERÍA ========== -->
+    <section class="galeria">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">Portafolio</span>
+                <h2 class="section-title light">Galería de Trabajos</h2>
+                <p class="section-sub light">Algunos de nuestros proyectos realizados</p>
+            </div>
+            <div class="galeria-grid reveal">
+                <div class="galeria-item"><i class="fas fa-wrench"></i><span>Reparación de pantalla</span></div>
+                <div class="galeria-item"><i class="fas fa-microchip"></i><span>Diagnóstico de placa</span></div>
+                <div class="galeria-item"><i class="fas fa-laptop"></i><span>Mantenimiento laptop</span></div>
+                <div class="galeria-item"><i class="fas fa-battery-full"></i><span>Cambio de batería</span></div>
+                <div class="galeria-item"><i class="fas fa-fire-alt"></i><span>Soldadura SMD</span></div>
+            </div>
+        </div>
+    </section>
 
-<script src="js/main.js"></script>
+    <!-- ========== TESTIMONIOS ========== -->
+    <section id="testimonios" class="testimonios">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">Clientes</span>
+                <h2 class="section-title">Lo que dicen de nosotros</h2>
+                <p class="section-sub">La satisfacción de nuestros clientes es nuestra mejor carta de presentación</p>
+            </div>
+            <div class="testimonios-grid">
+                <div class="testimonio-card reveal">
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p>Llevé mi iPhone con la pantalla rota y en menos de 2 horas me lo entregaron como nuevo. El precio
+                        fue muy justo y la atención excelente. Sin duda volvería.</p>
+                    <div class="testimonio-autor">
+                        <div class="autor-avatar">AM</div>
+                        <div class="autor-info"><strong>Ana María R.</strong><span>Cliente frecuente</span></div>
+                    </div>
+                </div>
+                <div class="testimonio-card reveal">
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p>Mi laptop llevaba meses lenta y con sobrecalentamiento. Hicieron la limpieza y cambio de pasta
+                        térmica. Quedó como el primer día. Muy profesionales.</p>
+                    <div class="testimonio-autor">
+                        <div class="autor-avatar">JC</div>
+                        <div class="autor-info"><strong>Juan Carlos P.</strong><span>Diseñador gráfico</span></div>
+                    </div>
+                </div>
+                <div class="testimonio-card reveal">
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p>Tomé el taller de reparación de celulares y aprendí muchísimo. Los instructores son pacientes y
+                        el contenido es muy práctico. Totalmente recomendado.</p>
+                    <div class="testimonio-autor">
+                        <div class="autor-avatar">LG</div>
+                        <div class="autor-info"><strong>Laura G.</strong><span>Estudiante del taller</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== PROCESO ========== -->
+    <section id="proceso" class="proceso">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">Cómo funciona</span>
+                <h2 class="section-title light">Proceso de Reparación</h2>
+                <p class="section-sub light">Simple, transparente y sin sorpresas. Así trabajamos para ti.</p>
+            </div>
+            <div class="proceso-steps">
+                <div class="paso reveal">
+                    <div class="paso-num">01</div>
+                    <div class="paso-icon"><i class="fas fa-search"></i></div>
+                    <h3>Diagnóstico gratuito</h3>
+                    <p>Evaluamos tu dispositivo sin costo y te explicamos el problema con claridad.</p>
+                </div>
+                <div class="paso reveal">
+                    <div class="paso-num">02</div>
+                    <div class="paso-icon"><i class="fas fa-file-invoice-dollar"></i></div>
+                    <h3>Presupuesto transparente</h3>
+                    <p>Recibes un presupuesto claro y detallado. Sin cargos ocultos, sin sorpresas.</p>
+                </div>
+                <div class="paso reveal">
+                    <div class="paso-num">03</div>
+                    <div class="paso-icon"><i class="fas fa-tools"></i></div>
+                    <h3>Reparación experta</h3>
+                    <p>Nuestros técnicos certificados trabajan con piezas de calidad garantizada.</p>
+                </div>
+                <div class="paso reveal">
+                    <div class="paso-num">04</div>
+                    <div class="paso-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h3>Entrega con garantía</h3>
+                    <p>Recibes tu dispositivo reparado con garantía escrita por 30 días.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== PRECIOS ========== -->
+    <section id="precios" class="precios">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">Planes</span>
+                <h2 class="section-title">Planes de Mantenimiento</h2>
+                <p class="section-sub">Protege tus dispositivos con nuestros planes de mantenimiento preventivo</p>
+            </div>
+            <div class="precios-grid">
+                <div class="precio-card reveal">
+                    <div class="precio-nombre">Básico</div>
+                    <div class="precio-valor">RD$1,200</div>
+                    <div class="precio-sub">por dispositivo / anual</div>
+                    <ul class="precio-features">
+                        <li><i class="fas fa-check-circle"></i>1 limpieza interna anual</li>
+                        <li><i class="fas fa-check-circle"></i>Diagnóstico completo</li>
+                        <li><i class="fas fa-check-circle"></i>Reporte de estado</li>
+                        <li><i class="fas fa-check-circle"></i>10% dto. en reparaciones</li>
+                    </ul>
+                    <button class="btn-precio ghost">Elegir plan</button>
+                </div>
+                <div class="precio-card destacado reveal">
+                    <div class="precio-badge">Más popular</div>
+                    <div class="precio-nombre">Pro</div>
+                    <div class="precio-valor">RD$2,500</div>
+                    <div class="precio-sub">por dispositivo / anual</div>
+                    <ul class="precio-features">
+                        <li><i class="fas fa-check-circle"></i>2 limpiezas internas anuales</li>
+                        <li><i class="fas fa-check-circle"></i>Diagnóstico completo</li>
+                        <li><i class="fas fa-check-circle"></i>Actualización de software</li>
+                        <li><i class="fas fa-check-circle"></i>20% dto. en reparaciones</li>
+                        <li><i class="fas fa-check-circle"></i>Prioridad en atención</li>
+                    </ul>
+                    <button class="btn-precio filled">Elegir plan</button>
+                </div>
+                <div class="precio-card reveal">
+                    <div class="precio-nombre">Empresarial</div>
+                    <div class="precio-valor">RD$8,500</div>
+                    <div class="precio-sub">hasta 5 dispositivos / anual</div>
+                    <ul class="precio-features">
+                        <li><i class="fas fa-check-circle"></i>Mantenimiento ilimitado</li>
+                        <li><i class="fas fa-check-circle"></i>Diagnóstico continuo</li>
+                        <li><i class="fas fa-check-circle"></i>Soporte técnico remoto</li>
+                        <li><i class="fas fa-check-circle"></i>30% dto. en reparaciones</li>
+                        <li><i class="fas fa-check-circle"></i>Técnico dedicado</li>
+                    </ul>
+                    <button class="btn-precio ghost">Contactar</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CONTACTO ========== -->
+    <section id="contacto" class="contacto">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">Contacto</span>
+                <h2 class="section-title">Inscríbete o solicita un servicio</h2>
+                <p class="section-sub">Estamos listos para ayudarte. Escríbenos y respondemos en menos de 2 horas.</p>
+            </div>
+            <div class="contacto-layout">
+                <div class="contacto-info reveal">
+                    <div class="contacto-info-item">
+                        <div class="c-icon"><i class="fas fa-phone"></i></div>
+                        <div class="c-text"><strong>Teléfono</strong><span>829-974-9835</span></div>
+                    </div>
+                    <div class="contacto-info-item">
+                        <div class="c-icon"><i class="fab fa-whatsapp"></i></div>
+                        <div class="c-text"><strong>WhatsApp</strong><span>829-974-9835</span></div>
+                    </div>
+                    <div class="contacto-info-item">
+                        <div class="c-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div class="c-text"><strong>Dirección</strong><span>Av. Padre Castellano #123</span></div>
+                    </div>
+                    <div class="contacto-info-item">
+                        <div class="c-icon"><i class="fas fa-clock"></i></div>
+                        <div class="c-text"><strong>Horario</strong><span>Lun–Sáb: 8am – 7pm</span></div>
+                    </div>
+                </div>
+
+                <!-- ===== FORMULARIO CON JS ===== -->
+                <div class="contacto-form reveal">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="f-nombre">Nombre</label>
+                            <input type="text" id="f-nombre" placeholder="Tu nombre completo" autocomplete="off">
+                            <span class="form-msg" id="msg-nombre"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="f-email">Correo electrónico</label>
+                            <input type="email" id="f-email" placeholder="correo@ejemplo.com" autocomplete="off">
+                            <span class="form-msg" id="msg-email"></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="f-servicio">Tipo de servicio</label>
+                        <select id="f-servicio">
+                            <option value="">Seleccionar…</option>
+                            <option>Reparación de celular</option>
+                            <option>Reparación de laptop</option>
+                            <option>Mantenimiento preventivo</option>
+                            <option>Inscripción a taller</option>
+                            <option>Plan empresarial</option>
+                            <option>Otro</option>
+                        </select>
+                        <span class="form-msg" id="msg-servicio"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="f-mensaje">Mensaje</label>
+                        <textarea id="f-mensaje" placeholder="Cuéntanos qué necesitas…" maxlength="500"></textarea>
+                        <div class="char-count" id="char-count">0 / 500</div>
+                        <span class="form-msg" id="msg-mensaje"></span>
+                    </div>
+                    <button class="btn-submit" id="btn-enviar" type="button">
+                        <i class="fas fa-paper-plane" id="btn-icon"></i>
+                        <span id="btn-text">&nbsp;Enviar mensaje</span>
+                        <span class="form-spinner" id="form-spinner"></span>
+                    </button>
+                    <div class="success-box" id="success-box">
+                        <div class="success-icon"><i class="fas fa-check"></i></div>
+                        <h3>¡Mensaje enviado!</h3>
+                        <p>Gracias por contactarnos. Te responderemos en menos de 2 horas.</p>
+                    </div>
+                </div>
+                <!-- ===== FIN FORMULARIO ===== -->
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer>
+        <div class="footer-top">
+            <div class="footer-brand">
+                <div class="brand-name">
+                    <img src="./img/logo-nuevo.png" alt="Digital Parts Logo" class="footer-logo">
+                </div>
+                <p>Especialistas en reparación de dispositivos electrónicos y formación técnica profesional en Santo
+                    Domingo, RD.</p>
+                <div class="footer-socials">
+                    <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Servicios</h4>
+                <ul>
+                    <li><a href="#servicios">Reparación de celulares</a></li>
+                    <li><a href="#servicios">Reparación de laptops</a></li>
+                    <li><a href="#servicios">Mantenimiento general</a></li>
+                    <li><a href="#servicios">Cambio de batería</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Empresa</h4>
+                <ul>
+                    <li><a href="#sobre">Sobre nosotros</a></li>
+                    <li><a href="#talleres">Talleres</a></li>
+                    <li><a href="#precios">Planes</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-newsletter">
+                <h4>Novedades</h4>
+                <p>Recibe ofertas, tips tecnológicos y novedades de nuestros cursos.</p>
+                <div class="newsletter-form">
+                    <input type="email" placeholder="tu@correo.com">
+                    <button type="button">Unirme</button>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom container">
+            <p>© 2026 Digital Parts. Todos los derechos reservados.</p>
+            <div class="footer-bottom-links">
+                <a href="#">Privacidad</a>
+                <a href="#">Términos</a>
+                <a href="#">Cookies</a>
+            </div>
+        </div>
+    </footer>
+
+    <button id="scrollTop" aria-label="Volver arriba"><i class="fas fa-arrow-up"></i></button>
+
+    <script src="js/main.js"></script>
 </body>
+
 </html>

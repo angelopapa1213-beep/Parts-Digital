@@ -1,534 +1,568 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Parts Digital</title>
-    <link rel="stylesheet" href="css/Style.css">
+    <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-    <link rel="shortcut icon" sizes="180x180" href="img/l.jpeg">
+    <link rel="shortcut icon" sizes="180x180" href="./img/l.jpeg">
     <script src="js/index.js" defer></script>
 </head>
+
 <body>
 
-<div id="caco">
-    <header id="header">
-        <div class="header-inner">
-            <img src="img/logo-nuevo.png" id="im" alt="Parts Digital Logo">
+    <div id="caco">
+        <header id="header">
+            <div class="header-inner">
+                <img src="./img/logo-nuevo.png" id="im" alt="Parts Digital Logo">
 
-            <nav id="nav-desktop">
-                <ul>
-                    <li><a href="#inicio" class="nav-link active">Inicio</a></li>
-                    <li><a href="empresa_digital.html" class="nav-link">Productos</a></li>
-                    <li><a href="sobre nosotros.html" class="nav-link">Sobre Nosotros</a></li>
-                    <li><a href="reservaciones.html" class="nav-link">Reservaciónes</a></li>
-                    <li><a href="reparacion.html" class="nav-link">Reparaciones</a></li>
-                </ul>
-            </nav>
+                <nav id="nav-desktop">
+                    <ul>
+                        <li><a href="#inicio" class="nav-link active">Inicio</a></li>
+                        <li><a href="empresa_digital.html" class="nav-link">Productos</a></li>
+                        <li><a href="sobre nosotros.html" class="nav-link">Sobre Nosotros</a></li>
+                        <li><a href="reservaciones.html" class="nav-link">Reservaciónes</a></li>
+                        <li><a href="reparacion.html" class="nav-link">Reparaciones</a></li>
+                    </ul>
+                </nav>
 
-            <div id="cajon-dentro-del-header">
-                <div id="sopla">
-                    <input type="text" placeholder="Buscar...">
-                    <i class="bi bi-search search-icon"></i>
+                <div id="cajon-dentro-del-header">
+                    <div id="sopla">
+                        <input type="text" placeholder="Buscar...">
+                        <i class="bi bi-search search-icon"></i>
+                    </div>
+                    <a id="primer-boton" href="inicio_seccion.html">Iniciar Sesión</a>
                 </div>
-                <a id="primer-boton" href="inicio_seccion.html">Iniciar Sesión</a>
+
+                <button class="hamburger" id="hamburger" aria-label="Abrir menú">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </header>
+
+
+        <div id="menu-movil">
+            <ul>
+                <li><a href="#inicio" class="nav-link active">Inicio</a></li>
+                <li><a href="empresa_digital.html" class="nav-link">Productos</a></li>
+                <li><a href="sobre nosotros.html" class="nav-link">Sobre Nosotros</a></li>
+                <li><a href="reservaciones.html" class="nav-link">Reservaciónes</a></li>
+                <li><a href="reparacion.html" class="nav-link">Reparaciones</a></li>
+            </ul>
+        </div>
+
+        <article id="inicio" class="primera-seccion">
+            <div id="text">
+                <div class="hero-badge"><i class="bi bi-lightning-charge-fill"></i> #1 en reparaciones en RD</div>
+                <h1>Bienvenido a <span>Parts Digital</span>, lo mejor en <span>calidad</span> y servicio</h1>
+                <div id="saidina">
+                    <p>Somos una empresa dedicada a proporcionar los <strong>mejores</strong> productos y servicios del
+                        mercado. Destacamos por nuestros precios accesibles y atención personalizada.</p>
+                    <p>Si estás interesado en ver nuestras ofertas y precios, no dudes en contactarnos.</p>
+                    <div class="hero-btns">
+                        <button class="btn-primary-hero"
+                            onclick="document.getElementById('contacto').scrollIntoView({behavior:'smooth'})">
+                            <i class="bi bi-chat-dots"></i> Contáctanos
+                        </button>
+                        <button class="btn-secondary-hero" onclick="window.location.href='productos.html'">
+                            Ver Productos <i class="bi bi-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
             </div>
 
-            <button class="hamburger" id="hamburger" aria-label="Abrir menú">
-                <span></span><span></span><span></span>
-            </button>
-        </div>
-    </header>
+            <div id="text-2">
+                <div>
 
+                </div>
+                <div id="dentro-text-2">
+                    <img src="./img/Pantalla rota de laptop moderna.png" alt="Reparación de laptop">
 
-    <div id="menu-movil">
-        <ul>
-            <li><a href="#inicio">Inicio</a></li>
-            <li><a href="productos.html">Productos</a></li>
-            <li><a href="#sobre">Sobre Nosotros</a></li>
-            <li><a href="#ubicacion">Ubicación</a></li>
-            <li><a href="#contacto">Contactos</a></li>
-        </ul>
+                    <img src="./img/equipos1.jpg" class="dentro-text-3">
+                </div>
+                <div id="dentro-text-3">
+                    <img src="./img/rutin.avif" alt="Reparación de smartphone">
+                </div>
+            </div>
+        </article>
     </div>
 
-    <article id="inicio" class="primera-seccion">
-        <div id="text">
-            <div class="hero-badge"><i class="bi bi-lightning-charge-fill"></i> #1 en reparaciones en RD</div>
-            <h1>Bienvenido a <span>Parts Digital</span>, lo mejor en <span>calidad</span> y servicio</h1>
-            <div id="saidina">
-                <p>Somos una empresa dedicada a proporcionar los <strong>mejores</strong> productos y servicios del mercado. Destacamos por nuestros precios accesibles y atención personalizada.</p>
-                <p>Si estás interesado en ver nuestras ofertas y precios, no dudes en contactarnos.</p>
-                <div class="hero-btns">
-                    <button class="btn-primary-hero" onclick="document.getElementById('contacto').scrollIntoView({behavior:'smooth'})">
-                        <i class="bi bi-chat-dots"></i> Contáctanos
-                    </button>
-                    <button class="btn-secondary-hero" onclick="window.location.href='productos.html'">
-                        Ver Productos <i class="bi bi-arrow-right"></i>
-                    </button>
-                </div>
-            </div>
+    <section id="el-2" class="reveal-section">
+        <div id="dentro-el-2">
+            <span class="section-tag">Nuestra ventaja</span>
+            <h2>¿Por qué elegirnos?</h2>
+            <p>En Parts Digital nos enorgullece ofrecer una experiencia de compra excepcional. Nuestro compromiso con la
+                calidad, la innovación y el servicio al cliente nos distingue como la mejor opción para tus necesidades
+                tecnológicas.</p>
         </div>
 
-        <div id="text-2">
-            <div>
-                
-            </div>
-            <div id="dentro-text-2">
-                <img src="img/Pantalla rota de laptop moderna.png" alt="Reparación de laptop">
+        <div class="caja-carrusel">
+            <div class="carrusel">
+                <div class="dividiendo-1">
+                    <i class="bi bi-patch-check-fill card-icon"></i>
+                    <h4>Calidad Garantizada</h4>
+                    <p>Todos nuestros productos pasan por rigurosos controles de calidad para asegurar que recibas solo
+                        lo mejor.</p>
+                </div>
+                <div class="dividiendo-1">
+                    <i class="bi bi-grid-3x3-gap-fill card-icon"></i>
+                    <h4>Variedad de Productos</h4>
+                    <p>Contamos con una amplia gama de productos tecnológicos para satisfacer todas tus necesidades.</p>
+                </div>
+                <div class="dividiendo-1">
+                    <i class="bi bi-tags-fill card-icon"></i>
+                    <h4>Precios Competitivos</h4>
+                    <p>Ofrecemos precios accesibles sin comprometer la calidad, asegurando el mejor valor por tu dinero.
+                    </p>
+                </div>
+                <div class="dividiendo-1">
+                    <i class="bi bi-headset card-icon"></i>
+                    <h4>Atención al Cliente Excepcional</h4>
+                    <p>Nuestro equipo siempre está disponible para ayudarte con cualquier consulta o problema.</p>
+                </div>
+                <div class="dividiendo-1">
+                    <i class="bi bi-truck card-icon"></i>
+                    <h4>Envío Rápido y Seguro</h4>
+                    <p>Nos aseguramos de que tus pedidos lleguen a tiempo y en perfectas condiciones.</p>
+                </div>
+                <div class="dividiendo-1">
+                    <i class="bi bi-shield-check card-icon"></i>
+                    <h4>Garantía Extendida</h4>
+                    <p>Ofrecemos garantías adicionales para que compres sin preocupaciones.</p>
+                </div>
 
-                <img src="img/equipos1.jpg" class="dentro-text-3">
+
+                <div class="dividiendo-1">
+                    <i class="bi bi-patch-check-fill card-icon"></i>
+                    <h4>Calidad Garantizada</h4>
+                    <p>Todos nuestros productos pasan por rigurosos controles de calidad para asegurar que recibas solo
+                        lo mejor.</p>
+                </div>
+                <div class="dividiendo-1">
+                    <i class="bi bi-grid-3x3-gap-fill card-icon"></i>
+                    <h4>Variedad de Productos</h4>
+                    <p>Contamos con una amplia gama de productos tecnológicos para satisfacer todas tus necesidades.</p>
+                </div>
+                <div class="dividiendo-1">
+                    <i class="bi bi-tags-fill card-icon"></i>
+                    <h4>Precios Competitivos</h4>
+                    <p>Ofrecemos precios accesibles sin comprometer la calidad, asegurando el mejor valor por tu dinero.
+                    </p>
+                </div>
+                <div class="dividiendo-1">
+                    <i class="bi bi-headset card-icon"></i>
+                    <h4>Atención al Cliente Excepcional</h4>
+                    <p>Nuestro equipo siempre está disponible para ayudarte con cualquier consulta o problema.</p>
+                </div>
+                <div class="dividiendo-1">
+                    <i class="bi bi-truck card-icon"></i>
+                    <h4>Envío Rápido y Seguro</h4>
+                    <p>Nos aseguramos de que tus pedidos lleguen a tiempo y en perfectas condiciones.</p>
+                </div>
+                <div class="dividiendo-1">
+                    <i class="bi bi-shield-check card-icon"></i>
+                    <h4>Garantía Extendida</h4>
+                    <p>Ofrecemos garantías adicionales para que compres sin preocupaciones.</p>
+                </div>
             </div>
-            <div id="dentro-text-3">
-                <img src="img/rutin.avif" alt="Reparación de smartphone">
+
+
+        </div>
+    </section>
+
+    <article id="tercer-article">
+        <aside id="eventual">
+            <div class="del">
+                <span class="section-tag light">Promociones</span>
+                <h2>Ofertas Especiales</h2>
             </div>
+            <div class="del">
+                <p>Nuestras ofertas son de las más populares del mercado. No te las pierdas.</p>
+            </div>
+        </aside>
+
+        <div id="even">
+            <aside class="primer-aside reveal-card">
+                <img src="./img/Sin-titulo-2024-10-16T161732.154.webp" alt="Monitor Gaming ASUS">
+                <div class="dentro-aside">
+                    <div class="producto-header">
+                        <h3>Monitor Gaming ASUS</h3>
+                        <h4>165Hz / 1ms</h4>
+                    </div>
+                    <p class="producto-desc">Monitor de última generación con precio muy accesible, ideal para gamers y
+                        profesionales.</p>
+                    <div id="buscando">
+                        <span><i class="bi bi-shop-window"></i> 7 unidades</span>
+                        <span><i class="bi bi-percent"></i> Oferta 10%</span>
+                        <span><i class="bi bi-fire"></i> Más vendido</span>
+                        <span><i class="bi bi-calendar-check"></i> Hasta el 24 de abril</span>
+                    </div>
+                    <div class="conte-buto">
+                        <span class="precio">RD$14,950</span>
+                        <button class="boton-oferta"><a href="empresa_digital.html">Ver Detalles</a></button>
+                    </div>
+                </div>
+            </aside>
+
+            <aside class="primer-aside reveal-card">
+                <img src="./img/451-BBZT_V3.avif" alt="Batería Laptop Dell">
+                <div class="dentro-aside">
+                    <div class="producto-header">
+                        <h3>Batería Laptop Dell</h3>
+                        <h4>650WAS</h4>
+                    </div>
+                    <p class="producto-desc">Compatible con varias líneas de laptops Dell. Vida útil prolongada y
+                        rendimiento confiable.</p>
+                    <div id="buscando">
+                        <span><i class="bi bi-shop-window"></i> 4 unidades</span>
+                        <span><i class="bi bi-percent"></i> Oferta 32%</span>
+                        <span><i class="bi bi-star-fill"></i> Más popular</span>
+                        <span><i class="bi bi-calendar-check"></i> Hasta el 14 de abril</span>
+                    </div>
+                    <div class="conte-buto">
+                        <span class="precio">RD$2,390</span>
+                        <button class="boton-oferta"><a href="empresa_digital.html">Ver Detalles</a></button>
+                    </div>
+                </div>
+            </aside>
+
+            <aside class="primer-aside reveal-card">
+                <img src="./img/samsung_990_pro_2tb_pcie_40_nvme_m2_2280_ssd_mzv9p2t0bw_ac58657_54766.webp"
+                    alt="SSD M.2 2TB">
+                <div class="dentro-aside">
+                    <div class="producto-header">
+                        <h3>SSD M.2 2TB Samsung</h3>
+                        <h4>Velocidad 750MB/s</h4>
+                    </div>
+                    <p class="producto-desc">Almacenamiento SSD de alta velocidad. Rendimiento superior para trabajo y
+                        entretenimiento.</p>
+                    <div id="buscando">
+                        <span><i class="bi bi-shop-window"></i> 10 unidades</span>
+                        <span><i class="bi bi-percent"></i> Oferta 25%</span>
+                        <span><i class="bi bi-fire"></i> Más vendido</span>
+                        <span><i class="bi bi-calendar-check"></i> Hasta el 9 de abril</span>
+                    </div>
+                    <div class="conte-buto">
+                        <span class="precio">RD$5,150</span>
+                        <button class="boton-oferta"><a href="empresa_digital.html">Ver Detalles</a></button>
+                    </div>
+                </div>
+            </aside>
         </div>
     </article>
-</div>
 
-<section id="el-2" class="reveal-section">
-    <div id="dentro-el-2">
-        <span class="section-tag">Nuestra ventaja</span>
-        <h2>¿Por qué elegirnos?</h2>
-        <p>En Parts Digital nos enorgullece ofrecer una experiencia de compra excepcional. Nuestro compromiso con la calidad, la innovación y el servicio al cliente nos distingue como la mejor opción para tus necesidades tecnológicas.</p>
-    </div>
-
-    <div class="caja-carrusel">
-        <div class="carrusel">
-            <div class="dividiendo-1">
-                <i class="bi bi-patch-check-fill card-icon"></i>
-                <h4>Calidad Garantizada</h4>
-                <p>Todos nuestros productos pasan por rigurosos controles de calidad para asegurar que recibas solo lo mejor.</p>
+    <section id="primer-seccion">
+        <div id="primer-se6">
+            <div id="suscripcion">
+                <span class="section-tag">Newsletter</span>
+                <h2>¿Quieres mantenerte al tanto?</h2>
+                <p>Suscríbete a nuestro boletín y recibe las últimas noticias y ofertas especiales directamente en tu
+                    correo.</p>
             </div>
-            <div class="dividiendo-1">
-                <i class="bi bi-grid-3x3-gap-fill card-icon"></i>
-                <h4>Variedad de Productos</h4>
-                <p>Contamos con una amplia gama de productos tecnológicos para satisfacer todas tus necesidades.</p>
+            <div id="caja-del-input">
+                <form id="fo" onsubmit="return false;">
+                    <input type="email" placeholder="Ingresa tu correo electrónico" required>
+                    <button type="submit" id="boton-suscripcion">Suscribirse</button>
+                </form>
             </div>
-            <div class="dividiendo-1">
-                <i class="bi bi-tags-fill card-icon"></i>
-                <h4>Precios Competitivos</h4>
-                <p>Ofrecemos precios accesibles sin comprometer la calidad, asegurando el mejor valor por tu dinero.</p>
-            </div>
-            <div class="dividiendo-1">
-                <i class="bi bi-headset card-icon"></i>
-                <h4>Atención al Cliente Excepcional</h4>
-                <p>Nuestro equipo siempre está disponible para ayudarte con cualquier consulta o problema.</p>
-            </div>
-            <div class="dividiendo-1">
-                <i class="bi bi-truck card-icon"></i>
-                <h4>Envío Rápido y Seguro</h4>
-                <p>Nos aseguramos de que tus pedidos lleguen a tiempo y en perfectas condiciones.</p>
-            </div>
-            <div class="dividiendo-1">
-                <i class="bi bi-shield-check card-icon"></i>
-                <h4>Garantía Extendida</h4>
-                <p>Ofrecemos garantías adicionales para que compres sin preocupaciones.</p>
-            </div>
+        </div>
+    </section>
 
+    <section id="segundo-section">
+        <div id="contenedor-tercer-aside">
+            <aside class="tercer-aside" id="texto-reparacion">
+                <span class="section-tag">Servicios</span>
+                <h2>Métodos de reparación de celulares</h2>
+                <p>En Digital Parts ofrecemos una amplia gama de servicios de reparación de celulares. Nuestro equipo de
+                    técnicos altamente capacitados cuenta con las herramientas y conocimientos necesarios para abordar
+                    cualquier problema en dispositivos móviles.</p>
+                <article id="metodos">
+                    <div class="metodos">
+                        <h5>Descuento de <span>30%</span></h5>
+                        <ul>
+                            <li><i class="bi bi-check2"></i> Reemplazo de piezas dañadas</li>
+                            <li><i class="bi bi-check2"></i> Reparación de pantallas</li>
+                            <li><i class="bi bi-check2"></i> Reparación de baterías</li>
+                        </ul>
+                    </div>
+                    <div class="metodos">
+                        <h5>Descuento de <span>10%</span></h5>
+                        <ul>
+                            <li><i class="bi bi-check2"></i> Reparación de puertos de carga</li>
+                            <li><i class="bi bi-check2"></i> Reparación de software</li>
+                            <li><i class="bi bi-check2"></i> Actualización de sistema</li>
+                        </ul>
+                    </div>
+                </article>
+            </aside>
+            <aside class="tercer-aside img-aside">
+                <img src="img/Reparaciones_de_Moviles_1.png" alt="Reparación de móviles">
+            </aside>
+        </div>
+    </section>
 
-            <div class="dividiendo-1">
-            <i class="bi bi-patch-check-fill card-icon"></i>
-            <h4>Calidad Garantizada</h4>
-            <p>Todos nuestros productos pasan por rigurosos controles de calidad para asegurar que recibas solo lo mejor.</p>
+    <section id="tercer-section">
+        <div id="segundo-contenedor">
+            <aside class="tercer-aside img-aside">
+                <img src="./img/celulares3.jpg" alt="Reparación de computadoras">
+            </aside>
+            <aside class="tercer-aside" id="texto-reparacion">
+                <span class="section-tag">Servicios</span>
+                <h2>Métodos de reparación de computadoras</h2>
+                <p>Nuestros métodos incluyen diagnóstico completo, reemplazo de piezas dañadas, servicios de
+                    mantenimiento preventivo y garantías de entre 2 y 5 meses. El tiempo dependerá del modelo y el tipo
+                    de reparación.</p>
+                <article id="metodos">
+                    <div class="metodos">
+                        <h5>Descuento de <span>15%</span></h5>
+                        <ul>
+                            <li><i class="bi bi-check2"></i> Reemplazo de piezas dañadas</li>
+                            <li><i class="bi bi-check2"></i> Reparación de pantallas</li>
+                            <li><i class="bi bi-check2"></i> Reparación de baterías</li>
+                        </ul>
+                    </div>
+                    <div class="metodos">
+                        <h5>Descuento de <span>25%</span></h5>
+                        <ul>
+                            <li><i class="bi bi-check2"></i> Reparación de puertos</li>
+                            <li><i class="bi bi-check2"></i> Reparación de software</li>
+                            <li><i class="bi bi-check2"></i> Actualización de Office</li>
+                        </ul>
+                    </div>
+                </article>
+            </aside>
         </div>
-        <div class="dividiendo-1">
-            <i class="bi bi-grid-3x3-gap-fill card-icon"></i>
-            <h4>Variedad de Productos</h4>
-            <p>Contamos con una amplia gama de productos tecnológicos para satisfacer todas tus necesidades.</p>
-        </div>
-        <div class="dividiendo-1">
-            <i class="bi bi-tags-fill card-icon"></i>
-            <h4>Precios Competitivos</h4>
-            <p>Ofrecemos precios accesibles sin comprometer la calidad, asegurando el mejor valor por tu dinero.</p>
-        </div>
-        <div class="dividiendo-1">
-            <i class="bi bi-headset card-icon"></i>
-            <h4>Atención al Cliente Excepcional</h4>
-            <p>Nuestro equipo siempre está disponible para ayudarte con cualquier consulta o problema.</p>
-        </div>
-        <div class="dividiendo-1">
-            <i class="bi bi-truck card-icon"></i>
-            <h4>Envío Rápido y Seguro</h4>
-            <p>Nos aseguramos de que tus pedidos lleguen a tiempo y en perfectas condiciones.</p>
-        </div>
-        <div class="dividiendo-1">
-            <i class="bi bi-shield-check card-icon"></i>
-            <h4>Garantía Extendida</h4>
-            <p>Ofrecemos garantías adicionales para que compres sin preocupaciones.</p>
-        </div>
-        </div>
+    </section>
 
+    <section id="cuarto-section">
+        <span class="section-tag light" style="text-align:center;display:block;">Portafolio</span>
+        <h3>Algunas de nuestras reparaciones más valoradas</h3>
 
-    </div>
-</section>
+        <div id="contenedor-cuarto">
+            <aside id="R">
+                <h2>Las reparaciones más valoradas por nuestros clientes</h2>
+                <p>Estas reparaciones no fueron las más valoradas porque nosotros así lo quisimos, sino que fueron
+                    puestas a votación por nuestra comunidad.</p>
+                <p>Elegidas por sus atractivos descuentos, ofertas de martes y viernes, y por sus 2×1 los miércoles.</p>
+                <p>Si sientes curiosidad por ver cuáles fueron, explora las imágenes a continuación.</p>
+            </aside>
 
-<article id="tercer-article">
-    <aside id="eventual">
-        <div class="del">
-            <span class="section-tag light">Promociones</span>
-            <h2>Ofertas Especiales</h2>
-        </div>
-        <div class="del">
-            <p>Nuestras ofertas son de las más populares del mercado. No te las pierdas.</p>
-        </div>
-    </aside>
-
-    <div id="even">
-        <aside class="primer-aside reveal-card">
-            <img src="img/Sin-titulo-2024-10-16T161732.154.webp" alt="Monitor Gaming ASUS">
-            <div class="dentro-aside">
-                <div class="producto-header">
-                    <h3>Monitor Gaming ASUS</h3>
-                    <h4>165Hz / 1ms</h4>
+            <div class="galeria-3d-wrapper">
+                <div id="escenario-3d">
+                    <div id="del">
+                        <div class="auxiliar"><img src="img/pen1.png" alt="Reparación 1"></div>
+                        <div class="auxiliar"><img src="img/pen2.png" alt="Reparación 2"></div>
+                        <div class="auxiliar"><img src="img/pen3.png" alt="Reparación 3"></div>
+                        <div class="auxiliar"><img src="img/pen4.png" alt="Reparación 4"></div>
+                        <div class="auxiliar"><img src="img/pen5.png" alt="Reparación 5"></div>
+                        <div class="auxiliar"><img src="img/pen4.png" alt="Reparación 6"></div>
+                    </div>
                 </div>
-                <p class="producto-desc">Monitor de última generación con precio muy accesible, ideal para gamers y profesionales.</p>
-                <div id="buscando">
-                    <span><i class="bi bi-shop-window"></i> 7 unidades</span>
-                    <span><i class="bi bi-percent"></i> Oferta 10%</span>
-                    <span><i class="bi bi-fire"></i> Más vendido</span>
-                    <span><i class="bi bi-calendar-check"></i> Hasta el 24 de abril</span>
+                <div id="botones">
+                    <button id="Izquierda" aria-label="Girar izquierda"><i class="bi bi-arrow-left"></i></button>
+                    <button id="Derecha" aria-label="Girar derecha"><i class="bi bi-arrow-right"></i></button>
                 </div>
-                <div class="conte-buto">
-                    <span class="precio">RD$14,950</span>
-                    <button class="boton-oferta"><a href="empresa_digital.html">Ver Detalles</a></button>
+            </div>
+        </div>
+    </section>
+
+    <article id="segundo-article">
+        <div class="testimonios-header reveal-section">
+            <span class="section-tag light">Clientes</span>
+            <h2>Prueba social</h2>
+            <p>En Parts Digital siempre tomamos en cuenta sus sugerencias y opiniones. No somos una empresa más del
+                montón; valoramos cada opinión para el bien de la empresa.</p>
+        </div>
+
+        <div id="separador-2">
+            <div class="cajones reveal-card">
+                <img src="./img/retrato-hombre-blanco-aislado_53876-40306.avif" alt="Alfonso Flores">
+                <div class="cajones-tex">
+                    <p>"Gracias a estos excelentes servicios puedo decir que mis equipos están bien cuidados."</p>
+                    <h3>Alfonso Flores</h3>
+                    <div class="estrellas-mini">
+                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                            class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="cajones reveal-card">
+                <img src="./img/concepto-personas-mujeres-retratos-cara-mujer-joven-sonriente-feliz_380164-119771.avif"
+                    alt="Minerva Paulina">
+                <div class="cajones-tex">
+                    <p>"Fui a reparar mi computadora y el servicio fue excelente. ¡Muy recomendable!"</p>
+                    <h3>Minerva Paulina</h3>
+                    <div class="estrellas-mini">
+                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                            class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="cajones reveal-card">
+                <img src="./img/esop.avif" alt="José Acabares">
+                <div class="cajones-tex">
+                    <p>"Me encantó el servicio de reparación y la calidad del trabajo. ¡Muy profesional!"</p>
+                    <h3>José Acabares</h3>
+                    <div class="estrellas-mini">
+                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                            class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="estrellas">
+            <img src="./img/4.5estrella.png" alt="Calificación 4.5 estrellas">
+            <h3>"Excelente" – Calificación 4.5 de más de 2,000 reseñas</h3>
+        </div>
+    </article>
+
+    <article id="ante-del-footer">
+        <aside id="antes-del-footer-aside">
+            <div class="ante-del-0">
+                <span class="section-tag light">Soporte</span>
+                <h3>Preguntas Frecuentes</h3>
+                <p>En esta sección encontrarás las preguntas más comunes sobre nuestros servicios.</p>
+            </div>
+
+            <div class="ante-del-1">
+                <div class="ante-del-2" id="h">
+                    <div class="dentro-del-2">
+                        <div class="contenedor-del-2">
+                            <i class="bi bi-chevron-down"></i>
+                            <h4>¿Cuánto tiempo dura una reparación?</h4>
+                        </div>
+                        <p class="resultado">El tiempo de reparación puede variar según la complejidad y el daño del
+                            equipo, pero normalmente tomamos alrededor de 2 a 3 días hábiles.</p>
+                    </div>
+                    <div class="dentro-del-2">
+                        <div class="contenedor-del-2">
+                            <i class="bi bi-chevron-down"></i>
+                            <h4>¿Cuáles métodos de pago utilizan?</h4>
+                        </div>
+                        <p class="resultado">Aceptamos tarjeta de crédito, tarjeta de débito y transferencia bancaria.
+                        </p>
+                    </div>
+                    <div class="dentro-del-2">
+                        <div class="contenedor-del-2">
+                            <i class="bi bi-chevron-down"></i>
+                            <h4>¿Dónde están ubicados?</h4>
+                        </div>
+                        <p class="resultado">Tenemos 2 sucursales: una en la Rómulo Betancourt y otra en la Avenida San
+                            Martín de Oca en Herrera.</p>
+                    </div>
+                    <div class="dentro-del-2">
+                        <div class="contenedor-del-2">
+                            <i class="bi bi-chevron-down"></i>
+                            <h4>¿Cuáles son los días laborables?</h4>
+                        </div>
+                        <p class="resultado">Trabajamos de lunes a sábado. No trabajamos los días feriados ni los
+                            domingos.</p>
+                    </div>
+                </div>
+
+                <div class="ante-del-2">
+                    <div class="dentro-del-2">
+                        <div class="contenedor-del-2">
+                            <i class="bi bi-chevron-down"></i>
+                            <h4>¿Cuáles son los horarios laborables?</h4>
+                        </div>
+                        <p class="resultado">Lunes a viernes de 9:00 AM a 6:00 PM, y sábados de 10:00 AM a 2:00 PM.</p>
+                    </div>
+                    <div class="dentro-del-2">
+                        <div class="contenedor-del-2">
+                            <i class="bi bi-chevron-down"></i>
+                            <h4>¿Tienen garantía los servicios?</h4>
+                        </div>
+                        <p class="resultado">Sí, ofrecemos garantía en todos nuestros servicios de reparación y
+                            mantenimiento.</p>
+                    </div>
+                    <div class="dentro-del-2">
+                        <div class="contenedor-del-2">
+                            <i class="bi bi-chevron-down"></i>
+                            <h4>¿Tienen métodos de seguridad?</h4>
+                        </div>
+                        <p class="resultado">Implementamos diversos métodos de seguridad para proteger la información de
+                            nuestros clientes.</p>
+                    </div>
+                    <div class="dentro-del-2">
+                        <div class="contenedor-del-2">
+                            <i class="bi bi-chevron-down"></i>
+                            <h4>¿Cuáles son los días de ofertas?</h4>
+                        </div>
+                        <p class="resultado">Tenemos variedad de ofertas los miércoles y los jueves.</p>
+                    </div>
                 </div>
             </div>
         </aside>
+    </article>
 
-        <aside class="primer-aside reveal-card">
-            <img src="img/451-BBZT_V3.avif" alt="Batería Laptop Dell">
-            <div class="dentro-aside">
-                <div class="producto-header">
-                    <h3>Batería Laptop Dell</h3>
-                    <h4>650WAS</h4>
-                </div>
-                <p class="producto-desc">Compatible con varias líneas de laptops Dell. Vida útil prolongada y rendimiento confiable.</p>
-                <div id="buscando">
-                    <span><i class="bi bi-shop-window"></i> 4 unidades</span>
-                    <span><i class="bi bi-percent"></i> Oferta 32%</span>
-                    <span><i class="bi bi-star-fill"></i> Más popular</span>
-                    <span><i class="bi bi-calendar-check"></i> Hasta el 14 de abril</span>
-                </div>
-                <div class="conte-buto">
-                    <span class="precio">RD$2,390</span>
-                   <button class="boton-oferta"><a href="empresa_digital.html">Ver Detalles</a></button>
-                </div>
-            </div>
-        </aside>
-
-        <aside class="primer-aside reveal-card">
-            <img src="img/samsung_990_pro_2tb_pcie_40_nvme_m2_2280_ssd_mzv9p2t0bw_ac58657_54766.webp" alt="SSD M.2 2TB">
-            <div class="dentro-aside">
-                <div class="producto-header">
-                    <h3>SSD M.2 2TB Samsung</h3>
-                    <h4>Velocidad 750MB/s</h4>
-                </div>
-                <p class="producto-desc">Almacenamiento SSD de alta velocidad. Rendimiento superior para trabajo y entretenimiento.</p>
-                <div id="buscando">
-                    <span><i class="bi bi-shop-window"></i> 10 unidades</span>
-                    <span><i class="bi bi-percent"></i> Oferta 25%</span>
-                    <span><i class="bi bi-fire"></i> Más vendido</span>
-                    <span><i class="bi bi-calendar-check"></i> Hasta el 9 de abril</span>
-                </div>
-                <div class="conte-buto">
-                    <span class="precio">RD$5,150</span>
-                   <button class="boton-oferta"><a href="empresa_digital.html">Ver Detalles</a></button>
-                </div>
-            </div>
-        </aside>
-    </div>
-</article>
-
-<section id="primer-seccion">
-    <div id="primer-se6">
-        <div id="suscripcion">
-            <span class="section-tag">Newsletter</span>
-            <h2>¿Quieres mantenerte al tanto?</h2>
-            <p>Suscríbete a nuestro boletín y recibe las últimas noticias y ofertas especiales directamente en tu correo.</p>
-        </div>
-        <div id="caja-del-input">
-            <form id="fo" onsubmit="return false;">
-                <input type="email" placeholder="Ingresa tu correo electrónico" required>
-                <button type="submit" id="boton-suscripcion">Suscribirse</button>
-            </form>
-        </div>
-    </div>
-</section>
-
-<section id="segundo-section">
-    <div id="contenedor-tercer-aside">
-        <aside class="tercer-aside" id="texto-reparacion">
-            <span class="section-tag">Servicios</span>
-            <h2>Métodos de reparación de celulares</h2>
-            <p>En Digital Parts ofrecemos una amplia gama de servicios de reparación de celulares. Nuestro equipo de técnicos altamente capacitados cuenta con las herramientas y conocimientos necesarios para abordar cualquier problema en dispositivos móviles.</p>
-            <article id="metodos">
-                <div class="metodos">
-                    <h5>Descuento de <span>30%</span></h5>
-                    <ul>
-                        <li><i class="bi bi-check2"></i> Reemplazo de piezas dañadas</li>
-                        <li><i class="bi bi-check2"></i> Reparación de pantallas</li>
-                        <li><i class="bi bi-check2"></i> Reparación de baterías</li>
-                    </ul>
-                </div>
-                <div class="metodos">
-                    <h5>Descuento de <span>10%</span></h5>
-                    <ul>
-                        <li><i class="bi bi-check2"></i> Reparación de puertos de carga</li>
-                        <li><i class="bi bi-check2"></i> Reparación de software</li>
-                        <li><i class="bi bi-check2"></i> Actualización de sistema</li>
-                    </ul>
-                </div>
-            </article>
-        </aside>
-        <aside class="tercer-aside img-aside">
-            <img src="img/Reparaciones_de_Moviles_1.png" alt="Reparación de móviles">
-        </aside>
-    </div>
-</section>
-
-<section id="tercer-section">
-    <div id="segundo-contenedor">
-        <aside class="tercer-aside img-aside">
-            <img src="img/celulares3.jpg" alt="Reparación de computadoras">
-        </aside>
-        <aside class="tercer-aside" id="texto-reparacion">
-            <span class="section-tag">Servicios</span>
-            <h2>Métodos de reparación de computadoras</h2>
-            <p>Nuestros métodos incluyen diagnóstico completo, reemplazo de piezas dañadas, servicios de mantenimiento preventivo y garantías de entre 2 y 5 meses. El tiempo dependerá del modelo y el tipo de reparación.</p>
-            <article id="metodos">
-                <div class="metodos">
-                    <h5>Descuento de <span>15%</span></h5>
-                    <ul>
-                        <li><i class="bi bi-check2"></i> Reemplazo de piezas dañadas</li>
-                        <li><i class="bi bi-check2"></i> Reparación de pantallas</li>
-                        <li><i class="bi bi-check2"></i> Reparación de baterías</li>
-                    </ul>
-                </div>
-                <div class="metodos">
-                    <h5>Descuento de <span>25%</span></h5>
-                    <ul>
-                        <li><i class="bi bi-check2"></i> Reparación de puertos</li>
-                        <li><i class="bi bi-check2"></i> Reparación de software</li>
-                        <li><i class="bi bi-check2"></i> Actualización de Office</li>
-                    </ul>
-                </div>
-            </article>
-        </aside>
-    </div>
-</section>
-
-<section id="cuarto-section">
-    <span class="section-tag light" style="text-align:center;display:block;">Portafolio</span>
-    <h3>Algunas de nuestras reparaciones más valoradas</h3>
-
-    <div id="contenedor-cuarto">
-        <aside id="R">
-            <h2>Las reparaciones más valoradas por nuestros clientes</h2>
-            <p>Estas reparaciones no fueron las más valoradas porque nosotros así lo quisimos, sino que fueron puestas a votación por nuestra comunidad.</p>
-            <p>Elegidas por sus atractivos descuentos, ofertas de martes y viernes, y por sus 2×1 los miércoles.</p>
-            <p>Si sientes curiosidad por ver cuáles fueron, explora las imágenes a continuación.</p>
-        </aside>
-
-        <div class="galeria-3d-wrapper">
-            <div id="escenario-3d">
-                <div id="del">
-                    <div class="auxiliar"><img src="img/pen1.png" alt="Reparación 1"></div>
-                    <div class="auxiliar"><img src="img/pen2.png" alt="Reparación 2"></div>
-                    <div class="auxiliar"><img src="img/pen3.png" alt="Reparación 3"></div>
-                    <div class="auxiliar"><img src="img/pen4.png" alt="Reparación 4"></div>
-                    <div class="auxiliar"><img src="img/pen5.png" alt="Reparación 5"></div>
-                    <div class="auxiliar"><img src="img/pen4.png" alt="Reparación 6"></div>
-                </div>
-            </div>
-            <div id="botones">
-                <button id="Izquierda" aria-label="Girar izquierda"><i class="bi bi-arrow-left"></i></button>
-                <button id="Derecha" aria-label="Girar derecha"><i class="bi bi-arrow-right"></i></button>
-            </div>
-        </div>
-    </div>
-</section>
-
-<article id="segundo-article">
-    <div class="testimonios-header reveal-section">
-        <span class="section-tag light">Clientes</span>
-        <h2>Prueba social</h2>
-        <p>En Parts Digital siempre tomamos en cuenta sus sugerencias y opiniones. No somos una empresa más del montón; valoramos cada opinión para el bien de la empresa.</p>
-    </div>
-
-    <div id="separador-2">
-        <div class="cajones reveal-card">
-            <img src="img/retrato-hombre-blanco-aislado_53876-40306.avif" alt="Alfonso Flores">
-            <div class="cajones-tex">
-                <p>"Gracias a estos excelentes servicios puedo decir que mis equipos están bien cuidados."</p>
-                <h3>Alfonso Flores</h3>
-                <div class="estrellas-mini">
-                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                </div>
-            </div>
-        </div>
-        <div class="cajones reveal-card">
-            <img src="img/concepto-personas-mujeres-retratos-cara-mujer-joven-sonriente-feliz_380164-119771.avif" alt="Minerva Paulina">
-            <div class="cajones-tex">
-                <p>"Fui a reparar mi computadora y el servicio fue excelente. ¡Muy recomendable!"</p>
-                <h3>Minerva Paulina</h3>
-                <div class="estrellas-mini">
-                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                </div>
-            </div>
-        </div>
-        <div class="cajones reveal-card">
-            <img src="img/esop.avif" alt="José Acabares">
-            <div class="cajones-tex">
-                <p>"Me encantó el servicio de reparación y la calidad del trabajo. ¡Muy profesional!"</p>
-                <h3>José Acabares</h3>
-                <div class="estrellas-mini">
-                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div id="estrellas">
-        <img src="img/4.5estrella.png" alt="Calificación 4.5 estrellas">
-        <h3>"Excelente" – Calificación 4.5 de más de 2,000 reseñas</h3>
-    </div>
-</article>
-
-<article id="ante-del-footer">
-    <aside id="antes-del-footer-aside">
-        <div class="ante-del-0">
-            <span class="section-tag light">Soporte</span>
-            <h3>Preguntas Frecuentes</h3>
-            <p>En esta sección encontrarás las preguntas más comunes sobre nuestros servicios.</p>
-        </div>
-
-        <div class="ante-del-1">
-            <div class="ante-del-2" id="h">
-                <div class="dentro-del-2">
-                    <div class="contenedor-del-2">
-                        <i class="bi bi-chevron-down"></i>
-                        <h4>¿Cuánto tiempo dura una reparación?</h4>
-                    </div>
-                    <p class="resultado">El tiempo de reparación puede variar según la complejidad y el daño del equipo, pero normalmente tomamos alrededor de 2 a 3 días hábiles.</p>
-                </div>
-                <div class="dentro-del-2">
-                    <div class="contenedor-del-2">
-                        <i class="bi bi-chevron-down"></i>
-                        <h4>¿Cuáles métodos de pago utilizan?</h4>
-                    </div>
-                    <p class="resultado">Aceptamos tarjeta de crédito, tarjeta de débito y transferencia bancaria.</p>
-                </div>
-                <div class="dentro-del-2">
-                    <div class="contenedor-del-2">
-                        <i class="bi bi-chevron-down"></i>
-                        <h4>¿Dónde están ubicados?</h4>
-                    </div>
-                    <p class="resultado">Tenemos 2 sucursales: una en la Rómulo Betancourt y otra en la Avenida San Martín de Oca en Herrera.</p>
-                </div>
-                <div class="dentro-del-2">
-                    <div class="contenedor-del-2">
-                        <i class="bi bi-chevron-down"></i>
-                        <h4>¿Cuáles son los días laborables?</h4>
-                    </div>
-                    <p class="resultado">Trabajamos de lunes a sábado. No trabajamos los días feriados ni los domingos.</p>
+    <footer>
+        <div class="footer-top">
+            <div class="footer-brand">
+                <img src="./img/logo-nuevo.png" alt="Digital Parts Logo">
+                <p>Tecnología confiable, precios competitivos y servicio cercano para tu hogar y negocio. Tu aliado tech
+                    en República Dominicana.</p>
+                <div class="footer-social">
+                    <a href="#" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                    <a href="#" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
                 </div>
             </div>
 
-            <div class="ante-del-2">
-                <div class="dentro-del-2">
-                    <div class="contenedor-del-2">
-                        <i class="bi bi-chevron-down"></i>
-                        <h4>¿Cuáles son los horarios laborables?</h4>
-                    </div>
-                    <p class="resultado">Lunes a viernes de 9:00 AM a 6:00 PM, y sábados de 10:00 AM a 2:00 PM.</p>
-                </div>
-                <div class="dentro-del-2">
-                    <div class="contenedor-del-2">
-                        <i class="bi bi-chevron-down"></i>
-                        <h4>¿Tienen garantía los servicios?</h4>
-                    </div>
-                    <p class="resultado">Sí, ofrecemos garantía en todos nuestros servicios de reparación y mantenimiento.</p>
-                </div>
-                <div class="dentro-del-2">
-                    <div class="contenedor-del-2">
-                        <i class="bi bi-chevron-down"></i>
-                        <h4>¿Tienen métodos de seguridad?</h4>
-                    </div>
-                    <p class="resultado">Implementamos diversos métodos de seguridad para proteger la información de nuestros clientes.</p>
-                </div>
-                <div class="dentro-del-2">
-                    <div class="contenedor-del-2">
-                        <i class="bi bi-chevron-down"></i>
-                        <h4>¿Cuáles son los días de ofertas?</h4>
-                    </div>
-                    <p class="resultado">Tenemos variedad de ofertas los miércoles y los jueves.</p>
-                </div>
+            <div class="footer-col">
+                <h4>PRODUCTOS</h4>
+                <ul>
+                    <li><a href="#">Laptops</a></li>
+                    <li><a href="#">Celulares</a></li>
+                    <li><a href="#">Memorias USB</a></li>
+                    <li><a href="#">Teclados</a></li>
+                    <li><a href="#">Mouse</a></li>
+                    <li><a href="#">Discos SSD</a></li>
+                    <li><a href="#">Auriculares</a></li>
+                </ul>
             </div>
-        </div>
-    </aside>
-</article>
 
-<footer>
-    <div class="footer-top">
-        <div class="footer-brand">
-            <img src="img/logo-nuevo.png" alt="Digital Parts Logo">
-            <p>Tecnología confiable, precios competitivos y servicio cercano para tu hogar y negocio. Tu aliado tech en República Dominicana.</p>
-            <div class="footer-social">
-                <a href="#" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
-                <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
-                <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-                <a href="#" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+            <div class="footer-col">
+                <h4>SERVICIOS</h4>
+                <ul>
+                    <li><a href="#">Reparaciones</a></li>
+                    <li><a href="#">Mantenimiento</a></li>
+                    <li><a href="#">Diagnóstico Gratis</a></li>
+                    <li><a href="#">Asesoría Tech</a></li>
+                    <li><a href="#">Instalación de Software</a></li>
+                    <li><a href="#">Recuperación de Datos</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-newsletter" id="contacto">
+                <h4>CONSULTAS</h4>
+                <p>Envíanos tu pregunta y te respondemos en menos de una hora durante el horario laboral.</p>
+                <div class="newsletter-form">
+                    <input type="text" placeholder="Tu consulta...">
+                    <button onclick="alert('¡Consulta enviada! Gracias.')">Enviar</button>
+                </div>
+                <p class="footer-mini-text">También disponibles en WhatsApp, Instagram y Facebook. Horario: Lun–Sáb
+                    9am–7pm.</p>
             </div>
         </div>
 
-        <div class="footer-col">
-            <h4>PRODUCTOS</h4>
-            <ul>
-                <li><a href="#">Laptops</a></li>
-                <li><a href="#">Celulares</a></li>
-                <li><a href="#">Memorias USB</a></li>
-                <li><a href="#">Teclados</a></li>
-                <li><a href="#">Mouse</a></li>
-                <li><a href="#">Discos SSD</a></li>
-                <li><a href="#">Auriculares</a></li>
-            </ul>
-        </div>
-
-        <div class="footer-col">
-            <h4>SERVICIOS</h4>
-            <ul>
-                <li><a href="#">Reparaciones</a></li>
-                <li><a href="#">Mantenimiento</a></li>
-                <li><a href="#">Diagnóstico Gratis</a></li>
-                <li><a href="#">Asesoría Tech</a></li>
-                <li><a href="#">Instalación de Software</a></li>
-                <li><a href="#">Recuperación de Datos</a></li>
-            </ul>
-        </div>
-
-        <div class="footer-newsletter" id="contacto">
-            <h4>CONSULTAS</h4>
-            <p>Envíanos tu pregunta y te respondemos en menos de una hora durante el horario laboral.</p>
-            <div class="newsletter-form">
-                <input type="text" placeholder="Tu consulta...">
-                <button onclick="alert('¡Consulta enviada! Gracias.')">Enviar</button>
+        <div class="footer-bottom">
+            <p>© 2026 Digital Parts. Todos los derechos reservados.</p>
+            <div class="footer-bottom-links">
+                <a href="#">Privacidad</a>
+                <a href="#">Términos</a>
+                <a href="#contacto">Contacto</a>
+                <a href="#ubicacion">Ubicación</a>
             </div>
-            <p class="footer-mini-text">También disponibles en WhatsApp, Instagram y Facebook. Horario: Lun–Sáb 9am–7pm.</p>
         </div>
-    </div>
+    </footer>
 
-    <div class="footer-bottom">
-        <p>© 2026 Digital Parts. Todos los derechos reservados.</p>
-        <div class="footer-bottom-links">
-            <a href="#">Privacidad</a>
-            <a href="#">Términos</a>
-            <a href="#contacto">Contacto</a>
-            <a href="#ubicacion">Ubicación</a>
-        </div>
-    </div>
-</footer>
-
-<button id="scrollTop" aria-label="Volver arriba"><i class="bi bi-arrow-up"></i></button>
+    <button id="scrollTop" aria-label="Volver arriba"><i class="bi bi-arrow-up"></i></button>
 
 </body>
+
 </html>
