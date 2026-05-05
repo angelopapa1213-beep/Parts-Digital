@@ -31,7 +31,7 @@ aside{
 }
 
 .primer-aside{
-     background-image: url("/Parts-Digital/img/pink-and-black-background-1920-x-1080-t0or6ndehv320kd4.jpg");
+     background-image: url("Parts-Digital/img/pink-and-black-background-1920-x-1080-t0or6ndehv320kd4.jpg");
      background-repeat: no-repeat;
      background-position: center;
      background-size: cover;
@@ -39,25 +39,24 @@ aside{
     border-bottom-right-radius: 10%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
+    gap: 50px;
+
 }
 .bi-arrow-left{
     color: #ffffff;
     font-size: 1.5rem;
+    margin-top: 20px;
+    margin-left: 20px;
 }
 #contenedor-icon{
     display: flex;
      border-radius: 20px;
-     position: absolute;
-     top: 100px;
-     left: 280px;
-    width: 200px;
     text-decoration: none;
     transition: 0.5s ease-in;
 }
 #contenedor-icon:hover{
-  transform: scale(1.1);
+  transform: scale(1.05);
   transition: 0.5s;
 }
 .primer-aside div{
@@ -68,6 +67,7 @@ aside{
     align-items: center;
     flex-direction: column;
     padding: 0 20px;
+    margin-top: 50px;
 
 }
 .primer-aside h2{
