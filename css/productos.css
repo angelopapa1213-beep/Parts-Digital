@@ -63,8 +63,6 @@ img { max-width:100%; display:block; }
 }
 .btn-dark:hover { background:var(--dark2); transform:translateY(-2px); }
 
-.fade-in { opacity:0; transform:translateY(24px); transition:opacity .6s ease, transform .6s ease; }
-.fade-in.visible { opacity:1; transform:translateY(0); }
 #header {
     position: fixed;
     top: 0;

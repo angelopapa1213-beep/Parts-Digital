@@ -1,458 +1,605 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Digital Parts – Tu Tech al Mejor Precio</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,700;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,700;1,400&family=Space+Mono:wght@400;700&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="css/productos.css">
+
+
 </head>
+
 <body>
-<header id="header">
-        <div class="nav-inner">
 
-            <div class="nav-logo">
-                <img src="/img/logo-nuevo.png" alt="Digital Parts Logo" class="logo-img">
-            </div>
+  <header id="header">
+    <div class="nav-inner">
 
-            <nav id="nav-desktop">
-                <ul>
-                    <li><a href="#Home" id="home">Inició</a></li>
-                    <li><a href="#contact">Sobre Nosotros</a></li>
-                    <li><a href="productos.html">Productos</a></li>
-                    <li><a href="#about">Reservaciones</a></li>
-                    <li><a href="#about">Contactos</a></li>
-                </ul>
-            </nav>
+      <div class="nav-logo">
+        <img src="/img/logo-nuevo.png" alt="Digital Parts Logo" class="logo-img">
+      </div>
 
-            <div class="nav-actions">
-                <button class="btn-gear" aria-label="Configuración">
-                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="17" height="17">
-                        <path
-                            d="M12 15.5A3.5 3.5 0 0 1 8.5 12 3.5 3.5 0 0 1 12 8.5a3.5 3.5 0 0 1 3.5 3.5 3.5 3.5 0 0 1-3.5 3.5m7.43-2.92c.04-.34.07-.69.07-1.08s-.03-.73-.07-1.08l2.33-1.82c.21-.16.27-.45.13-.69l-2.2-3.81c-.13-.24-.42-.32-.66-.24l-2.75 1.11c-.57-.44-1.18-.81-1.86-1.08L14.21 1.5c-.05-.26-.27-.5-.55-.5h-4.4c-.28 0-.49.24-.54.5l-.41 2.39c-.68.27-1.29.64-1.86 1.08L3.7 3.86c-.24-.08-.53 0-.66.24L.84 7.91c-.13.24-.08.53.13.69l2.33 1.82C3.26 10.77 3.23 11.1 3.23 11.5s.03.73.07 1.08L1 14.4c-.21.16-.27.45-.13.69l2.2 3.81c.13.24.42.32.66.24l2.75-1.11c.57.44 1.18.81 1.86 1.08l.41 2.39c.05.26.26.5.54.5h4.4c.28 0 .5-.24.55-.5l.41-2.39c.68-.27 1.29-.64 1.86-1.08l2.75 1.11c.24.08.53 0 .66-.24l2.2-3.81c.13-.24.08-.53-.13-.69l-2.33-1.82z" />
-                    </svg>
-                </button>
-                <div class="nav-divider"></div>
-                <button class="hamburger" id="hamburger" aria-label="Menú">
-                    <span></span><span></span><span></span>
-                </button>
-         </div>
+      <nav id="nav-desktop">
+        <ul>
+          <li><a href="index.html" class="nav-link active">Inicio</a></li>
+          <li><a href="empresa_digital.html" class="nav-link">Productos</a></li>
+          <li><a href="sobre nosotros.html" class="nav-link">Sobre Nosotros</a></li>
+          <li><a href="http://localhost/Parts-Digital/reservaciones.html" class="nav-link">Reservaciónes</a></li>
+          <li><a href="reparacion.html" class="nav-link">Reparaciones</a></li>
+        </ul>
+      </nav>
 
+      <div class="nav-actions">
+        <button class="btn-gear" aria-label="Configuración">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="17" height="17">
+            <path
+              d="M12 15.5A3.5 3.5 0 0 1 8.5 12 3.5 3.5 0 0 1 12 8.5a3.5 3.5 0 0 1 3.5 3.5 3.5 3.5 0 0 1-3.5 3.5m7.43-2.92c.04-.34.07-.69.07-1.08s-.03-.73-.07-1.08l2.33-1.82c.21-.16.27-.45.13-.69l-2.2-3.81c-.13-.24-.42-.32-.66-.24l-2.75 1.11c-.57-.44-1.18-.81-1.86-1.08L14.21 1.5c-.05-.26-.27-.5-.55-.5h-4.4c-.28 0-.49.24-.54.5l-.41 2.39c-.68.27-1.29.64-1.86 1.08L3.7 3.86c-.24-.08-.53 0-.66.24L.84 7.91c-.13.24-.08.53.13.69l2.33 1.82C3.26 10.77 3.23 11.1 3.23 11.5s.03.73.07 1.08L1 14.4c-.21.16-.27.45-.13.69l2.2 3.81c.13.24.42.32.66.24l2.75-1.11c.57.44 1.18.81 1.86 1.08l.41 2.39c.05.26.26.5.54.5h4.4c.28 0 .5-.24.55-.5l.41-2.39c.68-.27 1.29-.64 1.86-1.08l2.75 1.11c.24.08.53 0 .66-.24l2.2-3.81c.13-.24.08-.53-.13-.69l-2.33-1.82z" />
+          </svg>
+        </button>
+        <div class="nav-divider"></div>
+        <button class="hamburger" id="hamburger" aria-label="Menú">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+
+    </div>
+
+  </header>
+  <!-- Mobile Nav -->
+  <div id="mobile-nav">
+    <a href="#" onclick="closeMobileNav()">Inicio</a>
+    <a href="#nosotros" onclick="closeMobileNav()">Sobre Nosotros</a>
+    <a href="#productos" onclick="closeMobileNav()">Productos</a>
+    <a href="#reservaciones" onclick="closeMobileNav()">Reservaciones</a>
+    <a href="#contactos" onclick="closeMobileNav()">Contacto</a>
+  </div>
+
+  <!-- ════ HERO ════ -->
+  <section class="hero fade-in">
+    <div class="hero-content">
+      <div class="hero-tag">
+        <span></span>
+        OFERTAS ACTIVAS ESTA SEMANA
+      </div>
+      <h1>TU TECH<br>AL MEJOR<br><em>PRECIO</em></h1>
+      <p class="hero-desc">Laptops, accesorios gamer y mucho más — todo con garantía de calidad, envío rápido y el mejor
+        precio del mercado dominicano.</p>
+      <p class="hero-desc2">Más de 500 productos disponibles. Atención personalizada. Soporte técnico incluido.</p>
+      <div class="hero-actions">
+        <a href="#productos" class="btn-primary">Ver Ofertas <i class="bi bi-arrow-right"></i></a>
+        <a href="#contactos" class="btn-outline"><i class="bi bi-whatsapp"></i> Contáctanos</a>
+      </div>
+      <div class="hero-stats">
+        <div>
+          <div class="stat-num">500+</div>
+          <div class="stat-label">PRODUCTOS</div>
         </div>
-
-    </header>
-<!-- Mobile Nav -->
-<div id="mobile-nav">
-  <a href="#" onclick="closeMobileNav()">Inicio</a>
-  <a href="#nosotros" onclick="closeMobileNav()">Sobre Nosotros</a>
-  <a href="#productos" onclick="closeMobileNav()">Productos</a>
-  <a href="#reservaciones" onclick="closeMobileNav()">Reservaciones</a>
-  <a href="#contactos" onclick="closeMobileNav()">Contacto</a>
-</div>
-
-<!-- ════ HERO ════ -->
-<section class="hero fade-in">
-  <div class="hero-content">
-    <div class="hero-tag">
-      <span></span>
-      OFERTAS ACTIVAS ESTA SEMANA
-    </div>
-    <h1>TU TECH<br>AL MEJOR<br><em>PRECIO</em></h1>
-    <p class="hero-desc">Laptops, accesorios gamer y mucho más — todo con garantía de calidad, envío rápido y el mejor precio del mercado dominicano.</p>
-    <p class="hero-desc2">Más de 500 productos disponibles. Atención personalizada. Soporte técnico incluido.</p>
-    <div class="hero-actions">
-      <a href="#productos" class="btn-primary">Ver Ofertas <i class="bi bi-arrow-right"></i></a>
-      <a href="#contactos" class="btn-outline"><i class="bi bi-whatsapp"></i> Contáctanos</a>
-    </div>
-    <div class="hero-stats">
-      <div><div class="stat-num">500+</div><div class="stat-label">PRODUCTOS</div></div>
-      <div><div class="stat-num">3K+</div><div class="stat-label">CLIENTES</div></div>
-      <div><div class="stat-num">5★</div><div class="stat-label">VALORACIÓN</div></div>
-      <div><div class="stat-num">24H</div><div class="stat-label">SOPORTE</div></div>
-    </div>
-  </div>
-  <div class="hero-visual">
-    <img src="img/workspace-with-computer-screen-keyboard.jpg" alt="Setup Gamer" class="hero-img-main">
-    <img src="img/camera-photography-design-studio-editing-concept.jpg" alt="Accesorios" class="hero-img-secondary">
-  </div>
-</section>
-
-<!-- ════ MARQUEE ════ -->
-<div class="marquee-wrap">
-  <div class="marquee-track">
-    <div class="marquee-item"><i class="bi bi-lightning-charge-fill"></i> ENVÍOS RÁPIDOS</div>
-    <div class="marquee-item"><i class="bi bi-shield-check"></i> GARANTÍA INCLUIDA</div>
-    <div class="marquee-item"><i class="bi bi-headset"></i> SOPORTE TÉCNICO</div>
-    <div class="marquee-item"><i class="bi bi-tag-fill"></i> MEJORES PRECIOS</div>
-    <div class="marquee-item"><i class="bi bi-stars"></i> PRODUCTOS ORIGINALES</div>
-    <div class="marquee-item"><i class="bi bi-patch-check-fill"></i> CALIDAD CERTIFICADA</div>
-    <div class="marquee-item"><i class="bi bi-truck"></i> ENTREGA A DOMICILIO</div>
-    <div class="marquee-item"><i class="bi bi-lightning-charge-fill"></i> ENVÍOS RÁPIDOS</div>
-    <div class="marquee-item"><i class="bi bi-shield-check"></i> GARANTÍA INCLUIDA</div>
-    <div class="marquee-item"><i class="bi bi-headset"></i> SOPORTE TÉCNICO</div>
-    <div class="marquee-item"><i class="bi bi-tag-fill"></i> MEJORES PRECIOS</div>
-    <div class="marquee-item"><i class="bi bi-stars"></i> PRODUCTOS ORIGINALES</div>
-    <div class="marquee-item"><i class="bi bi-patch-check-fill"></i> CALIDAD CERTIFICADA</div>
-    <div class="marquee-item"><i class="bi bi-truck"></i> ENTREGA A DOMICILIO</div>
-  </div>
-</div>
-
-
-<section class="intro-text fade-in" id="nosotros">
-  <div class="intro-inner">
-    <div class="intro-left">
-      <div class="section-label">QUIÉNES SOMOS</div>
-      <h2 class="section-title">LA TIENDA TECH<br>QUE <em>DOMINICANA</em><br>NECESITABA</h2>
-    </div>
-    <div class="intro-right">
-      <p>En Digital Parts llevamos años siendo la solución tecnológica de miles de hogares y negocios en todo el país.</p>
-      <p>Trabajamos directamente con distribuidores certificados para garantizarte productos originales con respaldo real.</p>
-      <p>Hoy somos el aliado tecnológico de freelancers, estudiantes, gamers, empresas y emprendedores.</p>
-      <div class="intro-tags">
-        <span><i class="bi bi-check2"></i> Productos Originales</span>
-        <span><i class="bi bi-check2"></i> Garantía Real</span>
-        <span><i class="bi bi-check2"></i> Soporte Local</span>
-        <span><i class="bi bi-check2"></i> Precios Competitivos</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ════ CATEGORÍAS ════ -->
-<section class="categories fade-in">
-  <div class="section-label">CATÁLOGO</div>
-  <div class="section-title">EXPLORA POR<br><em>CATEGORÍA</em></div>
-  <p class="section-sub">Desde accesorios básicos hasta equipos de alto rendimiento.</p>
-  <div class="cat-grid">
-    <div class="cat-card"><div class="cat-icon"><i class="bi bi-mouse"></i></div><h3>Mouse</h3><p>Gamer y oficina con alta precisión y diseño ergonómico.</p><div class="cat-arrow">Ver productos <i class="bi bi-arrow-right"></i></div></div>
-    <div class="cat-card"><div class="cat-icon"><i class="bi bi-usb-symbol"></i></div><h3>Memorias USB</h3><p>Almacenamiento rápido desde 16GB hasta 1TB.</p><div class="cat-arrow">Ver productos <i class="bi bi-arrow-right"></i></div></div>
-    <div class="cat-card"><div class="cat-icon"><i class="bi bi-keyboard"></i></div><h3>Teclados</h3><p>Mecánicos, RGB y ergonómicos para trabajo y gaming.</p><div class="cat-arrow">Ver productos <i class="bi bi-arrow-right"></i></div></div>
-    <div class="cat-card"><div class="cat-icon"><i class="bi bi-laptop"></i></div><h3>Laptops</h3><p>Equipos para trabajo, estudio y entretenimiento desde $450.</p><div class="cat-arrow">Ver productos <i class="bi bi-arrow-right"></i></div></div>
-  </div>
-  <div class="cat-grid cat-grid2">
-    <div class="cat-card"><div class="cat-icon"><i class="bi bi-headphones"></i></div><h3>Auriculares</h3><p>Sonido envolvente para gaming, trabajo remoto y entretenimiento.</p><div class="cat-arrow">Ver productos <i class="bi bi-arrow-right"></i></div></div>
-    <div class="cat-card"><div class="cat-icon"><i class="bi bi-hdd"></i></div><h3>Discos SSD</h3><p>Velocidad superior para que tu equipo vuele.</p><div class="cat-arrow">Ver productos <i class="bi bi-arrow-right"></i></div></div>
-    <div class="cat-card"><div class="cat-icon"><i class="bi bi-lightning-charge"></i></div><h3>Cargadores</h3><p>Originales y compatibles para Dell, HP, Lenovo, Asus y más.</p><div class="cat-arrow">Ver productos <i class="bi bi-arrow-right"></i></div></div>
-    <div class="cat-card"><div class="cat-icon"><i class="bi bi-cpu"></i></div><h3>Accesorios</h3><p>Hubs USB, soportes, mousepad, cables y todo para tu setup.</p><div class="cat-arrow">Ver productos <i class="bi bi-arrow-right"></i></div></div>
-  </div>
-</section>
-
-<!-- ════ MEJORES OFERTAS ════ -->
-<section class="featured fade-in" id="productos">
-  <div class="featured-header">
-    <div>
-      <div class="section-label">ESTE MES</div>
-      <div class="section-title" style="margin-bottom:0">MEJORES<br><em>OFERTAS</em></div>
-    </div>
-    <a href="#" class="btn-dark">Ver todas <i class="bi bi-arrow-right"></i></a>
-  </div>
-  <p class="section-sub" style="margin-bottom:36px">Productos seleccionados con los mejores precios del mes.</p>
-
-  <div class="products-grid">
-    <div class="product-card">
-      <span class="product-badge">⚡ TOP VENTA</span>
-      <div class="product-img-wrap"><img src="img/keyboard-with-neon-lights-high-angle-removebg-preview.png" alt="Teclado Gamer"></div>
-      <div class="product-info">
-        <div class="product-cat">TECLADOS GAMER</div>
-        <h3>Teclado RGB Mecánico</h3>
-        <p>Switches mecánicos, retroiluminación RGB. Ideal para largas sesiones de juego.</p>
-        <div class="product-footer"><div class="product-price">Desde $30</div><div class="product-btn"><i class="bi bi-arrow-right"></i></div></div>
-      </div>
-    </div>
-    <div class="product-card">
-      <span class="product-badge dark">GAMER</span>
-      <div class="product-img-wrap"><img src="img/WhatsApp_Image_2026-03-31_at_18.48.02-removebg-preview.png" alt="Mouse Gamer"></div>
-      <div class="product-info">
-        <div class="product-cat">MOUSE</div>
-        <h3>Mouse Gamer Pro</h3>
-        <p>Alta precisión, sensor óptico de última generación y DPI ajustable.</p>
-        <div class="product-footer"><div class="product-price">Desde $20</div><div class="product-btn"><i class="bi bi-arrow-right"></i></div></div>
-      </div>
-    </div>
-    <div class="product-card">
-      <span class="product-badge white">NUEVO</span>
-      <div class="product-img-wrap"><img src="img/WhatsApp_Image_2026-03-31_at_18.52.45__1_-removebg-preview.png" alt="Laptop"></div>
-      <div class="product-info">
-        <div class="product-cat">LAPTOPS</div>
-        <h3>Laptops Certificadas</h3>
-        <p>Revisadas y certificadas para trabajo, estudio y gaming. Garantía incluida.</p>
-        <div class="product-footer"><div class="product-price">Desde $450</div><div class="product-btn"><i class="bi bi-arrow-right"></i></div></div>
-      </div>
-    </div>
-    <div class="product-card">
-      <span class="product-badge dark">OFERTA</span>
-      <div class="product-img-wrap"><img src="img/WhatsApp_Image_2026-03-31_at_18.59.59-removebg-preview.png" alt="Memoria USB"></div>
-      <div class="product-info">
-        <div class="product-cat">MEMORIAS USB</div>
-        <h3>Memorias Alta Velocidad</h3>
-        <p>32GB, 64GB, 128GB y 256GB con garantía de durabilidad.</p>
-        <div class="product-footer"><div class="product-price">Desde $15</div><div class="product-btn"><i class="bi bi-arrow-right"></i></div></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="products-grid" style="margin-top:16px">
-    <div class="product-card">
-      <span class="product-badge">POPULAR</span>
-      <div class="product-img-wrap"><img src="img/workspace-with-computer-screen-keyboard.jpg" alt="Accesorios"></div>
-      <div class="product-info">
-        <div class="product-cat">ACCESORIOS</div>
-        <h3>Kit Escritorio Completo</h3>
-        <p>Mouse, teclado y mousepad para armar tu espacio de trabajo ideal.</p>
-        <div class="product-footer"><div class="product-price">Desde $45</div><div class="product-btn"><i class="bi bi-arrow-right"></i></div></div>
-      </div>
-    </div>
-    <div class="product-card">
-      <span class="product-badge dark">LIMITADO</span>
-      <div class="product-img-wrap"><img src="img/view-electronic-product-balancing-podium.jpg" alt="Combo"></div>
-      <div class="product-info">
-        <div class="product-cat">COMBOS</div>
-        <h3>Combo Gamer Premium</h3>
-        <p>El setup completo para elevar tu experiencia al siguiente nivel.</p>
-        <div class="product-footer"><div class="product-price">Desde $85</div><div class="product-btn"><i class="bi bi-arrow-right"></i></div></div>
-      </div>
-    </div>
-    <div class="product-card">
-      <span class="product-badge">NUEVO</span>
-      <div class="product-img-wrap"><img src="img/laptopp.jpg" alt="SSD"></div>
-      <div class="product-info">
-        <div class="product-cat">DISCOS SSD</div>
-        <h3>SSD Ultra Rápido</h3>
-        <p>Velocidad de lectura y escritura superior. Compatible con laptops y PCs.</p>
-        <div class="product-footer"><div class="product-price">Desde $35</div><div class="product-btn"><i class="bi bi-arrow-right"></i></div></div>
-      </div>
-    </div>
-    <div class="product-card">
-      <span class="product-badge dark">OFERTA</span>
-      <div class="product-img-wrap"><img src="img/mm.jpg" alt="Auriculares"></div>
-      <div class="product-info">
-        <div class="product-cat">AURICULARES</div>
-        <h3>Headset Gaming 7.1</h3>
-        <p>Sonido envolvente con micrófono integrado para gaming y trabajo remoto.</p>
-        <div class="product-footer"><div class="product-price">Desde $25</div><div class="product-btn"><i class="bi bi-arrow-right"></i></div></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ════ COMBO BANNER ════ -->
-<section class="combo-banner fade-in">
-  <div class="combo-inner">
-    <div class="combo-img"><img src="img/view-electronic-product-balancing-podium.jpg" alt="Combo Gamer"></div>
-    <div class="combo-text">
-      <div class="section-label">OFERTA ESPECIAL</div>
-      <h2>COMBO<br>GAMER <em>5 EN 1</em></h2>
-      <p>Mouse, teclado, audífonos y más en un solo combo diseñado para alto rendimiento.</p>
-      <p style="font-size:13px;color:rgba(255,255,255,0.4);margin-bottom:24px">Disponible en versión estándar y pro. Consulta por WhatsApp.</p>
-      <div class="combo-features">
-        <div class="combo-feat"><i class="bi bi-mouse"></i><strong>Mouse</strong><span>Alta precisión</span></div>
-        <div class="combo-feat"><i class="bi bi-keyboard"></i><strong>Teclado</strong><span>RGB mecánico</span></div>
-        <div class="combo-feat"><i class="bi bi-headphones"></i><strong>Audio</strong><span>Envolvente 7.1</span></div>
-      </div>
-      <ul class="combo-checks">
-        <li><i class="bi bi-check-circle-fill"></i> Envíos rápidos en todo el país</li>
-        <li><i class="bi bi-check-circle-fill"></i> Garantía de calidad incluida</li>
-        <li><i class="bi bi-check-circle-fill"></i> Soporte técnico especializado post-venta</li>
-        <li><i class="bi bi-check-circle-fill"></i> Empaque seguro para entrega</li>
-      </ul>
-      <a href="#contactos" class="btn-primary">Consultar precio <i class="bi bi-arrow-right"></i></a>
-    </div>
-  </div>
-</section>
-
-<!-- ════ SERVICIOS ════ -->
-<section class="servicios fade-in">
-  <div class="section-label">LO QUE HACEMOS</div>
-  <div class="section-title">NUESTROS<br><em>SERVICIOS</em></div>
-  <p class="section-sub">No solo vendemos productos — somos tu solución tecnológica completa.</p>
-  <div class="servicios-grid">
-    <div class="servicio-card">
-      <div class="servicio-icon"><i class="bi bi-tools"></i></div>
-      <h3>Reparación Técnica</h3>
-      <p>Reparamos laptops, computadoras y accesorios. Diagnóstico gratuito en todos los casos.</p>
-      <ul class="servicio-list">
-        <li><i class="bi bi-dot"></i> Cambio de pantallas</li>
-        <li><i class="bi bi-dot"></i> Reparación de teclados</li>
-        <li><i class="bi bi-dot"></i> Cambio de baterías</li>
-      </ul>
-    </div>
-    <div class="servicio-card accent">
-      <div class="servicio-icon"><i class="bi bi-cpu"></i></div>
-      <h3>Mantenimiento Preventivo</h3>
-      <p>Limpieza profunda, actualización de drivers y optimización del sistema.</p>
-      <ul class="servicio-list">
-        <li><i class="bi bi-dot"></i> Limpieza de ventiladores</li>
-        <li><i class="bi bi-dot"></i> Cambio de pasta térmica</li>
-        <li><i class="bi bi-dot"></i> Optimización de software</li>
-      </ul>
-    </div>
-    <div class="servicio-card">
-      <div class="servicio-icon"><i class="bi bi-shield-lock"></i></div>
-      <h3>Seguridad y Antivirus</h3>
-      <p>Eliminación de virus y malware. Protección profesional para tus datos.</p>
-      <ul class="servicio-list">
-        <li><i class="bi bi-dot"></i> Eliminación de malware</li>
-        <li><i class="bi bi-dot"></i> Instalación de antivirus</li>
-        <li><i class="bi bi-dot"></i> Recuperación de datos</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<!-- ════ WEEKLY ════ -->
-<section class="weekly fade-in" id="reservaciones">
-  <div class="weekly-inner">
-    <div class="weekly-left">
-      <div class="section-label">CALENDARIO</div>
-      <h2>OFERTAS<br><em>SEMANALES</em></h2>
-      <p>Cada día de la semana tiene su propia oferta. Planifica tus compras y maximiza tu ahorro.</p>
-      <p style="font-size:13px;color:var(--gray);margin-bottom:28px">Válidas hasta agotar stock.</p>
-      <div class="weekly-days">
-        <div class="day-card"><div class="day-tag">LUNES</div><div class="day-desc">Descuentos en memorias USB y discos SSD.</div><div class="day-badge">10% OFF</div></div>
-        <div class="day-card"><div class="day-tag">MIÉRC.</div><div class="day-desc">Teclados y mouse con precio especial.</div><div class="day-badge">15% OFF</div></div>
-        <div class="day-card"><div class="day-tag">VIERNES</div><div class="day-desc">Diagnóstico técnico completamente gratis.</div><div class="day-badge">GRATIS</div></div>
-        <div class="day-card"><div class="day-tag">SÁBADO</div><div class="day-desc">Ofertas sorpresa en accesorios seleccionados.</div><div class="day-badge">SORPRESA</div></div>
-      </div>
-      <a href="#contactos" class="btn-primary" style="margin-top:28px;display:inline-flex">Ver Ofertas Activas <i class="bi bi-arrow-right"></i></a>
-    </div>
-    <div class="weekly-right">
-      <div class="section-label" style="justify-content:center">PRODUCTOS DESTACADOS</div>
-      <div class="circle-stack">
-        <div class="circ lg"><img src="img/laptopp.jpg" alt="Laptop"></div>
-        <div class="circ-row">
-          <div class="circ md"><img src="img/mm.jpg" alt="Memoria"></div>
-          <div class="circ sm"><img src="img/mm.jpg" alt="Mouse"></div>
+        <div>
+          <div class="stat-num">3K+</div>
+          <div class="stat-label">CLIENTES</div>
+        </div>
+        <div>
+          <div class="stat-num">5★</div>
+          <div class="stat-label">VALORACIÓN</div>
+        </div>
+        <div>
+          <div class="stat-num">24H</div>
+          <div class="stat-label">SOPORTE</div>
         </div>
       </div>
-      <div class="weekly-note">
-        <i class="bi bi-info-circle"></i>
-        Nuevas ofertas cada semana. Síguenos en redes para no perderte ninguna.
+    </div>
+    <div class="hero-visual">
+      <img src="img/workspace-with-computer-screen-keyboard.jpg" alt="Setup Gamer" class="hero-img-main">
+      <img src="img/camera-photography-design-studio-editing-concept.jpg" alt="Accesorios" class="hero-img-secondary">
+    </div>
+  </section>
+
+  <!-- ════ MARQUEE ════ -->
+  <div class="marquee-wrap">
+    <div class="marquee-track">
+      <div class="marquee-item"><i class="bi bi-lightning-charge-fill"></i> ENVÍOS RÁPIDOS</div>
+      <div class="marquee-item"><i class="bi bi-shield-check"></i> GARANTÍA INCLUIDA</div>
+      <div class="marquee-item"><i class="bi bi-headset"></i> SOPORTE TÉCNICO</div>
+      <div class="marquee-item"><i class="bi bi-tag-fill"></i> MEJORES PRECIOS</div>
+      <div class="marquee-item"><i class="bi bi-stars"></i> PRODUCTOS ORIGINALES</div>
+      <div class="marquee-item"><i class="bi bi-patch-check-fill"></i> CALIDAD CERTIFICADA</div>
+      <div class="marquee-item"><i class="bi bi-truck"></i> ENTREGA A DOMICILIO</div>
+      <div class="marquee-item"><i class="bi bi-lightning-charge-fill"></i> ENVÍOS RÁPIDOS</div>
+      <div class="marquee-item"><i class="bi bi-shield-check"></i> GARANTÍA INCLUIDA</div>
+      <div class="marquee-item"><i class="bi bi-headset"></i> SOPORTE TÉCNICO</div>
+      <div class="marquee-item"><i class="bi bi-tag-fill"></i> MEJORES PRECIOS</div>
+      <div class="marquee-item"><i class="bi bi-stars"></i> PRODUCTOS ORIGINALES</div>
+      <div class="marquee-item"><i class="bi bi-patch-check-fill"></i> CALIDAD CERTIFICADA</div>
+      <div class="marquee-item"><i class="bi bi-truck"></i> ENTREGA A DOMICILIO</div>
+    </div>
+  </div>
+
+
+  <section class="intro-text fade-in" id="nosotros">
+    <div class="intro-inner">
+      <div class="intro-left">
+        <div class="section-label">QUIÉNES SOMOS</div>
+        <h2 class="section-title">LA TIENDA TECH<br>QUE <em>DOMINICANA</em><br>NECESITABA</h2>
+      </div>
+      <div class="intro-right">
+        <p>En Digital Parts llevamos años siendo la solución tecnológica de miles de hogares y negocios en todo el país.
+        </p>
+        <p>Trabajamos directamente con distribuidores certificados para garantizarte productos originales con respaldo
+          real.</p>
+        <p>Hoy somos el aliado tecnológico de freelancers, estudiantes, gamers, empresas y emprendedores.</p>
+        <div class="intro-tags">
+          <span><i class="bi bi-check2"></i> Productos Originales</span>
+          <span><i class="bi bi-check2"></i> Garantía Real</span>
+          <span><i class="bi bi-check2"></i> Soporte Local</span>
+          <span><i class="bi bi-check2"></i> Precios Competitivos</span>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ════ BENEFITS ════ -->
-<section class="benefits fade-in">
-  <div class="benefits-inner">
-    <div class="benefits-left">
-      <div class="section-label">POR QUÉ ELEGIRNOS</div>
-      <h2>TECNOLOGÍA<br>CON <em>CONFIANZA</em></h2>
-      <p>En Digital Parts trabajamos cada día para ofrecerte las mejores ofertas y servicios con calidad garantizada.</p>
-      <p>Miles de clientes satisfechos en todo el país confían en nosotros porque cumplimos lo que prometemos.</p>
-      <a href="#productos" class="btn-dark" style="margin-top:20px">Ver Ofertas <i class="bi bi-arrow-right"></i></a>
-    </div>
-    <div class="benefits-grid">
-      <div class="benefit-item accent"><div class="benefit-icon"><i class="bi bi-hdd-fill"></i></div><h4>Memorias y Almacenamiento</h4><p>USB, SSD y RAM para mejor rendimiento.</p></div>
-      <div class="benefit-item"><div class="benefit-icon"><i class="bi bi-controller"></i></div><h4>Accesorios Premium</h4><p>Teclados, mouse, auriculares y más.</p></div>
-      <div class="benefit-item"><div class="benefit-icon"><i class="bi bi-shield-check"></i></div><h4>Seguridad y Mantenimiento</h4><p>Limpieza, optimización y protección profesional.</p></div>
-      <div class="benefit-item accent"><div class="benefit-icon"><i class="bi bi-tools"></i></div><h4>Reparación Técnica</h4><p>Diagnóstico gratis y soluciones rápidas.</p></div>
-      <div class="benefit-item"><div class="benefit-icon"><i class="bi bi-truck"></i></div><h4>Envíos a Todo el País</h4><p>Rápido, seguro y con seguimiento.</p></div>
-      <div class="benefit-item accent"><div class="benefit-icon"><i class="bi bi-headset"></i></div><h4>Soporte 24/7</h4><p>Disponibles por WhatsApp siempre.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- ════ CARGADOR DELL ════ -->
-<section class="charger fade-in">
-  <div class="charger-img"><img src="img/WhatsApp Image 2026-04-01 at 23.01.27.jpeg" alt="Cargador Dell"></div>
-  <div class="charger-text">
-    <div class="section-label">PRODUCTO DESTACADO</div>
-    <h2><i class="bi bi-lightning-charge" style="color:var(--pink)"></i> CARGADOR<br>DELL ORIGINAL</h2>
-    <p>Compatible con una amplia variedad de modelos Dell para garantizarte una carga rápida, segura y eficiente.</p>
-    <p>Fabricado con materiales de alta calidad y sistemas avanzados de protección contra sobrecargas.</p>
-    <div class="charger-specs">
-      <div class="spec"><i class="bi bi-check-circle"></i> Compatible con múltiples modelos Dell</div>
-      <div class="spec"><i class="bi bi-check-circle"></i> Protección contra sobrecalentamiento</div>
-      <div class="spec"><i class="bi bi-check-circle"></i> Cable reforzado de larga duración</div>
-      <div class="spec"><i class="bi bi-check-circle"></i> Garantía de funcionamiento incluida</div>
-    </div>
-    <div class="charger-price"><span>Solo</span> $1,000 <span>DOP</span></div>
-    <a href="#contactos" class="btn-primary">Comprar ahora <i class="bi bi-bag-check"></i></a>
-  </div>
-</section>
-
-<!-- ════ TESTIMONIOS ════ -->
-<section class="testimonios fade-in">
-  <div class="section-label">CLIENTES</div>
-  <div class="section-title">LO QUE DICEN<br><em>NUESTROS CLIENTES</em></div>
-  <p class="section-sub">La opinión de quienes ya confiaron en nosotros.</p>
-  <div class="testi-grid">
-    <div class="testi-card">
-      <div class="testi-stars">★★★★★</div>
-      <p>"Compré un teclado gamer y llegó en perfecto estado, rápido y bien empacado. El precio fue el mejor que encontré."</p>
-      <div class="testi-author"><div class="testi-avatar">JM</div><div><strong>Juan Martínez</strong><span>Santo Domingo</span></div></div>
-    </div>
-    <div class="testi-card accent">
-      <div class="testi-stars">★★★★★</div>
-      <p>"Me repararon la laptop en menos de 24 horas. El diagnóstico fue gratis y el precio de la reparación fue justo."</p>
-      <div class="testi-author"><div class="testi-avatar">MC</div><div><strong>María Cruz</strong><span>Santiago</span></div></div>
-    </div>
-    <div class="testi-card">
-      <div class="testi-stars">★★★★★</div>
-      <p>"Llevo años comprando aquí. Siempre tienen lo que busco y el soporte por WhatsApp es rápido. Los recomiendo."</p>
-      <div class="testi-author"><div class="testi-avatar">RP</div><div><strong>Roberto Pérez</strong><span>La Vega</span></div></div>
-    </div>
-  </div>
-</section>
-
-<!-- ════ FOOTER ════ -->
-<footer id="contactos">
-  <div class="footer-top">
-    <div class="footer-brand">
-      <img src="/img/logo-nuevo.png" alt="Digital Parts Logo" class="logo-img">
-      <p>Tecnología confiable, precios competitivos y servicio cercano. Tu aliado tech en República Dominicana.</p>
-      <div class="footer-social">
-        <div class="social-btn"><i class="bi bi-tiktok"></i></div>
-        <div class="social-btn"><i class="bi bi-instagram"></i></div>
-        <div class="social-btn"><i class="bi bi-facebook"></i></div>
-        <div class="social-btn"><i class="bi bi-whatsapp"></i></div>
+  <!-- ════ CATEGORÍAS ════ -->
+  <section class="categories fade-in">
+    <div class="section-label">CATÁLOGO</div>
+    <div class="section-title">EXPLORA POR<br><em>CATEGORÍA</em></div>
+    <p class="section-sub">Desde accesorios básicos hasta equipos de alto rendimiento.</p>
+    <div class="cat-grid">
+      <div class="cat-card">
+        <div class="cat-icon"><i class="bi bi-mouse"></i></div>
+        <h3>Mouse</h3>
+        <p>Gamer y oficina con alta precisión y diseño ergonómico.</p>
+        <div class="cat-arrow">Ver productos <i class="bi bi-arrow-right"></i></div>
+      </div>
+      <div class="cat-card">
+        <div class="cat-icon"><i class="bi bi-usb-symbol"></i></div>
+        <h3>Memorias USB</h3>
+        <p>Almacenamiento rápido desde 16GB hasta 1TB.</p>
+        <div class="cat-arrow">Ver productos <i class="bi bi-arrow-right"></i></div>
+      </div>
+      <div class="cat-card">
+        <div class="cat-icon"><i class="bi bi-keyboard"></i></div>
+        <h3>Teclados</h3>
+        <p>Mecánicos, RGB y ergonómicos para trabajo y gaming.</p>
+        <div class="cat-arrow">Ver productos <i class="bi bi-arrow-right"></i></div>
+      </div>
+      <div class="cat-card">
+        <div class="cat-icon"><i class="bi bi-laptop"></i></div>
+        <h3>Laptops</h3>
+        <p>Equipos para trabajo, estudio y entretenimiento desde $450.</p>
+        <div class="cat-arrow">Ver productos <i class="bi bi-arrow-right"></i></div>
       </div>
     </div>
-    <div class="footer-col">
-      <h4>PRODUCTOS</h4>
-      <ul>
-        <li><a href="#">Laptops</a></li>
-        <li><a href="#">Memorias USB</a></li>
-        <li><a href="#">Teclados</a></li>
-        <li><a href="#">Mouse</a></li>
-        <li><a href="#">Discos SSD</a></li>
-        <li><a href="#">Auriculares</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h4>SERVICIOS</h4>
-      <ul>
-        <li><a href="#">Reparaciones</a></li>
-        <li><a href="#">Mantenimiento</a></li>
-        <li><a href="#">Diagnóstico Gratis</a></li>
-        <li><a href="#">Asesoría Tech</a></li>
-        <li><a href="#">Instalación de Software</a></li>
-        <li><a href="#">Recuperación de Datos</a></li>
-      </ul>
-    </div>
-    <div class="footer-newsletter">
-      <h4>CONSULTAS</h4>
-      <p>Envíanos tu pregunta y te respondemos en menos de una hora.</p>
-      <div class="newsletter-form">
-        <input type="text" placeholder="Tu consulta...">
-        <button onclick="alert('¡Consulta enviada! Gracias.')">Enviar</button>
+    <div class="cat-grid cat-grid2">
+      <div class="cat-card">
+        <div class="cat-icon"><i class="bi bi-headphones"></i></div>
+        <h3>Auriculares</h3>
+        <p>Sonido envolvente para gaming, trabajo remoto y entretenimiento.</p>
+        <div class="cat-arrow">Ver productos <i class="bi bi-arrow-right"></i></div>
       </div>
-      <p style="font-size:11px;color:rgba(255,255,255,0.2);margin-top:8px">Lun–Sáb 9am–7pm.</p>
+      <div class="cat-card">
+        <div class="cat-icon"><i class="bi bi-hdd"></i></div>
+        <h3>Discos SSD</h3>
+        <p>Velocidad superior para que tu equipo vuele.</p>
+        <div class="cat-arrow">Ver productos <i class="bi bi-arrow-right"></i></div>
+      </div>
+      <div class="cat-card">
+        <div class="cat-icon"><i class="bi bi-lightning-charge"></i></div>
+        <h3>Cargadores</h3>
+        <p>Originales y compatibles para Dell, HP, Lenovo, Asus y más.</p>
+        <div class="cat-arrow">Ver productos <i class="bi bi-arrow-right"></i></div>
+      </div>
+      <div class="cat-card">
+        <div class="cat-icon"><i class="bi bi-cpu"></i></div>
+        <h3>Accesorios</h3>
+        <p>Hubs USB, soportes, mousepad, cables y todo para tu setup.</p>
+        <div class="cat-arrow">Ver productos <i class="bi bi-arrow-right"></i></div>
+      </div>
     </div>
-  </div>
-  <div class="footer-bottom">
-    <p>© 2026 Digital Parts. Todos los derechos reservados.</p>
-    <div class="footer-bottom-links">
-      <a href="#">Privacidad</a>
-      <a href="#">Términos</a>
-      <a href="#contactos">Contacto</a>
-      <a href="#">Ubicación</a>
-    </div>
-  </div>
-</footer>
+  </section>
 
-<script src="js/main.js"></script>
+  <!-- ════ MEJORES OFERTAS ════ -->
+  <section class="featured fade-in" id="productos">
+    <div class="featured-header">
+      <div>
+        <div class="section-label">ESTE MES</div>
+        <div class="section-title" style="margin-bottom:0">MEJORES<br><em>OFERTAS</em></div>
+      </div>
+      <a href="#" class="btn-dark">Ver todas <i class="bi bi-arrow-right"></i></a>
+    </div>
+    <p class="section-sub" style="margin-bottom:36px">Productos seleccionados con los mejores precios del mes.</p>
+
+    <div class="products-grid">
+      <div class="product-card">
+        <span class="product-badge">⚡ TOP VENTA</span>
+        <div class="product-img-wrap"><img src="img/keyboard-with-neon-lights-high-angle-removebg-preview.png"
+            alt="Teclado Gamer"></div>
+        <div class="product-info">
+          <div class="product-cat">TECLADOS GAMER</div>
+          <h3>Teclado RGB Mecánico</h3>
+          <p>Switches mecánicos, retroiluminación RGB. Ideal para largas sesiones de juego.</p>
+          <div class="product-footer">
+            <div class="product-price">Desde $30</div>
+            <div class="product-btn"><i class="bi bi-arrow-right"></i></div>
+          </div>
+        </div>
+      </div>
+      <div class="product-card">
+        <span class="product-badge dark">GAMER</span>
+        <div class="product-img-wrap"><img src="img/WhatsApp_Image_2026-03-31_at_18.48.02-removebg-preview.png"
+            alt="Mouse Gamer"></div>
+        <div class="product-info">
+          <div class="product-cat">MOUSE</div>
+          <h3>Mouse Gamer Pro</h3>
+          <p>Alta precisión, sensor óptico de última generación y DPI ajustable.</p>
+          <div class="product-footer">
+            <div class="product-price">Desde $20</div>
+            <div class="product-btn"><i class="bi bi-arrow-right"></i></div>
+          </div>
+        </div>
+      </div>
+      <div class="product-card">
+        <span class="product-badge white">NUEVO</span>
+        <div class="product-img-wrap"><img src="img/WhatsApp_Image_2026-03-31_at_18.52.45__1_-removebg-preview.png"
+            alt="Laptop"></div>
+        <div class="product-info">
+          <div class="product-cat">LAPTOPS</div>
+          <h3>Laptops Certificadas</h3>
+          <p>Revisadas y certificadas para trabajo, estudio y gaming. Garantía incluida.</p>
+          <div class="product-footer">
+            <div class="product-price">Desde $450</div>
+            <div class="product-btn"><i class="bi bi-arrow-right"></i></div>
+          </div>
+        </div>
+      </div>
+      <div class="product-card">
+        <span class="product-badge dark">OFERTA</span>
+        <div class="product-img-wrap"><img src="img/WhatsApp_Image_2026-03-31_at_18.59.59-removebg-preview.png"
+            alt="Memoria USB"></div>
+        <div class="product-info">
+          <div class="product-cat">MEMORIAS USB</div>
+          <h3>Memorias Alta Velocidad</h3>
+          <p>32GB, 64GB, 128GB y 256GB con garantía de durabilidad.</p>
+          <div class="product-footer">
+            <div class="product-price">Desde $15</div>
+            <div class="product-btn"><i class="bi bi-arrow-right"></i></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="products-grid" style="margin-top:16px">
+      <div class="product-card">
+        <span class="product-badge">POPULAR</span>
+        <div class="product-img-wrap"><img src="img/workspace-with-computer-screen-keyboard.jpg" alt="Accesorios"></div>
+        <div class="product-info">
+          <div class="product-cat">ACCESORIOS</div>
+          <h3>Kit Escritorio Completo</h3>
+          <p>Mouse, teclado y mousepad para armar tu espacio de trabajo ideal.</p>
+          <div class="product-footer">
+            <div class="product-price">Desde $45</div>
+            <div class="product-btn"><i class="bi bi-arrow-right"></i></div>
+          </div>
+        </div>
+      </div>
+      <div class="product-card">
+        <span class="product-badge dark">LIMITADO</span>
+        <div class="product-img-wrap"><img src="img/view-electronic-product-balancing-podium.jpg" alt="Combo"></div>
+        <div class="product-info">
+          <div class="product-cat">COMBOS</div>
+          <h3>Combo Gamer Premium</h3>
+          <p>El setup completo para elevar tu experiencia al siguiente nivel.</p>
+          <div class="product-footer">
+            <div class="product-price">Desde $85</div>
+            <div class="product-btn"><i class="bi bi-arrow-right"></i></div>
+          </div>
+        </div>
+      </div>
+      <div class="product-card">
+        <span class="product-badge">NUEVO</span>
+        <div class="product-img-wrap"><img src="img/laptopp.jpg" alt="SSD"></div>
+        <div class="product-info">
+          <div class="product-cat">DISCOS SSD</div>
+          <h3>SSD Ultra Rápido</h3>
+          <p>Velocidad de lectura y escritura superior. Compatible con laptops y PCs.</p>
+          <div class="product-footer">
+            <div class="product-price">Desde $35</div>
+            <div class="product-btn"><i class="bi bi-arrow-right"></i></div>
+          </div>
+        </div>
+      </div>
+      <div class="product-card">
+        <span class="product-badge dark">OFERTA</span>
+        <div class="product-img-wrap"><img src="img/mm.jpg" alt="Auriculares"></div>
+        <div class="product-info">
+          <div class="product-cat">AURICULARES</div>
+          <h3>Headset Gaming 7.1</h3>
+          <p>Sonido envolvente con micrófono integrado para gaming y trabajo remoto.</p>
+          <div class="product-footer">
+            <div class="product-price">Desde $25</div>
+            <div class="product-btn"><i class="bi bi-arrow-right"></i></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════ COMBO BANNER ════ -->
+  <section class="combo-banner fade-in">
+    <div class="combo-inner">
+      <div class="combo-img"><img src="img/view-electronic-product-balancing-podium.jpg" alt="Combo Gamer"></div>
+      <div class="combo-text">
+        <div class="section-label">OFERTA ESPECIAL</div>
+        <h2>COMBO<br>GAMER <em>5 EN 1</em></h2>
+        <p>Mouse, teclado, audífonos y más en un solo combo diseñado para alto rendimiento.</p>
+        <p style="font-size:13px;color:rgba(255,255,255,0.4);margin-bottom:24px">Disponible en versión estándar y pro.
+          Consulta por WhatsApp.</p>
+        <div class="combo-features">
+          <div class="combo-feat"><i class="bi bi-mouse"></i><strong>Mouse</strong><span>Alta precisión</span></div>
+          <div class="combo-feat"><i class="bi bi-keyboard"></i><strong>Teclado</strong><span>RGB mecánico</span></div>
+          <div class="combo-feat"><i class="bi bi-headphones"></i><strong>Audio</strong><span>Envolvente 7.1</span>
+          </div>
+        </div>
+        <ul class="combo-checks">
+          <li><i class="bi bi-check-circle-fill"></i> Envíos rápidos en todo el país</li>
+          <li><i class="bi bi-check-circle-fill"></i> Garantía de calidad incluida</li>
+          <li><i class="bi bi-check-circle-fill"></i> Soporte técnico especializado post-venta</li>
+          <li><i class="bi bi-check-circle-fill"></i> Empaque seguro para entrega</li>
+        </ul>
+        <a href="#contactos" class="btn-primary">Consultar precio <i class="bi bi-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════ SERVICIOS ════ -->
+  <section class="servicios fade-in">
+    <div class="section-label">LO QUE HACEMOS</div>
+    <div class="section-title">NUESTROS<br><em>SERVICIOS</em></div>
+    <p class="section-sub">No solo vendemos productos — somos tu solución tecnológica completa.</p>
+    <div class="servicios-grid">
+      <div class="servicio-card">
+        <div class="servicio-icon"><i class="bi bi-tools"></i></div>
+        <h3>Reparación Técnica</h3>
+        <p>Reparamos laptops, computadoras y accesorios. Diagnóstico gratuito en todos los casos.</p>
+        <ul class="servicio-list">
+          <li><i class="bi bi-dot"></i> Cambio de pantallas</li>
+          <li><i class="bi bi-dot"></i> Reparación de teclados</li>
+          <li><i class="bi bi-dot"></i> Cambio de baterías</li>
+        </ul>
+      </div>
+      <div class="servicio-card accent">
+        <div class="servicio-icon"><i class="bi bi-cpu"></i></div>
+        <h3>Mantenimiento Preventivo</h3>
+        <p>Limpieza profunda, actualización de drivers y optimización del sistema.</p>
+        <ul class="servicio-list">
+          <li><i class="bi bi-dot"></i> Limpieza de ventiladores</li>
+          <li><i class="bi bi-dot"></i> Cambio de pasta térmica</li>
+          <li><i class="bi bi-dot"></i> Optimización de software</li>
+        </ul>
+      </div>
+      <div class="servicio-card">
+        <div class="servicio-icon"><i class="bi bi-shield-lock"></i></div>
+        <h3>Seguridad y Antivirus</h3>
+        <p>Eliminación de virus y malware. Protección profesional para tus datos.</p>
+        <ul class="servicio-list">
+          <li><i class="bi bi-dot"></i> Eliminación de malware</li>
+          <li><i class="bi bi-dot"></i> Instalación de antivirus</li>
+          <li><i class="bi bi-dot"></i> Recuperación de datos</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════ WEEKLY ════ -->
+  <section class="weekly fade-in" id="reservaciones">
+    <div class="weekly-inner">
+      <div class="weekly-left">
+        <div class="section-label">CALENDARIO</div>
+        <h2>OFERTAS<br><em>SEMANALES</em></h2>
+        <p>Cada día de la semana tiene su propia oferta. Planifica tus compras y maximiza tu ahorro.</p>
+        <p style="font-size:13px;color:var(--gray);margin-bottom:28px">Válidas hasta agotar stock.</p>
+        <div class="weekly-days">
+          <div class="day-card">
+            <div class="day-tag">LUNES</div>
+            <div class="day-desc">Descuentos en memorias USB y discos SSD.</div>
+            <div class="day-badge">10% OFF</div>
+          </div>
+          <div class="day-card">
+            <div class="day-tag">MIÉRC.</div>
+            <div class="day-desc">Teclados y mouse con precio especial.</div>
+            <div class="day-badge">15% OFF</div>
+          </div>
+          <div class="day-card">
+            <div class="day-tag">VIERNES</div>
+            <div class="day-desc">Diagnóstico técnico completamente gratis.</div>
+            <div class="day-badge">GRATIS</div>
+          </div>
+          <div class="day-card">
+            <div class="day-tag">SÁBADO</div>
+            <div class="day-desc">Ofertas sorpresa en accesorios seleccionados.</div>
+            <div class="day-badge">SORPRESA</div>
+          </div>
+        </div>
+        <a href="#contactos" class="btn-primary" style="margin-top:28px;display:inline-flex">Ver Ofertas Activas <i
+            class="bi bi-arrow-right"></i></a>
+      </div>
+      <div class="weekly-right">
+        <div class="section-label" style="justify-content:center">PRODUCTOS DESTACADOS</div>
+        <div class="circle-stack">
+          <div class="circ lg"><img src="img/laptopp.jpg" alt="Laptop"></div>
+          <div class="circ-row">
+            <div class="circ md"><img src="img/mm.jpg" alt="Memoria"></div>
+            <div class="circ sm"><img src="img/mm.jpg" alt="Mouse"></div>
+          </div>
+        </div>
+        <div class="weekly-note">
+          <i class="bi bi-info-circle"></i>
+          Nuevas ofertas cada semana. Síguenos en redes para no perderte ninguna.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════ BENEFITS ════ -->
+  <section class="benefits fade-in">
+    <div class="benefits-inner">
+      <div class="benefits-left">
+        <div class="section-label">POR QUÉ ELEGIRNOS</div>
+        <h2>TECNOLOGÍA<br>CON <em>CONFIANZA</em></h2>
+        <p>En Digital Parts trabajamos cada día para ofrecerte las mejores ofertas y servicios con calidad garantizada.
+        </p>
+        <p>Miles de clientes satisfechos en todo el país confían en nosotros porque cumplimos lo que prometemos.</p>
+        <a href="#productos" class="btn-dark" style="margin-top:20px">Ver Ofertas <i class="bi bi-arrow-right"></i></a>
+      </div>
+      <div class="benefits-grid">
+        <div class="benefit-item accent">
+          <div class="benefit-icon"><i class="bi bi-hdd-fill"></i></div>
+          <h4>Memorias y Almacenamiento</h4>
+          <p>USB, SSD y RAM para mejor rendimiento.</p>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-icon"><i class="bi bi-controller"></i></div>
+          <h4>Accesorios Premium</h4>
+          <p>Teclados, mouse, auriculares y más.</p>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-icon"><i class="bi bi-shield-check"></i></div>
+          <h4>Seguridad y Mantenimiento</h4>
+          <p>Limpieza, optimización y protección profesional.</p>
+        </div>
+        <div class="benefit-item accent">
+          <div class="benefit-icon"><i class="bi bi-tools"></i></div>
+          <h4>Reparación Técnica</h4>
+          <p>Diagnóstico gratis y soluciones rápidas.</p>
+        </div>
+        <div class="benefit-item">
+          <div class="benefit-icon"><i class="bi bi-truck"></i></div>
+          <h4>Envíos a Todo el País</h4>
+          <p>Rápido, seguro y con seguimiento.</p>
+        </div>
+        <div class="benefit-item accent">
+          <div class="benefit-icon"><i class="bi bi-headset"></i></div>
+          <h4>Soporte 24/7</h4>
+          <p>Disponibles por WhatsApp siempre.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════ CARGADOR DELL ════ -->
+  <section class="charger fade-in">
+    <div class="charger-img"><img src="img/WhatsApp Image 2026-04-01 at 23.01.27.jpeg" alt="Cargador Dell"></div>
+    <div class="charger-text">
+      <div class="section-label">PRODUCTO DESTACADO</div>
+      <h2><i class="bi bi-lightning-charge" style="color:var(--pink)"></i> CARGADOR<br>DELL ORIGINAL</h2>
+      <p>Compatible con una amplia variedad de modelos Dell para garantizarte una carga rápida, segura y eficiente.</p>
+      <p>Fabricado con materiales de alta calidad y sistemas avanzados de protección contra sobrecargas.</p>
+      <div class="charger-specs">
+        <div class="spec"><i class="bi bi-check-circle"></i> Compatible con múltiples modelos Dell</div>
+        <div class="spec"><i class="bi bi-check-circle"></i> Protección contra sobrecalentamiento</div>
+        <div class="spec"><i class="bi bi-check-circle"></i> Cable reforzado de larga duración</div>
+        <div class="spec"><i class="bi bi-check-circle"></i> Garantía de funcionamiento incluida</div>
+      </div>
+      <div class="charger-price"><span>Solo</span> $1,000 <span>DOP</span></div>
+      <a href="#contactos" class="btn-primary">Comprar ahora <i class="bi bi-bag-check"></i></a>
+    </div>
+  </section>
+
+  <!-- ════ TESTIMONIOS ════ -->
+  <section class="testimonios fade-in">
+    <div class="section-label">CLIENTES</div>
+    <div class="section-title">LO QUE DICEN<br><em>NUESTROS CLIENTES</em></div>
+    <p class="section-sub">La opinión de quienes ya confiaron en nosotros.</p>
+    <div class="testi-grid">
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p>"Compré un teclado gamer y llegó en perfecto estado, rápido y bien empacado. El precio fue el mejor que
+          encontré."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">JM</div>
+          <div><strong>Juan Martínez</strong><span>Santo Domingo</span></div>
+        </div>
+      </div>
+      <div class="testi-card accent">
+        <div class="testi-stars">★★★★★</div>
+        <p>"Me repararon la laptop en menos de 24 horas. El diagnóstico fue gratis y el precio de la reparación fue
+          justo."</p>
+        <div class="testi-author">
+          <div class="testi-avatar">MC</div>
+          <div><strong>María Cruz</strong><span>Santiago</span></div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p>"Llevo años comprando aquí. Siempre tienen lo que busco y el soporte por WhatsApp es rápido. Los recomiendo."
+        </p>
+        <div class="testi-author">
+          <div class="testi-avatar">RP</div>
+          <div><strong>Roberto Pérez</strong><span>La Vega</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════ FOOTER ════ -->
+  <footer id="contactos">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="/img/logo-nuevo.png" alt="Digital Parts Logo" class="logo-img">
+        <p>Tecnología confiable, precios competitivos y servicio cercano. Tu aliado tech en República Dominicana.</p>
+        <div class="footer-social">
+          <div class="social-btn"><i class="bi bi-tiktok"></i></div>
+          <div class="social-btn"><i class="bi bi-instagram"></i></div>
+          <div class="social-btn"><i class="bi bi-facebook"></i></div>
+          <div class="social-btn"><i class="bi bi-whatsapp"></i></div>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>PRODUCTOS</h4>
+        <ul>
+          <li><a href="#">Laptops</a></li>
+          <li><a href="#">Memorias USB</a></li>
+          <li><a href="#">Teclados</a></li>
+          <li><a href="#">Mouse</a></li>
+          <li><a href="#">Discos SSD</a></li>
+          <li><a href="#">Auriculares</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>SERVICIOS</h4>
+        <ul>
+          <li><a href="#">Reparaciones</a></li>
+          <li><a href="#">Mantenimiento</a></li>
+          <li><a href="#">Diagnóstico Gratis</a></li>
+          <li><a href="#">Asesoría Tech</a></li>
+          <li><a href="#">Instalación de Software</a></li>
+          <li><a href="#">Recuperación de Datos</a></li>
+        </ul>
+      </div>
+      <div class="footer-newsletter">
+        <h4>CONSULTAS</h4>
+        <p>Envíanos tu pregunta y te respondemos en menos de una hora.</p>
+        <div class="newsletter-form">
+          <input type="text" placeholder="Tu consulta...">
+          <button onclick="alert('¡Consulta enviada! Gracias.')">Enviar</button>
+        </div>
+        <p style="font-size:11px;color:rgba(255,255,255,0.2);margin-top:8px">Lun–Sáb 9am–7pm.</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Digital Parts. Todos los derechos reservados.</p>
+      <div class="footer-bottom-links">
+        <a href="#">Privacidad</a>
+        <a href="#">Términos</a>
+        <a href="#contactos">Contacto</a>
+        <a href="#">Ubicación</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
 </body>
+
 </html>
